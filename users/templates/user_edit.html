@@ -1,0 +1,107 @@
+<form method="POST" action="/user_update/" id="form-udb-user-update" enctype="multipart/form-data" style="margin-top:20px;">
+	{%csrf_token%}
+	{{ form.non_field_errors }}
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.username.id_for_label">{{form.username.label}}</label>
+				<span class="field-errors" id="{{form.username.name}}_errors">{{form.username.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.username}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.first.id_for_label">{{form.first.label}}</label>
+				<span class="field-errors" id="{{form.first.name}}_errors">{{form.first.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.first}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.last.id_for_label">{{form.last.label}}</label>
+				<span class="field-errors" id="{{form.last.name}}_errors">{{form.last.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.last}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.email.id_for_label">{{form.email.label}}</label>
+				<span class="field-errors" id="{{form.email.name}}_errors">{{form.email.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.email}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.tier.id_for_label">{{form.tier.label}}</label>
+				<span class="field-errors" id="{{form.tier.name}}_errors">{{form.tier.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.tier}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="form-group">
+				<label for="form.active.id_for_label">{{form.active.label}}</label>
+				<span class="field-errors" id="{{form.active.name}}_errors">{{form.active.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.active}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label for="form.groups.id_for_label">{{form.groups.label}}</label>
+				<span class="field-errors" id="{{form.groups.name}}_errors">{{form.groups.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.groups}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label for="form.projects.id_for_label">{{form.projects.label}}</label>
+				<span class="field-errors" id="{{form.projects.name}}_errors">{{form.projects.errors}}</span>
+				<div class="input-group">
+					<div class="input-group-addon">
+					</div>
+					{{form.projects}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2">
+			<button id="btn-reset" class="btn btn-info">Reset Password</button>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<button class="btn btn-info pull-right btn-modal-cancel" id="btn-udb-user-udpate-cancel" style="margin-left:10px;">cancel</button>
+		<button class="btn btn-success pull-right" id="btn-udb-user-update-submit">update</button>
+	</div>
+</form>

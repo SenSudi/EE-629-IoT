@@ -1,0 +1,29 @@
+<li>
+	<a id="btn-narrative-input" style="display:none;" class="waves-effect waves-light" href="#">
+		<i class="fa fa-quote-left"></i>
+		<i class="fa fa-quote-right"></i>
+	</a>
+</li>
+
+<li>
+	<a id="feedback-btn" class="waves-effect waves-light" data-toggle="dropdown" href="#">
+		<i class="fa fa-bullhorn"></i>
+	</a>
+</li>
+
+<li class="">
+	<a id="btn-nav-scratchpad" class="waves-effect waves-light" data-toggle="dropdown" href="#">
+		<i class="icon-note"></i>
+		<!-- <div class="notify"><span class="heartbit"></span><span class="point"></span></div> -->
+	</a>
+</li>
+
+{% include 'top_nav_user_menu.html' %}
+
+{% if user.is_superuser %}
+	<li class=""> 
+		<a class="waves-effect waves-light" href="/admin">
+			<i class="ti-settings"></i>
+		</a>
+	</li>
+{% endif %}

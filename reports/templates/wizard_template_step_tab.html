@@ -1,0 +1,10 @@
+<li role="presentation" class="{% if forloop.first %}active{% endif %} wt-step-nav-tab" data-obj-id="{{step.id}}" data-url="/wizard_modal_step_content/" style="min-height:43px;">
+	<a href="#step-{{step.sequence}}-tab-content" aria-controls="step-{{step.sequence}}-tab" role="tab" data-toggle="tab" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" style="min-height:45px;">
+		<span >
+			<div class="container-fluid">
+				<i class="fa fa-circle-o" style="position:absolute;font-size:46px;top:-2px;left:20px;font-weight:lighter;"></i>
+				<span style="position:absolute;top:10px;left:31px;font-size:16px;text-align:center;min-width:18px;max-width:18px;">{{step.sequence}}</span>
+			</div>
+		</span>
+	</a>
+</li>

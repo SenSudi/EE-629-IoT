@@ -1,0 +1,137 @@
+<form id="add-item-form" method="POST" action="/methodologies/" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  
+    <div class="form-group">
+      <label for="{{ form.title.id_for_label }}">{{form.title.label}}</label><span>{{ form.title.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.title}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.project_type.id_for_label }}">{{form.project_type.label}}</label><span>{{ form.project_type.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.project_type}}
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-7">
+        <div class="form-group">
+          <label for="{{ form.phase.id_for_label }}">
+            {{form.phase.label}}
+          </label>
+          <span>{{ form.phase.errors }}</span>
+          <div class="input-group">
+            <div class="input-group-addon"></div>
+            {{form.phase}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-1">
+        <div class="form-group">
+          <label for="{{ form.tier.id_for_label }}">
+            {{form.tier.label}}
+          </label>
+          <span>{{ form.tier.errors }}</span>
+          <div class="input-group">
+            <div class="input-group-addon"></div>
+            {{form.tier}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-1">
+        <div class="form-group">
+          <label for="{{ form.seqence.id_for_label }}">
+            {{form.sequence.label}}
+          </label>
+          <span>{{ form.sequence.errors }}</span>
+          <div class="input-group">
+            <div class="input-group-addon"></div>
+            {{form.sequence}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label for="{{ form.est_time.id_for_label }}">
+            {{form.est_time.label}}
+          </label>
+          <span>{{ form.est_time.errors }}</span>
+          <div class="input-group">
+            <div class="input-group-addon"></div>
+            {{form.est_time}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-1">
+        <div class="form-group">
+          <label for="{{ form.automate.id_for_label }}">
+            {{form.automate.label}}
+          </label>
+          <span>{{ form.automate.errors }}</span>
+          <div class="input-group">
+            <!-- <div class="input-group-addon"></div> -->
+            {{form.automate}}
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End .row -->
+
+    <div class="form-group">
+      <label for="{{ form.command.id_for_label }}">{{form.command.label}}</label><span>{{ form.command.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.command}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.mangle.id_for_label }}">{{form.mangle.label}}</label><span>{{ form.mangle.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.mangle}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.description.id_for_label }}">{{form.description.label}}</label><span>{{ form.description.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.description}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.help_base.id_for_label }}">{{form.help_base.label}}</label><span>{{ form.help_base.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.help_base}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.help_import.id_for_label }}">{{form.help_import.label}}</label><span>{{ form.help_import.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.help_import}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.associated_files.id_for_label }}">{{form.associated_files.label}}</label><span id="{{form.associated_files.name}}_errors">{{ form.associated_files.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{form.associated_files}}
+      </div>
+    </div>
+
+</form>

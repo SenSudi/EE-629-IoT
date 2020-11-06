@@ -1,0 +1,21 @@
+{% for item in items %}
+<div class="item {{item.verbose_name}}" id="{{item.id}}" data-app="{{item_meta.app_label}}" data-model="{{item_meta.object_name}}">
+	{% if item_header %}
+	<div class="row item-header" style="background-color:#dad8d8">
+		{% block item_header_block %}
+		{% endblock %}
+	</div>
+	{% endif %}
+	{% if item_body %}
+	<div class="item-body" style="display:none;">
+		{% block item_body_block %}
+		{% endblock %}
+	</div>
+	{% else %}
+		{% block item %}
+		{% endblock %}
+	{% endif %}
+</div>
+
+		<hr style="margin-top:2px;margin-bottom:2px;">
+{% endfor %}

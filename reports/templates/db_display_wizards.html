@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="white-box popped container-fluid wizards multi-select-container">
+	<div class="col-xs-11">
+        <div class="col-xs-4 btn" style="text-align:left;"><b>Title</b></div>
+        <div class="col-xs-4 btn" style="text-align:left;"><b>Author</b></div>
+        <div class="col-xs-4 btn" style="text-align:left;"><b>Deploy</b></div>
+	</div>
+	{% for wizard in wizards %}
+	<div class="col-xs-11 {{wizard.type_label}} {% cycle 'odd' 'even' %} object selectable popped" data-obj-id="{{wizard.id}}" data-obj-app="{{wizard.app_label}}" data-obj-title="{{wizard.title}}" data-details="{{wizard.details_url}}" data-edit="{{wizard.edit_url}}" data-obj-model="{{wizard.model_class}}">
+		<div class="col-xs-4">
+			<b class="click">{{wizard.title}}</b>
+		</div>
+
+		<div class="col-xs-4">
+			<b>{{wizard.creator}}</b>
+		</div>
+		<div class="col-xs-3">
+			<input type="checkbox" class="db-wizard-deploy" name="active" {% if wizard.active %}checked{% endif %}>
+		</div>
+		<div class="col-xs-1">
+			{% include 'btn_generic_delete.html' %}
+		</div>
+	</div>
+	{% endfor %}
+</div>

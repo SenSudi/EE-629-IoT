@@ -1,0 +1,42 @@
+{% for week in weeks %}
+	<div class="row week" style="width:100%;">
+	<div class="week-users col-xs-1 text-left" style="width:12.5%;border:solid 1px black;display:inline;padding-left:0;padding-bottom:34px;padding-top:33px;">
+		{% for u in week.users %}
+			<div class="week-users btn pull-left">
+				{% autoescape off %}
+				{{u.tester.avatar_thumb}}
+				{% endautoescape %}
+				<b class="username">{{u.username}}</b>
+			</div>
+		{% endfor %}
+	</div>
+	{% for day in week.days %}
+		<div class="day {{day.day}} col-xs-1 text-center" style="width:12.5%;border:solid 1px black;display:inline;">
+			<div class="btn" style="border-bottom:solid 1px black;margin-bottom:4px;"><b class="tt-day-two-date">{{day.two_date}}</b></div>
+			{% if week.no_entries %}
+				<div class="btn text-center" data-copy="{{day.day}}" style="min-height:36px !important;">
+					<span class="tt-day-user-hours"><b>----</b></span>
+				</div>
+				<div class="text-center" style="position:relative;border-top:1px solid black;margin-bottom:7px;padding-top:5px;">
+					<b style="">----</b>
+				</div>
+			{% else %}
+				{% for item in day.userhours %}
+					<div onclick="ttDayCopyHours(this)" class="btn text-center" data-copy="{{day.day}}" style="min-height:36px !important;">
+						<span class="tt-day-user-hours">{{item.1}}</span>
+					</div>
+				{% endfor %}
+				<div class="text-center" style="border-top:1px solid black;">
+					<b onclick="ttDayShowNotes(this)" class="btn">Notes</b>
+					<i onclick="ttDayCopyNotes(this)" class="btn fa fa-clipboard" style="padding:0">
+						<textarea style="display:none;width:0;height:0;position:fixed;left:-99999px;" id="{{day.day}}-notes" class="tt-day-notes">
+							{{day.allnotes|linebreaksbr}}
+						</textarea>
+					</i>
+				</div>
+			{% endif %}
+		</div>
+	{% endfor %}
+	</div>
+	<b>Total Hours for Week: <span style="position:relative;top:1px;">{{week.total}}</span></b>
+{% endfor %}

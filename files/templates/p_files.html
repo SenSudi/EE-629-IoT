@@ -1,0 +1,20 @@
+{% extends 'base_list_view.html' %}
+{% load static %}
+
+{% block top_pallet %}
+  {% include 'auditor.html' %}
+{% endblock %}
+
+{% block page_headers %}
+<div class="col-xs-3 text-left"><b>File Name</b></div>
+<div class="col-xs-1 text-center"><b>Extension</b></div>
+<div class="col-xs-1 text-center"><b>Size</b></div>
+<div class="col-xs-2 text-center"><b>Uploaded</b></div>
+<div class="col-xs-2 text-left"><b>Uploader</b></div>
+<div class="col-xs-2 text-left"><b>Associated Item</b></div>
+<div class="col-xs-1"></div>
+{% endblock %}
+
+{% block items %}
+    {% include 'display_files.html' with items=files item_header=True item_body=True %}
+{% endblock %}

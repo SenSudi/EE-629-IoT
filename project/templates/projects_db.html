@@ -1,0 +1,75 @@
+{% load static %}
+
+{% block top_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12">
+  	<div class="white-box">
+        <div class="row">
+            <div class="col-xs-3"><b>Title</b></div>
+            <div class="col-xs-1 text-center"><b>Type</b></div>
+            <div class="col-xs-2"><b>Client</b></div>
+            <div class="col-xs-1 text-center"><b>Start</b></div>
+            <div class="col-xs-1 text-center"><b>End</b></div>
+            <div class="col-xs-1 text-center"><b>Active</b></div>
+            <div class="col-xs-1 text-center"><b>Billable</b></div>
+            <div class="col-xs-1"><b></b></div>
+        </div>
+  		{% for project in all_projects %}
+        	<div class="row project {% cycle 'even' 'odd' %}" data-obj-id="{{project.id}}" data-obj-title="{{project.title}}" data-obj-app="project" data-obj-model="Project" style="padding:10px;padding-top:20px;">
+        		<div class="col-md-3 proj-title vc">
+        			<a href="/projects/{{project.id}}" class="cppll" style="text-decoration:none;color:inherit;">
+                        <b>
+                            {{project.title}}
+                        </b>
+                    </a>
+        		</div>
+                <div class="col-xs-1 text-center">
+                    <b>{{project.project_type.shorthand}}<b>
+                </div>
+                <div class="col-xs-2 proj-client">
+                    <a href="/clients_db" class="cpll" style="text-decoration:none;color:inherit;">
+                        <b>{{project.client.name}}</b>
+                    </a>
+                </div>
+        		<div class="col-md-1 proj-start vc text-center">
+        			<b>{{project.start_date}}</b> 
+        		</div>
+                <div class="col-xs-1 proj-end text-center">
+                    <b>{{project.end_date}}</b>
+                </div>
+        		<div class="col-md-1 text-center vc">
+        			<b>{{project.active}}</b>
+        		</div>
+                <div class="col-xs-1 text-center">
+                    <b>{{project.billable}}</b>
+                </div>
+        		<div class="col-md-2 status-buttons vc" style="margin-top:-5px;">
+        			{% if project.active %}
+        			<button onclick="pdbProjectOpen(this)" class="btn btn-success waves-effect waves-light proj-open" type="button" disabled>
+        				<span>Open</span>
+        				<i class="fa fa-folder-open m-l-5"></i>
+        			</button>
+        			<button onclick="pdbProjectClose(this)" class="btn btn-warning waves-effect waves-light proj-close" type="button">
+        				<span>Close</span>
+        				<i class="fa fa-folder m-l-5"></i>
+        			</button>
+        			{% else %}
+        			<button onclick="pdbProjectOpen(this)" class="btn btn-success waves-effect waves-light proj-open" type="button">
+        				<span>Open</span>
+        				<i class="fa fa-folder-open m-l-5"></i>
+        			</button>
+        			<button onclick="pdbProjectClose(this)" class="btn btn-warning waves-effect waves-light proj-close" type="button" disabled>
+        				<span>Close</span>
+        				<i class="fa fa-folder m-l-5"></i>
+        			</button>
+					<i class="fa fa-trash-o btn" onclick="project_Delete(this)" style="font-size:20px;font-weight:lighter;color:rgba(144, 0, 0, 0.65098);"></i>
+					{% endif %}
+        		</div>
+        	</div>
+    	{% endfor %}
+  	</div>
+</div>
+
+<div id="page-data" style="display:none;" data-section="{{section}}" data-csrf="{{csrf_token}}"></div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+	<div class="row">
+		<div class="col-xs-7">
+			<h4 id="modal-ptype-update-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+				Update project type <b>{{ptype.title}}</b>
+			</h4>
+		</div>
+		<div class="col-xs-5">
+			{% include 'modal_header_controls.html' with item=ptype item_type="ptype" %}
+		</div>
+	</div>
+	<hr class="modal-divider">
+</div>
+<div class="modal-body" style="padding-top:0;">
+	{% include 'ptype_update_form.html' %}
+</div>

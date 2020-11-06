@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-xs-2">
+		{% if user.tester.avatar %}
+    		<a href="javascript:void(0)">
+    			<img src="{{user.tester.avatar.url}}" class="thumb-lg img-circle" alt="img">
+    		</a>
+    	{% else %}
+            <form method="POST" action="/upload_avatar/" enctype="multipart/form-data" class="upload_avatar">
+            	{% csrf_token %}
+            	{{form.as_p}}
+            </form>
+    	{% endif %}
+	</div>
+	<div class="col-xs-8">
+		<div class="container">
+			<h4>{{user.first_name}} {{user.last_name}}</h4>
+		</div>
+		{% if user.email %}
+			<hr class="modal-divider" style="opacity:.65;margin-bottom:4px;">
+			<div class="container">
+				<h4>{{user.email}}</h4>
+			</div>
+		{% endif %}
+		{% if user.tester.phone %}
+			<hr class="modal-divider" style="opacity:.65;margin-bottom:4px;">
+			<div class="container">
+				<h4>{{user.tester.phone}}</h4>
+			</div>
+		{% endif %}
+
+		<hr class="modal-divider" style="opacity:.65;margin-bottom:4px;">
+		<div class="container">
+			<h4>Tester Tier - {{user.tester.tier}}</h4>
+		</div>
+	</div>
+	<!-- <div class="col-xs-4">
+		
+	</div>
+	<div class="col-xs-4">
+		
+	</div> -->
+</div>

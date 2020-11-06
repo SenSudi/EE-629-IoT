@@ -1,0 +1,119 @@
+{% load static %}
+
+{% block top_pallet %}
+  {% include 'auditor.html' %}
+{% endblock %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12 white-box">
+    <div class="row">
+      <div class="col-xs-2" style="width:12.5%;">
+        <button onclick="ttEntryAdd()" id="btn-add-entry" type="button" class="btn btn-success" style="display:inline;"><i class="fa fa-file-o"></i> Entry</button>
+        <button class="btn btn-info" id=btn-expand-collapse style="display:inline;">Expand</button>
+      </div>
+      <div class="col-xs-2" style="width:10%;">
+        <div class="form-group">
+          <select class="form-control" id="project-filter" onchange="ttProjectFilter(event)">
+            <option value="all">-- All Projects --</option>
+            {% for project in all_projects %}
+            <option value="{{project.id}}">{{project.title}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-xs-2 c-2.5-40" style="width:7.5%;">
+        <div class="form-group">
+          <select class="form-control" id="user-filter" onchange="ttProjectFilter(event)">
+            <option value="all">All Users</option>
+            {% for user in all_users %}
+            <option value="{{user.id}}">{{user.username}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-xs-1" style="width:33%;">
+        <!-- <button onclick="ttFilterDateCurrent(this)" class="btn btn-info" style="margin-top:2px;display:inline;margin-right:15px;">Current</button> -->
+        <div class="form-group" style="display:inline;">
+          <select onchange="ttFilterDateCurrent(this)" class="form-control" style="display:inline;width:30%;">
+            <option value="week">Current Week</option>
+            <option value="month">Current Month</option>
+          </select>
+        </div>
+        <div class="form-group" style="display:inline;">
+          <input  class="form-control" type="date" name="fltr-date-start" id="fltr-date-start" style="display:inline;width:30%;" value="{{from}}">
+        </div>
+        <span style="white-space:pre;"><b>-</b></span>
+        <div class="form-gorup" style="display:inline;">
+          <input class="form-control" type="date" name="fltr-date-end" id="fltr-date-end" style="display:inline;width:30%;" value="{{to}}">
+        </div>
+      </div>
+      <div class="col-xs-1" style="width:7.5%;">
+        <button onclick="ttFilterSubmit(this)" class="btn" id="btn-activate-filters" style="margin-top:2px;">
+          <i class="fa fa-filter"></i>
+        </button>
+        <button onclick="ttFilterReset(this)" class="btn" id="btn-clear-filters" style="margin-top:2px;">
+          <i class="fa fa-history"></i>
+        </button>
+      </div>
+      <div class="col-xs-3">
+        {% include 'search_bar.html' %}
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-3 col-spacer">
+        <span id="message">
+          <b>Showing Entries for:<br> 
+            <span id="proj-msg">All Projects</span> 
+            <br> 
+            <span id="user-msg">All Users</span> 
+            <br> 
+            <span>From [
+              <span id="from-msg">{{start|date:"m/d/y"}}</span>
+              ] to [
+              <span id="to-msg">{{end|date:"m/d/y"}}</span>
+              ]
+            </span>
+          </b>
+        </span>
+      </div>
+
+      <div class="col-xs-7" id="week-div">
+        {% include 'display_week.html' %}
+      </div>
+      <div class="col-xs-2">
+        
+        <span>
+          <b onclick="ttDayCopyHours(this)" class="btn" data-copy="period-total">Range Total: 
+            <span id="period-total">
+                {{total_hours}}
+            </span>
+          </b>
+        </span>
+        <!-- <span>
+          <b onclick="ttDayCopyHours(this)" class="btn" data-copy="week-notes">
+          Week Notes 
+          </b>
+          <textarea style="display:none;width:0;height:0;position:fixed;left:-99999px;" id="week-notes">{% for note in week.notes %}{{note}}{%endfor%}</textarea>
+        </span> -->
+      </div>
+    </div>
+    
+    <hr>
+    <div class="row">
+    	<div class="col-sm-3"><b>Project</b></div>
+		  <div class="col-sm-3 text-center"><b>Time (hours)</b></div>
+		  <div class="col-sm-3"><b>Date</b></div>
+		  <div class="col-sm-3"><b>Tester</b></div>
+    </div>
+
+	<div class="row" id="entries">
+		{% include 'display_time_entries.html' %}
+	</div>
+</div>
+
+
+<div id="page-data" style="display:none;" data-section="{{section}}"></div>
+{% endblock %}

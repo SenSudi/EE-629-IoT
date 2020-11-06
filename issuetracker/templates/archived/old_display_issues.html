@@ -1,0 +1,51 @@
+{% for issue in tracked_issues %}
+	<div class="row">
+        <div class="col-sm-12 {% cycle 'even' 'odd' %} issue">
+            <div class="row item" id="{{issue.id}}">
+                <span style="display:none;">{{issue.project.codename}} {{issue.project.title}} {{issue.project.client}}</span>
+                <div class="row" style="padding:10px;padding-top:20px;">
+                    <div onclick="itIssueEdit(this)" class="col-md-3 item-title vc" style="background-color:#a6a6a6;cursor:pointer;
+">
+                        <b>{{issue.title}}</b>
+                    </div>
+                    <div class="col-md-1 text-center">
+                        <b>{{issue.status.title}}</b>
+                    </div>
+                    <div class="col-md-2 item-contrib-name">
+                        <b>{{issue.technical_poc.first_name}} {{issue.technical_poc.last_name}}</b>
+                    </div>
+                    <div class="col-md-2 item-contrib-name">
+                        {% if issue.issue_owner.first_name %}
+                        <b>{{issue.issue_owner.first_name}} {{issue.issue_owner.last_name}}</b>
+                        {% else %}
+                        <b>{{issue.issue_owner.user.first_name}} {{issue.issue_owner.user.last_name}}</b>   
+                        {% endif %}
+                    </div>
+                    <div class="col-md-2 text-left item-updated">
+                        <b>{{issue.updated}}</b>
+                    </div>
+                    <div class="col-md-2 text-right">
+                        <i onclick="itNoteModal(this)" class="fa fa-comment btn item-note" style="padding-top:2px;"></i>
+                        <span class="label label-rouded label-info pull-right note-count">{{issue.notes.all.count}}</span>
+                    </div>
+                </div>
+                <div class="item-type" id="{{item.item_type}}" style="display:none;"></div>
+                <div class="row">
+                    <div class="col-md-9 item-description">
+                        <span style="overflow:hidden;white-space:pre-wrap;padding:5px;">    {{issue.description}}</span>
+                    </div>
+                    <div class="col-md-3 text-left" style="margin-bottom:5px;">
+                        <a href="{{issue.latest_issue_file.file.url}}" target="_blank"><b>{{issue.latest_issue_file}}</b></a>
+                        {% if issue.associated_files.all.count > 0 %}
+                            <hr style="margin:2px;background-color:#686868;">
+                            <b>Associated Files</b><br>
+                            {% for file in issue.associated_files.all %}
+                                <a href="{{file.file.url}}" target="_blank">{{file.filename}}</a><br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

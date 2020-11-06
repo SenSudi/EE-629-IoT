@@ -1,0 +1,14 @@
+{% extends 'form_item_modal.html' %}
+{% load static %}
+
+{% block header_title %}
+	Create new <b>Status</b>
+{%endblock%}
+
+{% block header_additional %}
+	
+{%endblock%}
+
+{% block body_content %}
+	{% include 'status_form.html' with class=True %}
+{%endblock%}

@@ -1,0 +1,860 @@
+import time
+import sys
+from django.shortcuts import render
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect as HRR
+from django.http import HttpResponse as HR
+from django.http import JsonResponse as JR
+from django.core import serializers as ser
+from django.contrib.auth.models import User
+from django.db.models import Q
+from django.db.models.query import EmptyQuerySet as EQS
+from django.utils.safestring import mark_safe
+from django.utils import timezone
+
+from .models import Project, Phase
+from utils.models import Note, Meth_Item, Contact, Report, Recommendation, Vulnerability, Client
+from utils.models import Task_Item as Task
+from utils.models import Import_Table as IT
+from utils.models import Master_Table as MT
+from utils.models import Scrap_Table as ST
+from utils.models import Time_Object as TO
+import utils.models
+
+from .forms import ProjectForm as PF
+from .forms import MethodForm as MF
+from .forms import ReportForm as RF
+from .forms import RecForm as RecF
+from .forms import VulnForm as VF
+from .forms import TaskForm as TF
+from .forms import NoteForm as NF
+from .forms import ContactForm as CF
+
+from utils.tools import new_report as Export
+from utils.tools import check_if_file_exists as Check
+
+# Create your views here.
+context = {}
+data_item_list = ['whois', 
+				  'dns', 
+				  'cidr', 
+				  'domain', 
+				  'host', 
+				  'user', 
+				  'location', 
+				  'phone', 
+				  'email', 
+				  'vuln', 
+				  'service',
+				  'person',
+				  'url',
+				  'file']
+
+
+
+def get_model_attribute_names_list(model):
+	attribute_list = []
+	for item in model._meta.__dict__['concrete_fields']:
+		attribute = str(item.name)
+		if attribute != 'id':
+			attribute_list.append(attribute)
+	return attribute_list
+
+def check_for_m_2_m(model):
+		if len(model._meta.__dict__['local_many_to_many']) == 0:
+			return False
+		else:
+			return True
+
+def get_m_2_m_name_list(model):
+	name_list = []
+	for item in model._meta.__dict__['local_many_to_many']:
+		name = item.name
+		name_list.append(name)
+	return name_list
+
+
+
+def get_model_attribute_values_list(model_instance, attributes):
+	model = model_instance
+	values_list = []
+	for attribute in attributes:
+		if attribute == 'project':
+			value = str(model.project.title)
+		else:
+			value = str(model.__dict__.get(attribute,''))
+		values_list.append(value)
+		
+	return values_list
+
+def format_for_header(string):
+	under 		= '_'
+	space 		= ' '
+	formatted 	= string.replace(under,space).title()
+	if formatted == 'Text Command':
+		formatted = 'Command'
+	return formatted
+
+class table_object():
+	def __str__(self):
+		return 'table'
+class data_object():
+	def __str__(self):
+		return 'data'
+class row_object():
+	def __str__(self):
+		return 'row'
+class header_object():
+	def __str__(self):
+		return 'header'
+
+def vuln_search(word_list, objects_list):
+	objects_list = []
+	length = len(objects_list)
+	for word in word_list:
+		if word[0] == ' ':
+			word = word[1:]
+		obj = Vulnerability.objects.filter(title__contains=word)
+		objects_list.extend(obj)
+		if len(objects_list) == length:
+			obj = Vulnerability.objects.filter(category__contains=word)
+			objects_list.extend(obj)
+		if len(objects_list) == length: 
+			obj = Vulnerability.objects.filter(description__contains=word)
+			objects_list.extend(obj)
+		if len(objects_list) > length:
+			length += 1
+		print length
+	print objects_list
+	return objects_list
+
+def get_context_items(context):
+	projects_list 			= Project.objects.all()
+	projects_count 			= Project.objects.all().count()
+	vulnerabilities_count 	= Vulnerability.objects.all().count()
+
+	context['projects']					= projects_list
+	context['projects_count'] 			= projects_count
+	context['vulnerabilities_count'] 	= vulnerabilities_count
+	return context
+
+def get_data_item_count(project):
+	count = 0
+	import_table = project.import_table_set.get()
+	master_table = project.master_table_set.get()
+	scrap_table  = project.scrap_table_set.get()
+	for item in data_item_list:
+		i_manager 	= getattr(import_table, '%s' % item)
+		num 		= i_manager.all().count()
+		count 		+= num
+		m_manager 	= getattr(master_table, '%s' % item)
+		num 		= m_manager.all().count()
+		count 		+= num
+		s_manager 	= getattr(scrap_table, '%s' % item)
+		num 		= s_manager.all().count()
+		count 		+= num
+	return count
+
+def total_data_count():
+	count = 0
+	for project in Project.objects.all():
+		count += get_data_item_count(project)
+	return count
+	
+@login_required(login_url='/login/')
+def home(request):
+	context 				= {}
+	context 				= get_context_items(context)
+	reports_count 			= Report.objects.all().count()
+	user 					= request.user
+	inbox					= user.inbox_set.get()
+	context['inbox']			= inbox.message.all()
+	context['reports_count'] 	= reports_count
+	context['client_count']		= Client.objects.all().count()
+	context['total_data_count'] = total_data_count()
+	return render(request, 'home.html', context)
+
+@login_required(login_url='/login/')
+def overview(request):
+	get_context_items(context)
+	vuln_count 				= 0
+	context['section'] 		= 'Project Overview'
+	vuln_pk_list 			= []
+	redundancy 				= 0
+	redun_list 				= []
+	project 				= context['project']
+	data_item_count 		= get_data_item_count(project)
+	context['data_item_count'] = data_item_count
+	context['report_count'] = project.report_set.count()
+	for report in project.report_set.all():
+		for item in report.vulnerabilities.all():
+			vuln_count 		+= 1
+			if item.pk not in vuln_pk_list:
+				vuln_pk_list.append(item.pk)
+			else:
+				redun_list.append(str(item.title))
+				redundancy 	+= 1
+	context['vuln_count'] 	= vuln_count
+	context['redundancy'] 	= redundancy
+	context['redun_list'] 	= redun_list
+	context['task_count']	= len(context['tasks'])
+	return render(request, 'overview.html', context)
+
+@login_required(login_url='/login/')
+def remove_vuln(request, report_id, uid):
+	vuln = Vulnerability.objects.get(pk=uid)
+	report = Report.objects.get(pk=report_id)
+
+	report.vulnerabilities.remove(vuln)
+	report.save()
+	return HRR('/report/%s' % report_id)
+
+
+@login_required(login_url='/login/')
+def close_project(request):
+	context = {}
+	return HRR('/')
+
+@login_required(login_url='/login/')
+def vulnerabilities(request, uid = None):
+	get_context_items(context)
+	objects_list 				= []
+	vuln_pk 					= []
+	error_amount 				= 0
+	success_amount 				= 0
+	form 						= VF()
+	projects_list 				= Project.objects.all()#values_list('title', flat=True))
+	reports_list 				= Report.objects.values_list('title', flat=True)
+	context['projects']			= projects_list
+	context['reports'] 			= reports_list
+	context['section'] 			= 'vulnerabilities'
+	context['error'] 			= ''
+	context['form'] 			= form
+	context.pop('search', None)
+	context.pop('error', None)
+	context.pop('success', None)
+	#print context['updated_flag']
+	context['data_table'] = table_formatter(False,'vulnerability')
+	context['vuln'] = True
+	if request.method == 'POST':
+		if request.POST.get('search-val', False):
+			search 				= request.POST['search-val']
+			context['term_list']= search.split(',')
+			#objects_list = Vulnerability.objects.filter(reduce(lambda x, y: x | y, [Q(category__contains=word) for word in term_list]))
+			context['search'] 	= vuln_search(context['term_list'], objects_list)
+
+		# If request.POST contains a value for 'add-to-report', otherwise defult to false	
+		elif request.POST.get('update-vulnerabilities', False):
+			# Get the pk for selected vuln from request.POST.
+			pk_list 	= request.POST.getlist('item-pk', None)
+			# Get the descriptions for the selected vulns
+			desc_list 	= request.POST.getlist('item-desc', None)
+			# Instantiate and update vulns if neccessary
+			for idx, item in enumerate(pk_list):
+				vuln = Vulnerability.objects.get(pk=item)
+				if desc_list[idx] != vuln.description:
+					vuln.description 	= desc_list[idx]
+					vuln.save()
+					success_amount 		+= 1
+					objects_list.append(vuln)
+			if success_amount == 0:
+				context.pop('success', None)
+			else:
+				context['num_success'] 	= success_amount
+				context['success'] 		= ' Vulnerabilit'
+				context['search'] 		= objects_list
+			time.sleep(.5)
+
+		elif request.POST.get('show-all', None):
+			context['search'] 			= Vulnerability.objects.all()
+			context['updated_flag'] 	= False
+						
+		else:
+			form = VF(request.POST)
+			if form.is_valid():
+				form.save()
+				
+	if uid.isdigit() == False:
+		context.pop('project', None)
+	return render(request, 'vulnerabilities.html', context)
+
+@login_required(login_url='/login/')
+def recommendations(request):
+	get_context_items(context)
+	objects_list 					= []
+	context['section'] 				= 'recommendations'
+	rec 							= Recommendation.objects.all()
+	context['recommendations'] 		= rec
+	form 							= RecF()
+	context['form'] 				= form
+	context.pop('search', None)
+	if request.method == 'POST':
+		if request.POST.get('search-val', False):
+			search 					= request.POST['search-val']
+			context['term_list'] 	= search.split(',')
+			context['search'] 		= vuln_search(context['term_list'], objects_list)
+		else:
+			form 					= RecF(request.POST)
+			if form.is_valid():
+				form.save()
+	return render(request, 'recommendations.html', context)
+
+@login_required(login_url='/login/')
+def report_details(request, uid):
+	get_context_items(context)
+	report = Report.objects.get(pk=uid)
+	context['report'] 			= report
+	context['section'] 			= 'report detail'
+	context['vulnerabilities'] 	= report.vulnerabilities.all()
+	context.pop('search', None) # Clear the search on load
+	objects_list 				= []
+	if Check(report.file_url):
+		context['available'] 	= True
+	else:
+		context.pop('available', None)
+	if request.method == 'POST':
+		if request.POST.get('search-val', False):
+			search 				= request.POST['search-val']
+			term_list 			= search.split(',')
+			#objects_list = Vulnerability.objects.filter(reduce(lambda x, y: x | y, [Q(category__contains=word) for word in term_list]))
+			context['search'] 	= vuln_search(term_list, objects_list)
+
+		elif request.POST.get('add-to-report', False):
+			vuln_pk 		= []
+			error_amount 	= 0
+			success_amount 	= 0
+			report_title 	= report.title
+			# Get the pk for selected vul from request.POST and cast as int.
+			pk_list 		= request.POST.getlist('item-pk', None)
+			for item in pk_list:
+				print item	
+				vuln_pk.append(int(item))
+			# If the report title variable is blank.
+			if report_title == '':
+				# Print an error to the page.
+				context['error'] = 'No report by that name was found'
+			else:
+				# Set the report to the one with the matching title.
+				report		= Report.objects.get(title=report_title)
+				# Get a flat list of vulnerability pk's from the report.
+				vuln_list 	= list(report.vulnerabilities.values_list('pk', flat=True))
+				# If the vuln pk from the form is already associated to the report.	
+				for item in vuln_pk:
+					# Instantiate a vulnerability object using the pk from the report.
+					vuln = Vulnerability.objects.get(pk=item)
+					# Update the vulnerability with any new description info
+					if request.POST.get('item-desc', False):
+						if request.POST['item-desc'] != vuln.description:
+							vuln.description = request.POST['item-desc']
+							vuln.save()
+							report.vulnerabilities.add(vuln)
+							success_amount += 1
+						elif item not in vuln_list:
+							# Use the relationship manager to add the vulnerability to the report object.
+							report.vulnerabilities.add(vuln)
+							success_amount += 1
+						else:
+							error_amount += 1
+							vuln_pk.remove(item)
+					# Print an error to the page.
+				if error_amount == 0:
+					context.pop('error', None)
+				else:
+					context['num_error'] 	= error_amount
+					context['error'] 	 	= ' Vulnerabilit'
+				if success_amount == 0:
+					context.pop('success', None)
+				else:
+					context['num_success'] 	= success_amount
+					context['success'] 		= ' Vulnerabilit'
+		else:
+			r = Report.objects.get(pk=uid)
+			Export(r)
+			time.sleep(2)
+			return HRR('/report/%s' % uid)
+
+	return render(request, 'report_details.html', context)
+
+@login_required(login_url='/login/')
+def method(request):
+	get_context_items(context)
+	form = MF()
+	context['form'] = form
+	methods_list = Meth_Item.objects.all()
+	context['Meth_Item'] = methods_list
+	return render(request, 'method.html', context)
+
+@login_required(login_url='/login/')
+def add_project(request):
+	get_context_items(context)
+	if request.method == 'POST':
+		title = request.POST.get('title', None)
+		form = PF(request.POST, request.FILES)
+		print form.is_valid()
+		if form.is_valid():
+			form.save(commit=False)
+			form.client = Client.objects.get(name=request.POST.get('client',''))
+			#form.associate_files = request.FILES
+			project = form.save()
+			for item in request.FILES:
+				project.associate_files = request.FILES
+				project.save()
+			# Instantiate tasks
+			#project 	= Project.objects.get(title=form.cleaned_data.get('title'))
+			#project 	= list(Project.objects.all())[-1]
+			meth_list 	= project.project_type.meth_item_set.all()
+			task_list 	= []
+			print meth_list
+			for item in meth_list:
+				# Instantiate task items.
+				new_task 				= Task()
+				if item:
+					new_task.meth_item 	= item
+				else:
+					new_task.meth_item 	= None
+				new_task.status 		= 'open'
+				new_task.project 		= project
+				new_task.help_base		= 'Base help'
+				new_task.title 			= item.title
+				new_task.est_time		= '99:99:99'
+				new_task.tsk_duration	= timezone.now()
+				new_task.tsk_start		= timezone.now()
+				new_task.tsk_end		= timezone.now()
+				new_task.base_command	= item.command
+				new_task.exec_cmd		= 'sample exec cmd'
+				new_task.exec_duration	= '0:00:01'
+				new_task.save()
+				task_list.append(new_task)
+			new_import_table 			= IT()
+			new_import_table.project 	= project
+			new_import_table.save()
+			new_master_table 			= MT()
+			new_master_table.project 	= project
+			new_master_table.save()
+			new_scrap_table 			= ST()
+			new_scrap_table.project 	= project
+			new_scrap_table.save()
+
+	context['tasks'] = task_list
+	if title == None:
+		return HRR('/')
+	else:
+		return HRR('/projects/%s' % (project.id))
+
+@login_required(login_url='/login/')
+def new_project(request):
+	get_context_items(context)
+	form = PF()
+	context['form'] = form
+	return render(request, 'new_project.html', context)
+
+@login_required(login_url='/login/')
+def project(request,uid,info=''):
+	project_object = Project.objects.get(pk=uid)
+	context['project'] = project_object
+	'''''''''''''''''''''''''''''''''''''''''''''
+	#											#
+	#	THIS FUNCTIONALITY NEEDS TO BE MOVED	#
+	#											#
+	'''''''''''''''''''''''''''''''''''''''''''''
+	if(info == 'reports'):
+		if request.method == 'POST':
+			user 		= request.user
+			user_pk 	= User.objects.get(username=user.username).pk
+			form 		= RF(request.POST)
+			if form.is_valid():
+				report 	= form.save(commit=False)
+				#print report.report_type
+				report.updated_by 	= report.created_by = '%s %s' % (user.first_name, user.last_name)
+				report.created 		= report.updated = timezone.now()
+				report.project 		= project_object
+				report.save()
+				#print report.title
+			else:
+				print form.errors
+		form 						= RF()
+		context['form'] 			= form
+		reports_list 				= Report.objects.filter(project__title__exact=project_object.title)
+		context['reports'] 			= reports_list
+		context['section'] 			= info
+		return render(request, 'report.html', context)
+	'''''''''''''''''''''''''''''''''''''''''''''
+	#	^This segment needs sperate function^	#
+	'''''''''''''''''''''''''''''''''''''''''''''
+
+	context['tasks'] = list(project_object.task_item_set.all())
+	return HRR('/overview')
+
+'''''''''''''''''''''
+#     WORKFLOW      #
+'''''''''''''''''''''
+@login_required(login_url='/login/')
+def workflow(request):
+	get_context_items(context)
+	project = context['project']
+	context['phases'] = list(project.project_type.phase.all())
+
+	return render(request, 'workflow.html', context)
+
+@login_required(login_url='/login/')
+def new_task(request):
+	if request.method == 'POST':
+		project = context['project']
+		phase_title = request.POST.get('phase', False)
+		if phase_title:
+			phase 					= Phase.objects.get(title=phase_title)
+			new_task 				= Task()
+			new_task.project 		= project
+			new_task.phase 			= phase
+			new_task.title 			= request.POST.get('tsk_title', '')
+			new_task.help_base 		= request.POST.get('help_base','')
+			new_task.base_command 	= request.POST.get('base_cmd','')
+			new_task.save()
+			task_dict = new_task.__dict__
+			task_dict.pop('_state',None)
+			return JR({'task':task_dict})
+		else:
+			return HR('No Phase Selected!')
+	else:
+		return HR('Not Authorized!')
+
+@login_required(login_url='/login/')
+def task_info(request):
+	if request.method == 'POST':
+		task_id = request.POST.get('task_id', False)
+		if task_id:
+			task = Task.objects.get(pk=task_id)
+			task_info = task.__dict__
+			task_info.pop('_state', None)
+			return JR({'task': task_info})
+	else:
+		return HR('Not Authorized')
+
+'''''''''''''''''''''
+#    END WORKFLOW   #
+'''''''''''''''''''''
+
+@login_required(login_url='/login/')
+def scrap_table(request, uid):
+	get_context_items(context)
+	context['section'] 	= 'Scrap Table'
+	project 			= context['project']
+	scrap_table 		= project.scrap_table_set.get()
+	form_name 			= context.get('form_name', '')
+	name 				= context.get('name', '')
+	context['data_table'] = table_formatter(False,'scrap_table')
+	context['scrap'] = True
+
+	if request.method == 'POST':
+		if request.POST.get('submit-data', False):
+			form = getattr(sys.modules['project.forms'], "%s" % form_name)(request.POST)
+			if form.is_valid():
+				data_item = form.save()
+				
+				manager = getattr(scrap_table, '%s' % name)
+				manager.add(data_item)
+				scrap_table.save()
+			else:
+				print 'error'
+	return render(request, 'import_table.html', context)
+
+@login_required(login_url='/login/')
+def master_table(request, uid):
+	get_context_items(context)
+	context['section'] 	= 'Master Table'
+	project 			= context['project']
+	master_table 		= project.master_table_set.get()
+	form_name 			= context.get('form_name', '')
+	name 				= context.get('name', '')
+	context['data_table'] = table_formatter(False,'master_table')
+	context['master'] = True
+
+	if request.method == 'POST':
+		if request.POST.get('submit-data', False):
+			form = getattr(sys.modules['project.forms'], "%s" % form_name)(request.POST)
+			#print form.is_valid()
+			if form.is_valid():
+				data_item = form.save()
+				
+				manager = getattr(master_table, '%s' % name)
+				manager.add(data_item)
+				master_table.save()
+			else:
+				print 'error'
+		if request.POST.get('send-to-scrap', False):
+			item_pk 		= request.POST.get('item-pk', '')
+			item_label 		= request.POST.get('item-label', '')
+			manager 		= getattr(master_table, '%s' % item_label)
+			item 			= manager.get(pk=item_pk)
+			scrap_table		= project.scrap_table_set.get()
+			scrap_manager	= getattr(scrap_table, '%s' % item_label)
+
+			scrap_manager.add(item)
+			scrap_table.save()
+			manager.remove(item)
+			master_table.save()
+	return render(request, 'import_table.html', context)
+
+@login_required(login_url='/login/')
+def import_table(request, uid):
+	get_context_items(context)
+	context['section'] 	= 'Import Table'
+	project 			= context['project']
+	table 				= project.import_table_set.get()
+	context['table'] 	= table
+	name 				= context.get('name', '')
+	form_name 			= context.get('form_name', '')
+	table 				= context['table']
+	context['data_table'] = table_formatter(False,'import_table')
+	context['import'] = True
+	if request.method == 'POST':
+		
+		if request.POST.get('send-to-master', False):
+			item_pk 		= request.POST.get('item-pk', '')
+			item_label 		= request.POST.get('item-label', '')
+			manager 		= getattr(table, '%s' % item_label)
+			item 			= manager.get(pk=item_pk)
+			master_table 	= project.master_table_set.get()
+			master_manager 	= getattr(master_table, '%s' % item_label)
+
+			master_manager.add(item)
+			master_table.save()
+			manager.remove(item)
+			table.save()
+			return HR('success')
+
+		if request.POST.get('send-to-scrap', False):
+			item_pk 		= request.POST.get('item-pk', '')
+			item_label 		= request.POST.get('item-label', '')
+			manager 		= getattr(table, '%s' % item_label)
+			item 			= manager.get(pk=item_pk)
+			scrap_table		= project.scrap_table_set.get()
+			scrap_manager	= getattr(scrap_table, '%s' % item_label)
+
+			scrap_manager.add(item)
+			scrap_table.save()
+			manager.remove(item)
+			table.save()
+			return HR('success')
+
+	return render(request, 'import_table.html', context)
+
+def load_form(request,name):
+	#print name
+	context['name'] = name
+	prep = name[0].capitalize() + name[1:]
+	form_name = '%sForm' % (prep)
+	context['form_name'] = form_name
+	form = getattr(sys.modules['project.forms'], "%s" % form_name)()
+	return HR(form.as_p())
+
+def add_data_item(request):
+
+	pk = context['project'].pk
+	return HRR('/import_table/%s' % pk)
+
+
+def notes(request, uid):
+	get_context_items(context)
+	context['section'] 	= 'Notes'
+	form 				= NF()
+	context['form'] 	= form
+	project 			= context['project']
+
+	if request.method == 'POST':
+		if request.POST.get('add-note', False):
+			form = NF(request.POST)
+			if form.is_valid():
+				note = form.save(commit=False)
+				note.project = project
+				note.save()
+		if request.POST.get('update-note', False):
+			item_pk = request.POST.get('item-pk', '')
+			note = Note.objects.get(pk=item_pk)
+			body = request.POST.get('item-body', False)
+			if body:
+				note.body = body
+				note.save()
+
+	notes_list 			= list(project.note_set.all())
+	context['notes'] 	= notes_list
+	return render(request, 'notes.html', context)
+
+def contacts(request,uid):
+	get_context_items(context)
+	context['section'] 	= 'Contacts'
+	form 				= CF()
+	context['form'] 	= form
+	project 			= context['project']
+
+	if request.method == 'POST':
+		if request.POST.get('add-contact', False):
+			form = CF(request.POST)
+			if form.is_valid():
+				contact = form.save(commit=False)
+				contact.save()
+				contact.project.add(project)
+		if request.POST.get('update-contact', False):
+			item_pk 	= request.POST.get('item-pk', '')
+			contact 	= Contact.objects.get(pk=item_pk)
+			first_name 	= request.POST.get('item-first-name', False)
+			last_name 	= request.POST.get('item-last-name', False)
+			email 		= request.POST.get('item-email', False)
+			phone 		= request.POST.get('item-phone', False)
+			if first_name:
+				contact.first_name = first_name
+			if last_name:
+				contact.last_name = last_name
+			if email:
+				contact.email = email
+			if phone:
+				contact.phone = phone
+			contact.save()
+
+	contacts_list 		= list(project.contact_set.all())
+	context['contacts'] = contacts_list
+	return render(request, 'contacts.html', context)
+
+
+
+def calendar(request):
+
+	return render(request, 'calendar.html', context)
+
+
+def remove_table_item(request):
+	pk 				= request.POST.get('pk', '')
+	item_type 		= request.POST.get('item-type', '')
+	if item_type in data_item_list:
+		prep = item_type[0].capitalize() + item_type[1:]
+		final = 'Data_%s' % prep
+	item_model		= getattr(utils.models, '%s' % final)
+	model_instance 	= item_model.objects.get(pk=pk)
+	model_instance.delete()
+	return HR('success')
+
+def new_data(request, name, table):
+	prep 			= name[0].capitalize() + name[1:]
+	model_name 		= 'Data_%s' % prep
+	model 			= getattr(sys.modules['utils.models'], '%s' % model_name)()
+	model.save()
+
+	index 			= table.index(' ')
+	table_set 		= '%s_table_set' % table[:index]
+	table_manager 	= getattr(context['project'], '%s' % table_set).get()
+	item_manager 	= getattr(table_manager, '%s' % name)
+	item_manager.add(model)
+
+
+	return JR({'attrs': get_model_attribute_names_list(model), 'pk': model.pk})
+
+def update_data_item(request):
+	
+	if request.method == 'POST':
+		m_type 		= request.POST.get('m_type', '')
+		name 		= request.POST.get('name', '')
+		if ' ' in name:
+			idx 	= name.index(' ')
+			name 	= name[:idx]
+		val 		= request.POST.get('value', '')
+		pk 			= request.POST.get('pk', '')
+		loc 		= pk.index('-')
+		clean_pk 	= pk[loc+1:]
+		index 		= m_type.index('-')
+		prep 		= m_type[0].capitalize() + m_type[1:index] 
+		accessor 	= getattr(sys.modules['utils.models'], 'Data_%s' % prep)
+		objects 	= getattr(accessor, '%s' % 'objects')
+		model 		= getattr(objects, '%s' % 'get')(pk=clean_pk)
+		setattr(model, '%s' % name, val)
+		model.save()
+		return_val 	= '%s-%s' % (prep,model.pk)
+		return HR(return_val)
+
+
+
+def table_formatter(request=False,m_name='',r_type=''):
+	# print context
+	table_list				= []
+	header 					= header_object()
+	table_objects_list 		= []
+	project 				= context.get('project',Project.objects.get(pk=11))
+	if request:
+		model_name			= request.POST.get('model-name', '')
+		response_type 		= request.POST.get('response-type', '')
+	else:
+		model_name 			= m_name
+		response_type 		= r_type
+	model_manager 			= getattr(project, '%s_set' % model_name)
+	if '_table' in model_name:
+		model_instance = model_manager.get()
+		if check_for_m_2_m(model_instance):
+			model_forward_relationships_list = get_m_2_m_name_list(model_instance)
+			
+			for model_man in model_forward_relationships_list:
+				table 					= table_object()
+				manager 				= getattr(model_instance, '%s' % model_man)
+				model 					= manager.model
+				model_attributes_list 	= get_model_attribute_names_list(model)
+				table.label 			= model_man
+				header_list 			= []
+				for item in model_attributes_list:
+					header_list.append(format_for_header(item))
+				# Set Table Header
+				table.header			= header_list
+				#print manager.all()
+				model_instance_list		= manager.all()
+				row_objects_list		= []
+				table.count = model_instance_list.count()
+				if len(model_instance_list) > 0:
+					for mod in list(manager.all()):
+						#print 'instance: %s' % mod.__dict__
+						model_attribute_values_list = get_model_attribute_values_list(mod,model_attributes_list)
+						row							= row_object()
+						row.id 						= mod.__dict__.get('id','')
+						# Fill The Row With Values
+						row.list 					= model_attribute_values_list
+						row.ziplist					= zip(model_attributes_list, model_attribute_values_list)
+						row_objects_list.append(row)
+				# Fill The Table With Rows
+				table.rows = row_objects_list
+				table_objects_list.append(table)
+		return table_objects_list	
+	else :
+		model_instance_list 	= model_manager.all()
+		table 					= table_object()
+		model 					= model_manager.model
+		model_attributes_list 	= get_model_attribute_names_list(model)
+		header_list 			= []
+		for item in model_attributes_list:
+			header_list.append(format_for_header(item))
+		# Set Table Header
+		table.header			= header_list
+		table.label 			= model_name
+		table.count 			= model_manager.count()
+		row_objects_list		= []
+		for mod in model_instance_list:
+			model_attribute_values_list = get_model_attribute_values_list(mod, model_attributes_list)
+			row 						= row_object()
+			row.id 						= mod.__dict__.get('id', '')
+			row.list 					= model_attribute_values_list
+			row.ziplist					= zip(model_attributes_list, model_attribute_values_list)
+			row_objects_list.append(row)
+		# Fill The Table With Rows
+		table.rows = row_objects_list
+		table_objects_list.append(table)
+
+		return table_objects_list
+	# Either return the data as some useable object for JS
+	# or set the object into the context
+	# or return the object to set it into the context where it was called
+
+def find_model(request):
+	#print request.POST
+	val = request.POST.get('val','')
+	client_names = []
+	client_list = list(Client.objects.filter(name__contains=val))
+	for client in client_list:
+		client_names.append(client.name)
+	transmission = {'clients':client_names}
+	return JR(transmission)

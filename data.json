@@ -1,0 +1,5850 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "dgy3pbs1bwfj1p38aaaqiuobiimxbsr5",
+  "fields": {
+    "session_data": "ZWQwNDllY2M4OGIzMTI1ZDI3ZDZkOWQzYTZkMzQ5MTNhNzg2YTIzOTp7Il9hdXRoX3VzZXJfaGFzaCI6IjQwYmM1MGQzZGU1OTQ0NTllM2Y1MDgxYjc0M2M2NWIyZDFjOTQyZTgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=",
+    "expire_date": "2018-05-17T06:12:30.502"
+  }
+},
+{
+  "model": "clients.client",
+  "pk": 1,
+  "fields": {
+    "name": "Default Client",
+    "contacts": []
+  }
+},
+{
+  "model": "clients.client",
+  "pk": 2,
+  "fields": {
+    "name": "Client 1",
+    "contacts": []
+  }
+},
+{
+  "model": "project.vip",
+  "pk": 1,
+  "fields": {
+    "guid": "c3ba54f713bc1577d75ab5ef72c91de7",
+    "content_type": 4,
+    "object_id": 3,
+    "role": 1
+  }
+},
+{
+  "model": "users.context",
+  "pk": 1,
+  "fields": {
+    "tt_date_range_start": "2018-04-16",
+    "tt_date_range_end": "2018-04-23",
+    "tt_fields_sort_by": "-date",
+    "tt_search_bar": "''",
+    "tt_user_filter": "all",
+    "tt_project_filter": "all",
+    "ms_project_filter": "all",
+    "ms_status_filter": "all",
+    "ms_date_range_start": null,
+    "ms_date_range_end": null,
+    "ms_sort_field": "",
+    "ms_sort_ascending": false,
+    "pulse_state": "collapse",
+    "pulse_btn_class": "fa-plus",
+    "pulse_body_style": "display:none;"
+  }
+},
+{
+  "model": "users.context",
+  "pk": 2,
+  "fields": {
+    "tt_date_range_start": "2018-05-03",
+    "tt_date_range_end": "2018-05-10",
+    "tt_fields_sort_by": "-date",
+    "tt_search_bar": "''",
+    "tt_user_filter": "all",
+    "tt_project_filter": "all",
+    "ms_project_filter": "all",
+    "ms_status_filter": "all",
+    "ms_date_range_start": null,
+    "ms_date_range_end": null,
+    "ms_sort_field": "",
+    "ms_sort_ascending": false,
+    "pulse_state": "collapse",
+    "pulse_btn_class": "fa-plus",
+    "pulse_body_style": "display:none;"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 1,
+  "fields": {
+    "guid": "2dd3fa0d6d03a1d5b7a8d60df0e35d4f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 2,
+  "fields": {
+    "guid": "280d3f52c84cbe52d9f46e416f3756aa"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 3,
+  "fields": {
+    "guid": "b84170f83d2e652ab110d34af387e4f3"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 4,
+  "fields": {
+    "guid": "b5a2bfa2747b665f2c4863cd18d13eb8"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 5,
+  "fields": {
+    "guid": "1cad3905fb6292b90427f9c5f702e547"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 6,
+  "fields": {
+    "guid": "9cfa665a37d0af71598cb3a0d1ada1ca"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 7,
+  "fields": {
+    "guid": "0afe80cf73d67d3b57fcc5608b4e03ba"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 8,
+  "fields": {
+    "guid": "8cdf97d884bfac426c3459a32f56aba0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 9,
+  "fields": {
+    "guid": "ae06affc0574bd872dc64d31615cecd5"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 10,
+  "fields": {
+    "guid": "a81f9a216b27d1117efdfa13df648ec6"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 11,
+  "fields": {
+    "guid": "45023ef4aeea6b8b622f218be3b3bad8"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 12,
+  "fields": {
+    "guid": "67e61500c17a14b775fc5e372a77195b"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 13,
+  "fields": {
+    "guid": "c0eb69cac528854a0467b2b6ad3369c2"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 14,
+  "fields": {
+    "guid": "3b7292b9d5e1982daf2c1a558b94301e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 15,
+  "fields": {
+    "guid": "b20671cc36d9576bdccc47ba29cd9edd"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 16,
+  "fields": {
+    "guid": "d183f9dafb829d1285b4109fb700db89"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 17,
+  "fields": {
+    "guid": "a5a6e3a26ac1641d9096caa99cd8fa90"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 18,
+  "fields": {
+    "guid": "b077ffc51738166f83200f9ca5e21fa7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 19,
+  "fields": {
+    "guid": "2fd5fc3f5317af99119b80265df2ca0e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 20,
+  "fields": {
+    "guid": "a38213d9f6a3c83009d26071b1edad0d"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 21,
+  "fields": {
+    "guid": "609a48e0a53ed382ff7acd322354487c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 22,
+  "fields": {
+    "guid": "390988e13ea2f4c67f5e42c707b33d0a"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 23,
+  "fields": {
+    "guid": "a4d53b1c1fa3cecc7aa361761baf7b94"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 24,
+  "fields": {
+    "guid": "ae453e848d092fd69728e69cfbe74099"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 25,
+  "fields": {
+    "guid": "c9a9d9292358fd4d62b3d83d3e92ba09"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 26,
+  "fields": {
+    "guid": "6459b159b6480d01c99f2bb9292f1399"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 27,
+  "fields": {
+    "guid": "877856d2ffbee28a6adee9984bc46694"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 28,
+  "fields": {
+    "guid": "2f98fac5f1edf680f37391ea99d45b2d"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 29,
+  "fields": {
+    "guid": "26c108d0b88cb1ef63b412946dcf9807"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 30,
+  "fields": {
+    "guid": "edaf8425787c5424da05515f793d8de2"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 31,
+  "fields": {
+    "guid": "3d0eeb398ea52c6d71240cce91c2e0f7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 32,
+  "fields": {
+    "guid": "137098659478fbcb3a1d59a03380fe18"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 33,
+  "fields": {
+    "guid": "42bf92d2ebb70fb592e38e7b9ae1be53"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 34,
+  "fields": {
+    "guid": "cb7f658724b86504ab2f1a63a2ade8fc"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 35,
+  "fields": {
+    "guid": "e99c098c23716046a327c9a3c84a056c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 36,
+  "fields": {
+    "guid": "ff29a014eec1ac844d7f1dfe85a19f9f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 37,
+  "fields": {
+    "guid": "314fdb8d9e93ad4a4c97e014800a1e60"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 38,
+  "fields": {
+    "guid": "55f6582c1a1b6c32a113fe9dd6c72ded"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 39,
+  "fields": {
+    "guid": "8f145f9142e1270e8e05b167803f91b3"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 40,
+  "fields": {
+    "guid": "da375c5043c1cc31ea127a5268d14de0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 41,
+  "fields": {
+    "guid": "660295b5c16447e015fffcd6ce259c2c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 42,
+  "fields": {
+    "guid": "a9dc38177296b856d8c751aa4e31fbb0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 43,
+  "fields": {
+    "guid": "51a5543ab0cd89ded203f7bd764c6f12"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 44,
+  "fields": {
+    "guid": "c924e9c503e8aa742c1b6041e29a026e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 45,
+  "fields": {
+    "guid": "eafca43310e61fd809ba4b049c929c82"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 46,
+  "fields": {
+    "guid": "6275ad712c38cecfdcd01d166d9b18dd"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 47,
+  "fields": {
+    "guid": "513bd20efd60eb385f6661a074a21666"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 48,
+  "fields": {
+    "guid": "14a880e0c6de9f121e4dcf50267f3068"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 49,
+  "fields": {
+    "guid": "13b7233445242ef8d591ef2bea6d9362"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 50,
+  "fields": {
+    "guid": "08529e7338125026a1f7a1b81f711dd7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 51,
+  "fields": {
+    "guid": "25f1001cb45b2844af7859c85b57b72d"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 52,
+  "fields": {
+    "guid": "a6dee0765f757fc17a9bdf8ae4e3784b"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 53,
+  "fields": {
+    "guid": "9217c06371f19e029051e268803f2809"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 54,
+  "fields": {
+    "guid": "f796f7e385d0c93fd890506f15b98484"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 55,
+  "fields": {
+    "guid": "5e443a404c36a6780a174eefe24ad5c9"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 56,
+  "fields": {
+    "guid": "e667975f2b3739a5f371210bc1681834"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 57,
+  "fields": {
+    "guid": "c3ba54f713bc1577d75ab5ef72c91de7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 58,
+  "fields": {
+    "guid": "21c5d66a242925021fcabb3911ea5226"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 59,
+  "fields": {
+    "guid": "8625eaecd4d72143b1a9bed20662e5e6"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 60,
+  "fields": {
+    "guid": "b976037237cd3a3f621b9571c267a3c0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 61,
+  "fields": {
+    "guid": "ef3b185cf5db495c747573372ec6d8c2"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 62,
+  "fields": {
+    "guid": "025ad179bcd065404b708a0fae17f37d"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 63,
+  "fields": {
+    "guid": "4ae2c8a2d15309ed221908ef1b5c3b29"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 64,
+  "fields": {
+    "guid": "8e0361e86ac613fd38f8cb639526cc2a"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 65,
+  "fields": {
+    "guid": "51aba1baa97e380c8e76f6ea2f7e2c92"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 66,
+  "fields": {
+    "guid": "f49befb1af3855615e000f101fd9e27e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 67,
+  "fields": {
+    "guid": "1bdc335d022d50e3156cd3ab58ad5383"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 68,
+  "fields": {
+    "guid": "5c79339ae3a7c5ef5fef734257473e23"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 69,
+  "fields": {
+    "guid": "ed49fa1de5c95776450f3cf7dad9f7ee"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 70,
+  "fields": {
+    "guid": "69eeb8eff14b32caccdd56adecf0d03b"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 71,
+  "fields": {
+    "guid": "a64cc56459fdea2ae865bd8134905d2c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 72,
+  "fields": {
+    "guid": "927ba0dc191689217ebcda795c1bdd29"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 73,
+  "fields": {
+    "guid": "ae2cc3c94f380bc1221f09035340d1c9"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 74,
+  "fields": {
+    "guid": "cfa3f89c67451462de9042477906f307"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 75,
+  "fields": {
+    "guid": "84eb1bb163ef6917eaff13e75232924f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 76,
+  "fields": {
+    "guid": "b75265c0b0b70686553aea42ddba8bc0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 77,
+  "fields": {
+    "guid": "3fcf66d78d5b5a7390b7be333dbe03cf"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 78,
+  "fields": {
+    "guid": "93509d5261bed71cd5068c240ac5795a"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 79,
+  "fields": {
+    "guid": "ab39aa441c5305c07bf89275d8375139"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 80,
+  "fields": {
+    "guid": "90320048af24cc97d9dc874527ad285e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 81,
+  "fields": {
+    "guid": "9b566727653f43a8850167b4609d2a94"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 82,
+  "fields": {
+    "guid": "c47575c9c4c4e88fdca2c5a4819bf796"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 83,
+  "fields": {
+    "guid": "326bb1ad4b192411e0adc3b7f37a05c5"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 84,
+  "fields": {
+    "guid": "d989f773b653e5af70c5537567a1eaec"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 85,
+  "fields": {
+    "guid": "e8e75db44d30515c468ed53fe1dc6b61"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 86,
+  "fields": {
+    "guid": "1e9cf32c501ae7d876b663a5f8e7f5dc"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 87,
+  "fields": {
+    "guid": "43f0546fa303d39728a2046035de34f9"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 88,
+  "fields": {
+    "guid": "a241d472ba6fa5c8e435a78ff767733e"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 89,
+  "fields": {
+    "guid": "9d5d10bce4eb425b50828872efee50d0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 90,
+  "fields": {
+    "guid": "aebb87ab9720e6fa2054b67470eb1b00"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 91,
+  "fields": {
+    "guid": "faf31046c797f304bad660a05ce8800b"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 92,
+  "fields": {
+    "guid": "51b862ae3cf1311f8532565e6d6157c7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 93,
+  "fields": {
+    "guid": "8bf00280427b9327a6184cfae447e230"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 94,
+  "fields": {
+    "guid": "d17524bb44ab33f06528d4bc2495651c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 95,
+  "fields": {
+    "guid": "7bff8d38fa8b20a21705921d1543a1d1"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 96,
+  "fields": {
+    "guid": "1ef18dd40e640a1ac961cdb44acd1450"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 97,
+  "fields": {
+    "guid": "024b04805b01f63fb926021f30e4d100"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 98,
+  "fields": {
+    "guid": "f0525608abb031463f4c2e474cc802a1"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 99,
+  "fields": {
+    "guid": "9431b1579343cb5759b360dcbd581cd7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 100,
+  "fields": {
+    "guid": "fdf8abef0623002c2e858e20ff1b9872"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 101,
+  "fields": {
+    "guid": "d8ea8876155f58553e5cfa13f1dd6a6f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 102,
+  "fields": {
+    "guid": "7d16c746c805f95a9f03d89fce0450e7"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 103,
+  "fields": {
+    "guid": "b4bce2b846dd82f17cd78c8ac482f18f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 104,
+  "fields": {
+    "guid": "2545625341af4316f152383a9506eb81"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 105,
+  "fields": {
+    "guid": "764e53625ad952bfa8ccecdeeb8807ac"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 106,
+  "fields": {
+    "guid": "d99e02e88c78548abd47ea705c7c704c"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 107,
+  "fields": {
+    "guid": "bed2d757fd97ed3c76c4dcb25cc90c65"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 108,
+  "fields": {
+    "guid": "fe7687df0157fbb77d1e384e3f4a07fe"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 109,
+  "fields": {
+    "guid": "4eb0b357b2ef8df1306300b61ea98608"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 110,
+  "fields": {
+    "guid": "57312b1955bdf11b49316b7f0b94b2fd"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 111,
+  "fields": {
+    "guid": "1877b8be400f6709599a20a1d8d7ada5"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 112,
+  "fields": {
+    "guid": "d81a2fe9950281f96e905df833a468bc"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 113,
+  "fields": {
+    "guid": "21bcf6f726c3c99b8c42716a470af951"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 114,
+  "fields": {
+    "guid": "1a207d3d93bb6637aa4d83f78c54ccc6"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 115,
+  "fields": {
+    "guid": "f2445c7b903ee85b9a0f74228f75bf09"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 116,
+  "fields": {
+    "guid": "032c83c7fb870ef4bf93b18c2ffc8ab6"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 117,
+  "fields": {
+    "guid": "fa625aaf90013943b38562129a64650b"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 118,
+  "fields": {
+    "guid": "1f1ca905e0cc0217136098d972a5f2ac"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 119,
+  "fields": {
+    "guid": "e2da9f04e3c8436bfa71784166e18f89"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 120,
+  "fields": {
+    "guid": "a31bf85210a2b94be38f7d0732edcb00"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 121,
+  "fields": {
+    "guid": "fd50b92f0a9c61c8d83e62d2bff98931"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 122,
+  "fields": {
+    "guid": "01143972625ee91f32da0f09ac741960"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 123,
+  "fields": {
+    "guid": "698cf87a24db5c8cec965bc0a017266f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 124,
+  "fields": {
+    "guid": "2b3dd2ed0bd52ee6b4d46cdf689003ac"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 125,
+  "fields": {
+    "guid": "f61c2fcd43014010212e6973bf97561f"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 126,
+  "fields": {
+    "guid": "28da495b1cbb53caea21455cf962cde0"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 127,
+  "fields": {
+    "guid": "103737b29a3a5b40ac1c1b3e4e2989a4"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 128,
+  "fields": {
+    "guid": "f6022bad53c9fba8b24eeaff7c440254"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 129,
+  "fields": {
+    "guid": "e4003418186d4497187a57a50fc078a9"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 130,
+  "fields": {
+    "guid": "efa26565a88263773b05f259dbaa4753"
+  }
+},
+{
+  "model": "utils.guid",
+  "pk": 131,
+  "fields": {
+    "guid": "d5918b7b0868793db1f462bcb6b8cdc6"
+  }
+},
+{
+  "model": "utils.label",
+  "pk": 1,
+  "fields": {
+    "guid": null,
+    "lineage_guid": null,
+    "label": "Role1",
+    "content_type": null,
+    "object_id": null,
+    "project": true,
+    "ri_label": false,
+    "attributes": "{\"Title\":\"\"}",
+    "attr_order": "[\"Title\"]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$EWkoAlcKPgpk$qckx0CHoPBpBjLrI5NPcAeWv/XzYAMNc0iMhcnGrA6M=",
+    "last_login": "2018-05-09T00:38:48.218",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "Istrator",
+    "email": "test@test.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-04-15T01:27:24.690",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$jY8oRwnIj317$7CfP9ismgp7DVd44NXpG/vjQgggJD7AJCGuaDE/ilp0=",
+    "last_login": "2018-05-09T00:43:20.371",
+    "is_superuser": true,
+    "username": "TestUser",
+    "first_name": "Test",
+    "last_name": "User",
+    "email": "abc@xyz.pqr",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-05-09T00:42:19",
+    "groups": [],
+    "user_permissions": [
+      1,
+      2,
+      3,
+      19,
+      20,
+      21,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      13,
+      14,
+      15,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      28,
+      29,
+      30,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      46,
+      47,
+      48,
+      43,
+      44,
+      45,
+      52,
+      53,
+      54,
+      49,
+      50,
+      51,
+      58,
+      59,
+      60,
+      55,
+      56,
+      57,
+      61,
+      62,
+      63,
+      70,
+      71,
+      72,
+      67,
+      68,
+      69,
+      64,
+      65,
+      66,
+      79,
+      80,
+      81,
+      76,
+      77,
+      78,
+      73,
+      74,
+      75,
+      100,
+      101,
+      102,
+      88,
+      89,
+      90,
+      85,
+      86,
+      87,
+      103,
+      104,
+      105,
+      94,
+      95,
+      96,
+      82,
+      83,
+      84,
+      91,
+      92,
+      93,
+      97,
+      98,
+      99,
+      16,
+      17,
+      18,
+      109,
+      110,
+      111,
+      106,
+      107,
+      108,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      130,
+      131,
+      132,
+      124,
+      125,
+      126,
+      121,
+      122,
+      123,
+      127,
+      128,
+      129
+    ]
+  }
+},
+{
+  "model": "auditor.action",
+  "pk": 1,
+  "fields": {
+    "who": 3,
+    "what": "created TestProject",
+    "where": "projects/1",
+    "when": "2018-05-09T00:58:27.887",
+    "project": 1,
+    "content_type": 26,
+    "object_id": 1
+  }
+},
+{
+  "model": "files.associated_file",
+  "pk": 5,
+  "fields": {
+    "guid": "c1e399742dc0fb2716a870750681b512",
+    "lineage_guid": "edaf8425787c5424da05515f793d8de2",
+    "filename": "Leet_-_Ext_Prelim_Recon.xlsx",
+    "file": "misc/vagrant/media/methodology/Leet_-_Ext_Prelim_Recon.xlsx",
+    "subdirectory": "misc",
+    "uploader": 3,
+    "updated": "2017-05-17T14:49:10.728",
+    "description": null,
+    "newest": true,
+    "content_type": 36,
+    "object_id": 24,
+    "a_i_guid": "d0cef951d444dce75d59fd2382224b60"
+  }
+},
+{
+  "model": "files.associated_file",
+  "pk": 6,
+  "fields": {
+    "guid": "f1d0887d12927c23c9433418e4c67bb6",
+    "lineage_guid": "3d0eeb398ea52c6d71240cce91c2e0f7",
+    "filename": "Leet_-_Client_-_Assets_Tracker.xlsx",
+    "file": "misc/vagrant/media/methodology/Leet_-_Client_-_Assets_Tracker.xlsx",
+    "subdirectory": "methodology",
+    "uploader": 3,
+    "updated": "2017-08-08T15:52:38.257",
+    "description": null,
+    "newest": true,
+    "content_type": 36,
+    "object_id": 31,
+    "a_i_guid": "98c61c437c8ceca27af923a062cc2b34"
+  }
+},
+{
+  "model": "files.associated_file",
+  "pk": 7,
+  "fields": {
+    "guid": "07318ed06251d01bfc3c195181bd0a2e",
+    "lineage_guid": "137098659478fbcb3a1d59a03380fe18",
+    "filename": "wmd.sh",
+    "file": "misc/vagrant/media/methodology/wmd.sh",
+    "subdirectory": "methodology",
+    "uploader": 3,
+    "updated": "2017-06-06T15:01:50.934",
+    "description": null,
+    "newest": true,
+    "content_type": 36,
+    "object_id": 48,
+    "a_i_guid": "08529e7338125026a1f7a1b81f711dd7"
+  }
+},
+{
+  "model": "files.associated_file",
+  "pk": 8,
+  "fields": {
+    "guid": "159cedbe520e1d311e2cfaabf66aa3fd",
+    "lineage_guid": "42bf92d2ebb70fb592e38e7b9ae1be53",
+    "filename": "Leet_-_Client_-_Phishing_Test_Template.docx",
+    "file": "misc/vagrant/media/methodology/Leet_-_Client_-_Phishing_Test_Template.docx",
+    "subdirectory": "methodology",
+    "uploader": 3,
+    "updated": "2017-08-01T11:55:03.588",
+    "description": null,
+    "newest": true,
+    "content_type": 36,
+    "object_id": 62,
+    "a_i_guid": "b1ede2ef1d939b82da7a8974429bc8b7"
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 1,
+  "fields": {
+    "guid": "e3970488b3d7288c18af8f88b57c235a",
+    "parent_guid": null,
+    "lineage_guid": "0d234168337b4efbbb2e4304e6bf0b49",
+    "title": "Vuln Scan",
+    "sequence": 8,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 2,
+  "fields": {
+    "guid": "d1ba71f249d59bbb69c0d7f220d9e8be",
+    "parent_guid": null,
+    "lineage_guid": "8624d883a0fcf163d3ab97c9cb45ab26",
+    "title": "Web Recon",
+    "sequence": 5,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 3,
+  "fields": {
+    "guid": "d9248c6606c6172d289bc9b2f7a6c047",
+    "parent_guid": null,
+    "lineage_guid": "27edf13d248498f800a9989943fc7062",
+    "title": "Web Scan",
+    "sequence": 6,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 4,
+  "fields": {
+    "guid": "c6d0c7d3a03c47ac493b20fc1794e29a",
+    "parent_guid": "134e331893b3b1ab74b608cedeeaf556",
+    "lineage_guid": "0436e5c42b1cb6f1e7a2014adb014e14",
+    "title": "DNS Recon",
+    "sequence": 3,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 5,
+  "fields": {
+    "guid": "ad98d945c07d78c8d4eefd0161be6c83",
+    "parent_guid": null,
+    "lineage_guid": "26224d3f2dded212e33cf9364fcc2a3b",
+    "title": "Exploitation",
+    "sequence": 9,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 6,
+  "fields": {
+    "guid": "0c506d3a43fa7ff30020db57aea4d127",
+    "parent_guid": null,
+    "lineage_guid": "b47bb854a2d8ff4c96dbbd128789ef33",
+    "title": "Humint",
+    "sequence": 7,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 7,
+  "fields": {
+    "guid": "d1b67b840403b45cf520805c49d856c8",
+    "parent_guid": null,
+    "lineage_guid": "787c5564c647b1af47138522a8cf4e59",
+    "title": "Portscan",
+    "sequence": 4,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 8,
+  "fields": {
+    "guid": "494a6cb418a189efff52e00eca9bd131",
+    "parent_guid": "6b0613f5de3a2c0aedfe64f2fef5745e",
+    "lineage_guid": "390135a4222b7d00ea44ffc68bba062a",
+    "title": "Project Close",
+    "sequence": 30,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 9,
+  "fields": {
+    "guid": "5dccd37a009ed7d59f30f645f81cbd33",
+    "parent_guid": "72b190535e9529be98e724421eb31f42",
+    "lineage_guid": "fa2bb5a0a7db45926b4083701e7dd7c5",
+    "title": "Project Start",
+    "sequence": 1,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 10,
+  "fields": {
+    "guid": "441c3b9e0a23c63f435ba480e18a2155",
+    "parent_guid": "29e415f052ef82dabb9e0e7585850dfd",
+    "lineage_guid": "782f9ffd95b7f38248a081eeba17e470",
+    "title": "Reporting",
+    "sequence": 14,
+    "project": null,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 11,
+  "fields": {
+    "guid": "21c5d66a242925021fcabb3911ea5226",
+    "parent_guid": "e3970488b3d7288c18af8f88b57c235a",
+    "lineage_guid": "0d234168337b4efbbb2e4304e6bf0b49",
+    "title": "Vuln Scan",
+    "sequence": 8,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 12,
+  "fields": {
+    "guid": "8625eaecd4d72143b1a9bed20662e5e6",
+    "parent_guid": "d1ba71f249d59bbb69c0d7f220d9e8be",
+    "lineage_guid": "8624d883a0fcf163d3ab97c9cb45ab26",
+    "title": "Web Recon",
+    "sequence": 5,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 13,
+  "fields": {
+    "guid": "b976037237cd3a3f621b9571c267a3c0",
+    "parent_guid": "d9248c6606c6172d289bc9b2f7a6c047",
+    "lineage_guid": "27edf13d248498f800a9989943fc7062",
+    "title": "Web Scan",
+    "sequence": 6,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 14,
+  "fields": {
+    "guid": "ef3b185cf5db495c747573372ec6d8c2",
+    "parent_guid": "c6d0c7d3a03c47ac493b20fc1794e29a",
+    "lineage_guid": "0436e5c42b1cb6f1e7a2014adb014e14",
+    "title": "DNS Recon",
+    "sequence": 3,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 15,
+  "fields": {
+    "guid": "025ad179bcd065404b708a0fae17f37d",
+    "parent_guid": "ad98d945c07d78c8d4eefd0161be6c83",
+    "lineage_guid": "26224d3f2dded212e33cf9364fcc2a3b",
+    "title": "Exploitation",
+    "sequence": 9,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 16,
+  "fields": {
+    "guid": "4ae2c8a2d15309ed221908ef1b5c3b29",
+    "parent_guid": "0c506d3a43fa7ff30020db57aea4d127",
+    "lineage_guid": "b47bb854a2d8ff4c96dbbd128789ef33",
+    "title": "Humint",
+    "sequence": 7,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 17,
+  "fields": {
+    "guid": "8e0361e86ac613fd38f8cb639526cc2a",
+    "parent_guid": "d1b67b840403b45cf520805c49d856c8",
+    "lineage_guid": "787c5564c647b1af47138522a8cf4e59",
+    "title": "Portscan",
+    "sequence": 4,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 18,
+  "fields": {
+    "guid": "51aba1baa97e380c8e76f6ea2f7e2c92",
+    "parent_guid": "494a6cb418a189efff52e00eca9bd131",
+    "lineage_guid": "390135a4222b7d00ea44ffc68bba062a",
+    "title": "Project Close",
+    "sequence": 30,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 19,
+  "fields": {
+    "guid": "f49befb1af3855615e000f101fd9e27e",
+    "parent_guid": "5dccd37a009ed7d59f30f645f81cbd33",
+    "lineage_guid": "fa2bb5a0a7db45926b4083701e7dd7c5",
+    "title": "Project Start",
+    "sequence": 1,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.phase",
+  "pk": 20,
+  "fields": {
+    "guid": "1bdc335d022d50e3156cd3ab58ad5383",
+    "parent_guid": "441c3b9e0a23c63f435ba480e18a2155",
+    "lineage_guid": "782f9ffd95b7f38248a081eeba17e470",
+    "title": "Reporting",
+    "sequence": 14,
+    "project": 1,
+    "version": "1.00",
+    "ancestor": null,
+    "descendant": null,
+    "recommend": false,
+    "suggestor": null,
+    "newest": true
+  }
+},
+{
+  "model": "methodologies.project_type",
+  "pk": 1,
+  "fields": {
+    "guid": "84a345a5300a7c7b76cd4968c60a71e9",
+    "lineage_guid": "2dd3fa0d6d03a1d5b7a8d60df0e35d4f",
+    "title": "External Penetration Test",
+    "shorthand": "Extern",
+    "version": "1.00",
+    "newest": true,
+    "sequence": 1,
+    "phase": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 1,
+  "fields": {
+    "guid": "f3d1afc2a9339d501cd87eb61928de0d",
+    "parent_guid": null,
+    "lineage_guid": "75cb5cfd246086c438b593fae7090e57",
+    "phase": 1,
+    "title": "Run Nessus Against All CIDR Nets",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:40.356",
+    "command": "nessus <ALL_CIDR_NETS>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      1
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 2,
+  "fields": {
+    "guid": "ad7a48043c0423f6eba47fafd03e2ff3",
+    "parent_guid": null,
+    "lineage_guid": "50ea90a99503b3fef87074a79df32e43",
+    "phase": 2,
+    "title": "Screenshot All Web Ports",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2016-12-19T02:38:40.053",
+    "command": "EyeWitness.py --no-prompt --web --prepend-https --add-https-ports=<HTTPS_PORTS> --add-http-ports=<HTTP_PORTS> -f <INPUT_FILE>",
+    "description": "",
+    "automate": true,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "1:00",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      2
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 3,
+  "fields": {
+    "guid": "6c650c574318690729a4ab7876df5e14",
+    "parent_guid": null,
+    "lineage_guid": "b4b00d1fd69b94e825079ba78fc9b9a5",
+    "phase": 2,
+    "title": "Screenshot all potential VHosts",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2016-12-19T02:38:40.093",
+    "command": "./EyeWitness.py --no-prompt --web --prepend-https -f <INPUT_FILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      3
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 4,
+  "fields": {
+    "guid": "39f22a1101dd15a77a58cad01d48227a",
+    "parent_guid": null,
+    "lineage_guid": "520062d4ffd163cd5f0fc301dfb15f18",
+    "phase": 2,
+    "title": "Screenshot All Interesting Files and DIrectories",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2016-12-19T02:38:40.135",
+    "command": "./EyeWitness.py --no-prompt --web --prepend-https -f <INPUT_FILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "1:00",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      4
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 5,
+  "fields": {
+    "guid": "0585383704f28d534497e9cab7bdea71",
+    "parent_guid": null,
+    "lineage_guid": "c74acdf48ebb8b9dc23acb56f78edc11",
+    "phase": 2,
+    "title": "Harvest Link from Robots.txt Files",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:40.398",
+    "command": "robotix.pl -i <ALL_WWW_URLS> -o <OUTFILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-i <ALL_WWW_URLS>\r\n     Takes file as input. Be sure all URLs are prefixed with appropriate http/https\r\n-o <OUTFILE>",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      5
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 6,
+  "fields": {
+    "guid": "9cfa665a37d0af71598cb3a0d1ada1ca",
+    "parent_guid": null,
+    "lineage_guid": "e7edce6cbba3facfa9ce96c3ec83e242",
+    "phase": 2,
+    "title": "Wapiti",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2017-05-24T13:59:45.949",
+    "command": "./wapiti https://url.goes.here.com/ --format html -o /directory/where/to/save/output.html -v 2",
+    "description": "Wapiti is a Web Application Vulnerability Scanner",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      6
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 7,
+  "fields": {
+    "guid": "5d376e9dbc5b8598e1635d84ad0f1cf8",
+    "parent_guid": null,
+    "lineage_guid": "1ebc4423727af6b0391254ca73d38603",
+    "phase": 3,
+    "title": "Perform Nikto Scans",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:40.310",
+    "command": "nikto -host <host or hosts  file> -output <filename> -Format <format>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-host <host or hosts  file>\r\n     Can be an IP address, hostname or text file of hosts. Can also parse hosts from nmap greppable (-oG) file.\r\n-output <filename>\r\n-Format <format>\r\n     Options are csv, htm, txt or xml\r\n-Display V\r\n     Verbose output",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      8
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 8,
+  "fields": {
+    "guid": "fdec43c638e31e94f42dcb5d519c1c48",
+    "parent_guid": null,
+    "lineage_guid": "268f9df0c9effe37e335d5c4cbd6d384",
+    "phase": 3,
+    "title": "Perform Dirb Scan Against Web Servers",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:40.378",
+    "command": "dirb <ALL_WEBSERVERS> <wordlist_file(s)> -o <output_file> -t -w -r",
+    "description": "DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects. It basically works by launching a dictionary based attack against a web server and analyzing the response.",
+    "automate": false,
+    "mangle": "",
+    "help_base": "<ALL_WEBSERVERS>\r\n\r\n<wordlist_file(s)>\r\n     Wordlists can be found under /usr/share/dirb/wordlists. Run small.txt, big.txt, common.txt, indexes.txt, mutations_common.txt\r\n\r\n -o <output_file>\r\n\r\n-t\r\n     Don't force an ending '/'' on URLs.\r\n\r\n-w\r\n     Don't stop on WARNING messages.\r\n\r\n-r\r\n     Don't search recursively.",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      9
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 9,
+  "fields": {
+    "guid": "0afe80cf73d67d3b57fcc5608b4e03ba",
+    "parent_guid": null,
+    "lineage_guid": "f8968f0237cfdfe3682cb0cf398957da",
+    "phase": 3,
+    "title": "Spiderfoot Active",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-05-24T13:58:27.665",
+    "command": "./sf.py",
+    "description": "You want to use All Scan Type or specifically choose modules you want to use. Active modules should be on",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      10
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 10,
+  "fields": {
+    "guid": "8cdf97d884bfac426c3459a32f56aba0",
+    "parent_guid": null,
+    "lineage_guid": "396ff9dfb3614fcfac3cc7396c97f4f6",
+    "phase": 3,
+    "title": "Backup File Artifact Checker",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-05-24T13:58:36.435",
+    "command": "./bfac.py -v --verbose-output /directory/to/save/output.txt -u https://url.goes.here.com",
+    "description": "bfac checks for files that would exist if backups were made and not cleaned off the web server.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      11
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 11,
+  "fields": {
+    "guid": "ae06affc0574bd872dc64d31615cecd5",
+    "parent_guid": null,
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "phase": 3,
+    "title": "Skipfish",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2017-06-09T12:32:29.010",
+    "command": "skipfish -v -u -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      12
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 12,
+  "fields": {
+    "guid": "a81f9a216b27d1117efdfa13df648ec6",
+    "parent_guid": null,
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "phase": 3,
+    "title": "Skipfish",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2017-06-12T14:44:21.811",
+    "command": "skipfish -U -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      13
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 13,
+  "fields": {
+    "guid": "231b3b46c12ca10e5780df69010054ab",
+    "parent_guid": null,
+    "lineage_guid": "45023ef4aeea6b8b622f218be3b3bad8",
+    "phase": 3,
+    "title": "Investigate Forgotten Password Systems",
+    "tier": 1,
+    "sequence": 10,
+    "updated": "2017-06-28T14:04:03.514",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      14
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 14,
+  "fields": {
+    "guid": "b5eb875b4814054ec3a7b20ded304342",
+    "parent_guid": null,
+    "lineage_guid": "2960382d815ed5ed2f080f7e50555a4a",
+    "phase": 4,
+    "title": "Perform Whois Lookups",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:39.933",
+    "command": "whois -H <ALL_DOMAINS>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-H\n     Prevents display of verbose legal disclaimers\n<ALL_DOMAINS>\n     Unique domain for each command. Does not accept file input.",
+    "help_import": "",
+    "est_time": "10",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      19
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 15,
+  "fields": {
+    "guid": "58610e27d513dbcf69a0c4aef5ea399b",
+    "parent_guid": null,
+    "lineage_guid": "875cda5e52a49e1b59644f8dfac5a47d",
+    "phase": 4,
+    "title": "Obtain information from Internet Registry",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2016-12-19T02:38:39.953",
+    "command": "arininfo -t orgname <ORG_NAME>",
+    "description": "You can use the arininfo tool or the arin.net website, be sure to explore to identify all relevant information",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "15",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      20
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 16,
+  "fields": {
+    "guid": "00c75026cddba8b2496584e5e664fc70",
+    "parent_guid": null,
+    "lineage_guid": "580a4f2bee62856ba034e8a441f579ad",
+    "phase": 4,
+    "title": "Attempt DNS Zone Transfer",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:39.973",
+    "command": "dnsrecon -t axfr -c <OUTFILE> -d <ALL_DOMAINS> -n",
+    "description": "Attempt DNS Zone transfer against",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-c <OUTFILE>\n-d <ALL_DOMAINS> This needs to be a unique command for each variable\n-n <ALL_NAMSERVERS> This needs to be a unique command for each variable",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      21
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 17,
+  "fields": {
+    "guid": "d5cef75569bcc99bae71cb6fabb6493c",
+    "parent_guid": null,
+    "lineage_guid": "50012c73d4fdcb0d84029bf1f947a468",
+    "phase": 4,
+    "title": "Recon via Spiderfoot",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2016-12-19T02:38:40.157",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "2:00",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      22
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 18,
+  "fields": {
+    "guid": "85441e327c069a675ee8e60f51778609",
+    "parent_guid": null,
+    "lineage_guid": "655e448fe11de92015301cfcef82a54d",
+    "phase": 4,
+    "title": "Brute-force Enumerate Subdomains",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2016-12-19T02:38:40.232",
+    "command": "dnsrecon -c <OUTFILE> -d <ALL_DOMAINS> -t brt -D subdomains-top1mil-110000.txt -n <ALL_DNS_NS>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-c <OUTFILE> \n-d <ALL_DOMAINS>\n     Unique domain. Will not accept file as input.\n-t brt\n     Specifies brute-force\n-D /usr/share/dnsrecon/subdomains-top1mil.txt\n     This file is found in SecLists under /Discovery/DNS/subdomains-top1mil-110000.txt\n-n <ALL_DNS_NS>\n     Unique name server. Will not accept file as input.\n\n--threads X\n     Use if too slow",
+    "help_import": "",
+    "est_time": "20",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      23
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 19,
+  "fields": {
+    "guid": "d0cef951d444dce75d59fd2382224b60",
+    "parent_guid": null,
+    "lineage_guid": "55e270eb09828f2c7eeb277d5e5f3e0c",
+    "phase": 4,
+    "title": "Create Initial Recon Results Spreadsheet",
+    "tier": 1,
+    "sequence": 7,
+    "updated": "2017-05-17T14:49:10.686",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [
+      5
+    ],
+    "children": [
+      24
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 20,
+  "fields": {
+    "guid": "67e61500c17a14b775fc5e372a77195b",
+    "parent_guid": null,
+    "lineage_guid": "772d0062257fa4e64ab6a5d852617a54",
+    "phase": 4,
+    "title": "Enumerate Subdomains from Search Engines SubList3r",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-05-24T14:00:13.510",
+    "command": "./sublist3r.py -v -d <DOMAIN>",
+    "description": "Sublist3r Utilizies multiple 3rd party services to enumerate SubDomains related to a target",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-v Verbose\r\n-d <DOMAIN> target domain",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      25
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 21,
+  "fields": {
+    "guid": "c0eb69cac528854a0467b2b6ad3369c2",
+    "parent_guid": null,
+    "lineage_guid": "91b3098c120bc13bd5ef413863880944",
+    "phase": 4,
+    "title": "Resolve Domain from IP via VirusTotal - IPtoDomain",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2017-06-06T14:19:19.418",
+    "command": "./iptodomain.py -i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> -w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> -o <PATH/FILENAME FOR ALL DOMAINS REPORT> -v -r <PATH/FILENAME FOR ALL UNIQ DOMAIN FINAL REPORT>",
+    "description": "IPtoDomain is a tool that utilizes VirusTotal to find a Domain linked to a certain IP Address",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> \r\n(have not tested but believe this must be a contiguous range)\r\n-w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> \r\n-o <PATH/FILENAME FOR ALL DOMAINS REPORT>\r\n-r <PATH/FILENAME FOR UNIQ DOMAIN FINAL REPORT>\r\n(creates a number of reports)\r\n -v\r\n(verbose flag)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      26
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 22,
+  "fields": {
+    "guid": "7f0609d117c449a126a79e0222fcd3cc",
+    "parent_guid": null,
+    "lineage_guid": "9bc29076e680de48b2bcfb03d77aa170",
+    "phase": 4,
+    "title": "Perform DNS Reverse Lookups",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2016-12-19T02:38:40.273",
+    "command": "dnsrecon -r <ALL_CIDR_NETS> -n <ALL_DNS_NS> -c <OUTFILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-r <ALL_CIDR_NETS> \r\n     Unique CIDR net for each command. Will not accept file as input.\r\n-n <ALL_DNS_NS>\r\n     Unique name server for each command. Will not accept file as input.\r\n-c <OUTFILE>",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      27
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 23,
+  "fields": {
+    "guid": "3582594729a2eb9e7a54b487a3fac4c6",
+    "parent_guid": null,
+    "lineage_guid": "3b7292b9d5e1982daf2c1a558b94301e",
+    "phase": 4,
+    "title": "Enumerate BGP ASNs from Subnets",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-07-31T12:28:47.711",
+    "command": "bgp-show-subnet.pl <SUBNET> >> <OUTFILE>",
+    "description": "This command queries a BGP looking glass server for a subnet that we know is associated with the target organization and gives us the BGP ASN that is advertising that subnet. You will need to run this command against all target subnets individually.",
+    "automate": true,
+    "mangle": "",
+    "help_base": "This command can take a long time to run. You then parse the file you saved the output to with the following command\r\nbgp-subnet-parse.pl <OUTFILE>",
+    "help_import": "",
+    "est_time": "15",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      28
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 24,
+  "fields": {
+    "guid": "a37e8854b034f5202917be2552a89689",
+    "parent_guid": null,
+    "lineage_guid": "b20671cc36d9576bdccc47ba29cd9edd",
+    "phase": 4,
+    "title": "Enumerate Subnets Advertised via BGP",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-07-31T12:42:41.042",
+    "command": "bgp-show-asn.pl <ASN> >> <OUTFILE>",
+    "description": "This command queries a BGP looking glass server for the ASN that we specify and gives us all the subnets being advertised via that BGP ASN. You will need to run this command against all target ASNs individually.",
+    "automate": true,
+    "mangle": "",
+    "help_base": "This command can take a long time to run. You then parse the file you saved the output to with the following command bgp-asn-parse.pl <OUTFILE>",
+    "help_import": "",
+    "est_time": "15",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      29
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 25,
+  "fields": {
+    "guid": "6d34ad98356aebbc15408a8cf25c60fc",
+    "parent_guid": null,
+    "lineage_guid": "d183f9dafb829d1285b4109fb700db89",
+    "phase": 4,
+    "title": "Enumerate Hosts via Certificate Search",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-08-03T15:49:26.898",
+    "command": "",
+    "description": "Manually search https://crt.sh - search for all root domains for target organization.",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      30
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 26,
+  "fields": {
+    "guid": "98c61c437c8ceca27af923a062cc2b34",
+    "parent_guid": null,
+    "lineage_guid": "a5a6e3a26ac1641d9096caa99cd8fa90",
+    "phase": 4,
+    "title": "Create Asset Tracker Spreadsheet",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-08-08T15:52:38.197",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "15",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [
+      6
+    ],
+    "children": [
+      31
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 27,
+  "fields": {
+    "guid": "f8d64aa99562eb1aef6317429f2c6322",
+    "parent_guid": null,
+    "lineage_guid": "4f9c520f3182693b954b7eea996596fd",
+    "phase": 6,
+    "title": "Run theHarvester Against All Domains",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2016-12-19T02:38:40.015",
+    "command": "theharvester -d <ALL_DOMAINS> -l 500 -b all -f <OUTFILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-d <ALL_DOMAINS>\n     Unique domain for each command. Does not accept file as input.\n\n-l 500\n     Limit to 500 results.\n\n-b all \n     Specifies all data sources\n\n-f <OUTFILE>",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      34
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 28,
+  "fields": {
+    "guid": "f9450a7d026503b127b8e490832d7b34",
+    "parent_guid": null,
+    "lineage_guid": "cc3ceace1e57061e360ad5cfe80d3a31",
+    "phase": 6,
+    "title": "MetaData from FOCA",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2016-12-19T02:38:40.073",
+    "command": "",
+    "description": "FOCA is a graphical tool",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "2:00",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      35
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 29,
+  "fields": {
+    "guid": "4c7a99d5b66643f7e34db1b08498efef",
+    "parent_guid": null,
+    "lineage_guid": "f977ab8448db0082efea95c5d0f9319e",
+    "phase": 6,
+    "title": "Search Public Data Repositories",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2016-12-19T02:38:40.115",
+    "command": "",
+    "description": "github, pastebin, etc",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "3:00",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      36
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 30,
+  "fields": {
+    "guid": "b077ffc51738166f83200f9ca5e21fa7",
+    "parent_guid": null,
+    "lineage_guid": "5f8d8cf80f2bbfb35915682155fe7d47",
+    "phase": 6,
+    "title": "Operative Framework",
+    "tier": 1,
+    "sequence": 6,
+    "updated": "2017-05-24T13:58:55.533",
+    "command": "./operative.py",
+    "description": "Opeartive Framework is a newer tool that is meant to provide good OSINT and DNS Reccon, it will collect AS information, Emails, Human Names, SubDomains, and more.\r\n\r\nChange the config.json file adding your target Domain, Name and IP- After starting tool use :campaign to run",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      37
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 31,
+  "fields": {
+    "guid": "2fd5fc3f5317af99119b80265df2ca0e",
+    "parent_guid": null,
+    "lineage_guid": "25ca4d57fa6a2fe37ae85cb0ab4e15c0",
+    "phase": 6,
+    "title": "PwnBin",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:06.442",
+    "command": "python pwnbin.py -k keyword",
+    "description": "PwnBin is a python script that crawls PasteBin Posts for certain keywords you specify",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      38
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 32,
+  "fields": {
+    "guid": "a38213d9f6a3c83009d26071b1edad0d",
+    "parent_guid": null,
+    "lineage_guid": "3b046b6338b8621f4e896825a334f594",
+    "phase": 6,
+    "title": "SimplyEmail",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:20.414",
+    "command": "./SimplyEmail.py -v --e domain.com -all",
+    "description": "SimplyEmail is a tool to enumerate Emails relating to the target. It is considered semi-active",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      39
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 33,
+  "fields": {
+    "guid": "609a48e0a53ed382ff7acd322354487c",
+    "parent_guid": null,
+    "lineage_guid": "4debf77a009a06466e691dedde441a80",
+    "phase": 6,
+    "title": "Infoga",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:30.547",
+    "command": "./infoga.py --target domain.com --source all",
+    "description": "Infoga is a SubDomain and Email Recon Tool that queries multiple third party services for Subdomains and Emails relating to the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      40
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 34,
+  "fields": {
+    "guid": "390988e13ea2f4c67f5e42c707b33d0a",
+    "parent_guid": null,
+    "lineage_guid": "7ac94dc00dc50c9a48aaa78c689ce66d",
+    "phase": 6,
+    "title": "Run wmd.sh (Wayback Machine Downloader script) against all discovered subdomains",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-06-06T15:01:50.854",
+    "command": "./wmd.sh <INPUT FILE> <OUTPUT DIR>",
+    "description": "Download all archived files for all discovered subdomains. A portion of script can be un-commented to allow for narrower file type filtering.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "<INPUT FILE>\r\n(newline separated file containing all subdomains, sans URI scheme prefix)\r\n<OUTPUT DIR>\r\n(output directory, script will create a new folder for each subdomain)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      41
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 35,
+  "fields": {
+    "guid": "a4d53b1c1fa3cecc7aa361761baf7b94",
+    "parent_guid": null,
+    "lineage_guid": "2d8ff60cd62f7c503a77b0d0fc47cca0",
+    "phase": 6,
+    "title": "Run bulk_extractor against directory containing wmd.sh files",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-06-06T16:25:13.436",
+    "command": "bulk_extractor -R <WMD.SH OUTPUT PARENT DIR> -o <OUTPUT DIR>",
+    "description": "bulk_extractor scans a directory for a large number of pre-defined regular expressions and other kinds of content. When run against the wmd.sh output, it often yields a bounty of in-scope URLs, emails, phone numbers and other related content.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-R <WMD.SH OUTPUT PARENT DIR> \r\n(point at the parent directory that contains all of the files downloaded from wmd.sh)\r\n-o <OUTPUT DIR>\r\n(bulk_extractor will create an output dir for it's output files. point it at the location where you would like it to create that dir.)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      42
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 36,
+  "fields": {
+    "guid": "dbd4915f94afd23408281fbedcbc4cfe",
+    "parent_guid": null,
+    "lineage_guid": "ae453e848d092fd69728e69cfbe74099",
+    "phase": 6,
+    "title": "Search Breach Data",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2017-07-12T14:53:53.245",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      43
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 37,
+  "fields": {
+    "guid": "567da94fdfa7dc78c8e38bfc1c1d338f",
+    "parent_guid": null,
+    "lineage_guid": "4f2cf6dfb5e4068b9293ad516dd677ca",
+    "phase": 7,
+    "title": "Perform Masscan of All Ports",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2016-12-19T02:38:40.456",
+    "command": "masscan -oX <OUTFILE> -p1-65535 --rate 1000 -iL <ALL_LIVE_IPS_FILE>",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-oX <OUTFILE> \n     Sets output format to XML.. Other format options include binary [-oB], grepable [-oG], JSON [-oJ] and simple list [-oL].\n-p1-65535\n--rate 1000 \n-iL <ALL_LIVE_IPS_FILE>\n     Takes file as input.",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      50
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 38,
+  "fields": {
+    "guid": "c9a9d9292358fd4d62b3d83d3e92ba09",
+    "parent_guid": null,
+    "lineage_guid": "60c2af34103b3c02d7a4b17b18a2ee72",
+    "phase": 7,
+    "title": "Perform NMAP Scan of All Live Ports",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-06-07T09:05:01.002",
+    "command": "nmap -sS -Pn -v -A -p <ALL_LIVE_PORTS> -oA <OUTFILE> <ALL_CIDR_NETS_AND_IPS>",
+    "description": "",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-sS \r\n     TCP SYN scan\r\n-Pn \r\n     No ping\r\n-v \r\n     Verbose output\r\n-A \r\n     Enables OS detection, version detection, script scanning and traceroute\r\n-p <ALL_LIVE_PORTS> \r\n     All live ports discovered by Masscan (separate with commas)\r\n-oA <OUTFILE> \r\n     Sets output to all three major formats.\r\n-iL <ALL_CIDR_NETS_AND_IPS>\r\n     Takes new-line separated file as input.",
+    "help_import": null,
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      51
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 39,
+  "fields": {
+    "guid": "6459b159b6480d01c99f2bb9292f1399",
+    "parent_guid": null,
+    "lineage_guid": "97f8a18c0203b7e9ee0696c7fc3569fd",
+    "phase": 7,
+    "title": "Perform Masscan of Common Ports",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-06-06T19:04:35.851",
+    "command": "masscan -oG <OUTFILE> -p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 --rate 1000 -iL <ALL_CIDR_NETS> --interactive",
+    "description": "Sample Email you can send to client:\r\nThe first task for the internal testing is to enumerate live network ranges. We do this by scanning all private IP ranges (RFC 1918) for about one dozen common ports. We\u2019ll typically do this after hours (it typically takes a good 8 hours to complete). We have control over the packets per second, we don\u2019t expect any issues, but potential issues include network slowness/latency issues. Thus, if you anyone experiences ANYTHING related to network slowness they can reach out to us immediately. Also remember that if anyone on your team suspects our testing is causing an issue they can disconnect our device from the network \u2013 this will not ruin anything we\u2019re doing and we can restart after the problem has been addressed. Let me know if you have any questions or want to schedule a quick call to discuss. Thanks!",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-oG <OUTFILE> \r\n     Sets output format to grepable.. (Other format options include binary (-oB), XML (-oX), JSON (-oJ)and simple list (-oL).)\r\n-p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 \r\n--rate 1000 \r\n-iL <ALL_CIDR_NETS>\r\n     Accepts file input. Can be run on a single CIDR net by removing -iL flag.\r\n--interactive\r\n     shows the results in real time on the console",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      52
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 40,
+  "fields": {
+    "guid": "d54bf90b3ff929618bac4753bed2f70a",
+    "parent_guid": null,
+    "lineage_guid": "877856d2ffbee28a6adee9984bc46694",
+    "phase": 7,
+    "title": "Enumerate Outbound Firewall Rules",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-06-21T11:55:35.873",
+    "command": "masscan -oG <OUTFILE> -p 1-65535 --rate 1000 198.58.109.32 --interactive",
+    "description": "egadz.metasploit.com\r\nThis commond enumerates the TCP ports which are allowed outbound to the Internet. This currently uses the host egadz.metasploit.com which is configured to reply to all SYN packets, making it appear that all ports on the host are open. Be sure to perform an nslookup of the host to make sure the IP address has not changed.",
+    "automate": true,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      53
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 41,
+  "fields": {
+    "guid": "d4ede471c4bb03ba27fd837eb4676f24",
+    "parent_guid": null,
+    "lineage_guid": "2f98fac5f1edf680f37391ea99d45b2d",
+    "phase": 7,
+    "title": "Scan for common vulnerable ports",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-06-22T13:16:27.343",
+    "command": "masscan -oG <OUTFILE> -p 1099,7001,8880,8080,2020,60024,4711,40001,54663,18443,1337,8008,8443 --rate 1000 --interactive -iL <ALL_CIDR_NETS>",
+    "description": "",
+    "automate": true,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      54
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 42,
+  "fields": {
+    "guid": "176263d77ba29d1fb6b031f8d0cafb04",
+    "parent_guid": null,
+    "lineage_guid": "3d34fe5dd5d6931f5f55d02934c666a3",
+    "phase": 8,
+    "title": "Project Review & Knowledge Transfer",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-01-11T13:37:37.064",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      57
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 43,
+  "fields": {
+    "guid": "44529a76c4350e89f986f45e30a69be1",
+    "parent_guid": null,
+    "lineage_guid": "8e3e8f15a68a078416260f5c4b8fd828",
+    "phase": 9,
+    "title": "Gather Initial Scope",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2016-12-19T02:38:40.196",
+    "command": "",
+    "description": "Gather initial scope from client",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      58
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 44,
+  "fields": {
+    "guid": "bb3e990362b9dbd0058e500eca0fcc16",
+    "parent_guid": null,
+    "lineage_guid": "90ad1795d0f9343abb64c112ff473117",
+    "phase": 9,
+    "title": "Attach Signed Statement of Work",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-05-08T13:05:40.916",
+    "command": "",
+    "description": "Attach the statement of work to this task as a reference and create a note with the major points, as well as anything unique.",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      59
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 45,
+  "fields": {
+    "guid": "d2039ca3d5c30e8317129701d4fa928d",
+    "parent_guid": null,
+    "lineage_guid": "91556a6aa2a64e5da1540a22f6b53cf0",
+    "phase": 9,
+    "title": "Kick Off Call",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2016-12-19T02:38:40.252",
+    "command": "",
+    "description": "Introduce Team on both sides\r\n\r\nContact Information\r\n LeetSys Project Lead & Emergency Contact Info\r\n Client Project Lead & Emergency Contact Info\r\n\r\nConfirm Scope \r\n Target IPs, Target Websites\r\n Anything specifically avoided/blacklisted\r\n \r\nTesting Windows\r\n Dates and Times\r\n \r\nCheck before Exploitation & How much Oversight",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "30",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      60
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 46,
+  "fields": {
+    "guid": "dad2d96074c617cc3509656037975f05",
+    "parent_guid": null,
+    "lineage_guid": "c6f06a94ea1ad8095c2899dd14f9981c",
+    "phase": 9,
+    "title": "Internal Team Discussion",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-01-11T13:31:11.236",
+    "command": "",
+    "description": "Cover at least the following\r\n\r\nThe Client - Name, Address, Overview, Industry and Sector, Size\r\nHow we obtained the work\r\nThe type of project and any unique elements\r\nTargeted Assets (primary and secondary)\r\n\r\nTentative dates, timelines and deadlines\r\n\r\nDefine project roles\r\n project manager  \r\n technical lead  \r\n testers\r\n\r\nReview project methodology and discuss any recent additions to methodology\r\n\r\nOpen floor to question, thoughts, comments",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      61
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 47,
+  "fields": {
+    "guid": "b1ede2ef1d939b82da7a8974429bc8b7",
+    "parent_guid": null,
+    "lineage_guid": "5a53dc446088457dd58abec26b0509c0",
+    "phase": 10,
+    "title": "Write Draft Report",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-01-06T10:48:55.402",
+    "command": "",
+    "description": "",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [
+      8
+    ],
+    "children": [
+      62
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 48,
+  "fields": {
+    "guid": "4174ddc6bf6e9da18d3513ebec32ef4d",
+    "parent_guid": null,
+    "lineage_guid": "a48957f2ee95adb5702e11fa238ae9b4",
+    "phase": 10,
+    "title": "Peer Review Report",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-01-06T10:49:10.931",
+    "command": "",
+    "description": "Spelling & Grammar Check\r\nVerify no other client names\r\nVerify no data should be sanitized (eg; passwords, sensitive emails, etc)",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      63
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 49,
+  "fields": {
+    "guid": "c8e31370a4f9e141d9887e7f12406ebf",
+    "parent_guid": null,
+    "lineage_guid": "6228eb369b4552873836752f45221972",
+    "phase": 10,
+    "title": "Deliver Report",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-01-06T10:49:31.836",
+    "command": "",
+    "description": "Deliver the report to client.",
+    "automate": false,
+    "mangle": "",
+    "help_base": "",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      64
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 50,
+  "fields": {
+    "guid": "cb7f658724b86504ab2f1a63a2ade8fc",
+    "parent_guid": null,
+    "lineage_guid": "e7edce6cbba3facfa9ce96c3ec83e242",
+    "phase": 2,
+    "title": "Wapiti",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2017-05-24T13:59:45.949",
+    "command": "./wapiti https://url.goes.here.com/ --format html -o /directory/where/to/save/output.html -v 2",
+    "description": "Wapiti is a Web Application Vulnerability Scanner",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      7
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 51,
+  "fields": {
+    "guid": "e99c098c23716046a327c9a3c84a056c",
+    "parent_guid": null,
+    "lineage_guid": "f8968f0237cfdfe3682cb0cf398957da",
+    "phase": 3,
+    "title": "Spiderfoot Active",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-05-24T13:58:27.665",
+    "command": "./sf.py",
+    "description": "You want to use All Scan Type or specifically choose modules you want to use. Active modules should be on",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      15
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 52,
+  "fields": {
+    "guid": "ff29a014eec1ac844d7f1dfe85a19f9f",
+    "parent_guid": null,
+    "lineage_guid": "396ff9dfb3614fcfac3cc7396c97f4f6",
+    "phase": 3,
+    "title": "Backup File Artifact Checker",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-05-24T13:58:36.435",
+    "command": "./bfac.py -v --verbose-output /directory/to/save/output.txt -u https://url.goes.here.com",
+    "description": "bfac checks for files that would exist if backups were made and not cleaned off the web server.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      16
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 53,
+  "fields": {
+    "guid": "314fdb8d9e93ad4a4c97e014800a1e60",
+    "parent_guid": null,
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "phase": 3,
+    "title": "Skipfish",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2017-06-09T12:32:29.010",
+    "command": "skipfish -v -u -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      17
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 54,
+  "fields": {
+    "guid": "55f6582c1a1b6c32a113fe9dd6c72ded",
+    "parent_guid": null,
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "phase": 3,
+    "title": "Skipfish",
+    "tier": 1,
+    "sequence": 4,
+    "updated": "2017-06-12T14:44:21.811",
+    "command": "skipfish -U -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      18
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 55,
+  "fields": {
+    "guid": "da375c5043c1cc31ea127a5268d14de0",
+    "parent_guid": null,
+    "lineage_guid": "772d0062257fa4e64ab6a5d852617a54",
+    "phase": 4,
+    "title": "Enumerate Subdomains from Search Engines SubList3r",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-05-24T14:00:13.510",
+    "command": "./sublist3r.py -v -d <DOMAIN>",
+    "description": "Sublist3r Utilizies multiple 3rd party services to enumerate SubDomains related to a target",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-v Verbose\r\n-d <DOMAIN> target domain",
+    "help_import": "",
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      32
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 56,
+  "fields": {
+    "guid": "660295b5c16447e015fffcd6ce259c2c",
+    "parent_guid": null,
+    "lineage_guid": "91b3098c120bc13bd5ef413863880944",
+    "phase": 4,
+    "title": "Resolve Domain from IP via VirusTotal - IPtoDomain",
+    "tier": 1,
+    "sequence": 5,
+    "updated": "2017-06-06T14:19:19.418",
+    "command": "./iptodomain.py -i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> -w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> -o <PATH/FILENAME FOR ALL DOMAINS REPORT> -v -r <PATH/FILENAME FOR ALL UNIQ DOMAIN FINAL REPORT>",
+    "description": "IPtoDomain is a tool that utilizes VirusTotal to find a Domain linked to a certain IP Address",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> \r\n(have not tested but believe this must be a contiguous range)\r\n-w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> \r\n-o <PATH/FILENAME FOR ALL DOMAINS REPORT>\r\n-r <PATH/FILENAME FOR UNIQ DOMAIN FINAL REPORT>\r\n(creates a number of reports)\r\n -v\r\n(verbose flag)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      33
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 57,
+  "fields": {
+    "guid": "6275ad712c38cecfdcd01d166d9b18dd",
+    "parent_guid": null,
+    "lineage_guid": "5f8d8cf80f2bbfb35915682155fe7d47",
+    "phase": 6,
+    "title": "Operative Framework",
+    "tier": 1,
+    "sequence": 6,
+    "updated": "2017-05-24T13:58:55.533",
+    "command": "./operative.py",
+    "description": "Opeartive Framework is a newer tool that is meant to provide good OSINT and DNS Reccon, it will collect AS information, Emails, Human Names, SubDomains, and more.\r\n\r\nChange the config.json file adding your target Domain, Name and IP- After starting tool use :campaign to run",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      44
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 58,
+  "fields": {
+    "guid": "513bd20efd60eb385f6661a074a21666",
+    "parent_guid": null,
+    "lineage_guid": "25ca4d57fa6a2fe37ae85cb0ab4e15c0",
+    "phase": 6,
+    "title": "PwnBin",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:06.442",
+    "command": "python pwnbin.py -k keyword",
+    "description": "PwnBin is a python script that crawls PasteBin Posts for certain keywords you specify",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      45
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 59,
+  "fields": {
+    "guid": "14a880e0c6de9f121e4dcf50267f3068",
+    "parent_guid": null,
+    "lineage_guid": "3b046b6338b8621f4e896825a334f594",
+    "phase": 6,
+    "title": "SimplyEmail",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:20.414",
+    "command": "./SimplyEmail.py -v --e domain.com -all",
+    "description": "SimplyEmail is a tool to enumerate Emails relating to the target. It is considered semi-active",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      46
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 60,
+  "fields": {
+    "guid": "13b7233445242ef8d591ef2bea6d9362",
+    "parent_guid": null,
+    "lineage_guid": "4debf77a009a06466e691dedde441a80",
+    "phase": 6,
+    "title": "Infoga",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-05-24T13:59:30.547",
+    "command": "./infoga.py --target domain.com --source all",
+    "description": "Infoga is a SubDomain and Email Recon Tool that queries multiple third party services for Subdomains and Emails relating to the target",
+    "automate": false,
+    "mangle": null,
+    "help_base": "",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      47
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 61,
+  "fields": {
+    "guid": "08529e7338125026a1f7a1b81f711dd7",
+    "parent_guid": null,
+    "lineage_guid": "7ac94dc00dc50c9a48aaa78c689ce66d",
+    "phase": 6,
+    "title": "Run wmd.sh (Wayback Machine Downloader script) against all discovered subdomains",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-06-06T15:01:50.854",
+    "command": "./wmd.sh <INPUT FILE> <OUTPUT DIR>",
+    "description": "Download all archived files for all discovered subdomains. A portion of script can be un-commented to allow for narrower file type filtering.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "<INPUT FILE>\r\n(newline separated file containing all subdomains, sans URI scheme prefix)\r\n<OUTPUT DIR>\r\n(output directory, script will create a new folder for each subdomain)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [
+      7
+    ],
+    "children": [
+      48
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 62,
+  "fields": {
+    "guid": "25f1001cb45b2844af7859c85b57b72d",
+    "parent_guid": null,
+    "lineage_guid": "2d8ff60cd62f7c503a77b0d0fc47cca0",
+    "phase": 6,
+    "title": "Run bulk_extractor against directory containing wmd.sh files",
+    "tier": 1,
+    "sequence": 2,
+    "updated": "2017-06-06T16:25:13.436",
+    "command": "bulk_extractor -R <WMD.SH OUTPUT PARENT DIR> -o <OUTPUT DIR>",
+    "description": "bulk_extractor scans a directory for a large number of pre-defined regular expressions and other kinds of content. When run against the wmd.sh output, it often yields a bounty of in-scope URLs, emails, phone numbers and other related content.",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-R <WMD.SH OUTPUT PARENT DIR> \r\n(point at the parent directory that contains all of the files downloaded from wmd.sh)\r\n-o <OUTPUT DIR>\r\n(bulk_extractor will create an output dir for it's output files. point it at the location where you would like it to create that dir.)",
+    "help_import": null,
+    "est_time": "",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      49
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 63,
+  "fields": {
+    "guid": "9217c06371f19e029051e268803f2809",
+    "parent_guid": null,
+    "lineage_guid": "60c2af34103b3c02d7a4b17b18a2ee72",
+    "phase": 7,
+    "title": "Perform NMAP Scan of All Live Ports",
+    "tier": 1,
+    "sequence": 3,
+    "updated": "2017-06-07T09:05:01.002",
+    "command": "nmap -sS -Pn -v -A -p <ALL_LIVE_PORTS> -oA <OUTFILE> <ALL_CIDR_NETS_AND_IPS>",
+    "description": "",
+    "automate": false,
+    "mangle": null,
+    "help_base": "-sS \r\n     TCP SYN scan\r\n-Pn \r\n     No ping\r\n-v \r\n     Verbose output\r\n-A \r\n     Enables OS detection, version detection, script scanning and traceroute\r\n-p <ALL_LIVE_PORTS> \r\n     All live ports discovered by Masscan (separate with commas)\r\n-oA <OUTFILE> \r\n     Sets output to all three major formats.\r\n-iL <ALL_CIDR_NETS_AND_IPS>\r\n     Takes new-line separated file as input.",
+    "help_import": null,
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      55
+    ]
+  }
+},
+{
+  "model": "methodologies.method",
+  "pk": 64,
+  "fields": {
+    "guid": "f796f7e385d0c93fd890506f15b98484",
+    "parent_guid": null,
+    "lineage_guid": "97f8a18c0203b7e9ee0696c7fc3569fd",
+    "phase": 7,
+    "title": "Perform Masscan of Common Ports",
+    "tier": 1,
+    "sequence": 1,
+    "updated": "2017-06-06T19:04:35.851",
+    "command": "masscan -oG <OUTFILE> -p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 --rate 1000 -iL <ALL_CIDR_NETS> --interactive",
+    "description": "Sample Email you can send to client:\r\nThe first task for the internal testing is to enumerate live network ranges. We do this by scanning all private IP ranges (RFC 1918) for about one dozen common ports. We\u2019ll typically do this after hours (it typically takes a good 8 hours to complete). We have control over the packets per second, we don\u2019t expect any issues, but potential issues include network slowness/latency issues. Thus, if you anyone experiences ANYTHING related to network slowness they can reach out to us immediately. Also remember that if anyone on your team suspects our testing is causing an issue they can disconnect our device from the network \u2013 this will not ruin anything we\u2019re doing and we can restart after the problem has been addressed. Let me know if you have any questions or want to schedule a quick call to discuss. Thanks!",
+    "automate": false,
+    "mangle": "",
+    "help_base": "-oG <OUTFILE> \r\n     Sets output format to grepable.. (Other format options include binary (-oB), XML (-oX), JSON (-oJ)and simple list (-oL).)\r\n-p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 \r\n--rate 1000 \r\n-iL <ALL_CIDR_NETS>\r\n     Accepts file input. Can be run on a single CIDR net by removing -iL flag.\r\n--interactive\r\n     shows the results in real time on the console",
+    "help_import": "",
+    "est_time": "5",
+    "version": "1.00",
+    "recommend": false,
+    "newest": true,
+    "suggestor": null,
+    "ancestor": null,
+    "descendant": null,
+    "project_type": [
+      1
+    ],
+    "files": [],
+    "children": [
+      56
+    ]
+  }
+},
+{
+  "model": "notes.scratchpad",
+  "pk": 1,
+  "fields": {
+    "body": "",
+    "updated": "2018-04-16T08:02:13.151",
+    "in_use": false,
+    "content_type": null,
+    "object_id": null,
+    "testers": [],
+    "users": []
+  }
+},
+{
+  "model": "notes.scratchpad",
+  "pk": 2,
+  "fields": {
+    "body": "",
+    "updated": "2018-05-03T04:24:06.020",
+    "in_use": false,
+    "content_type": null,
+    "object_id": null,
+    "testers": [],
+    "users": []
+  }
+},
+{
+  "model": "project.project",
+  "pk": 1,
+  "fields": {
+    "title": "TestProject",
+    "client": 2,
+    "codename": "TP",
+    "description": "Test Project to observe behaviour of a Project.",
+    "start_date": "2018-05-09",
+    "end_date": "2018-07-31",
+    "contract_hours": "789.00",
+    "project_type": 1,
+    "active": true,
+    "issue_number": 1,
+    "is_billable": true,
+    "project_milestone": 1,
+    "vips": [],
+    "members": []
+  }
+},
+{
+  "model": "project.milestone",
+  "pk": 1,
+  "fields": {
+    "guid": null,
+    "title": "Project Completion",
+    "hours": "789.00",
+    "comment": " ",
+    "start_date": "2018-05-09",
+    "end_date": "2018-07-31",
+    "project": 1,
+    "status": "open",
+    "content_type": null,
+    "object_id": null,
+    "phases": [],
+    "tasks": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 1,
+  "fields": {
+    "guid": "5c79339ae3a7c5ef5fef734257473e23",
+    "lineage_guid": "75cb5cfd246086c438b593fae7090e57",
+    "project": 1,
+    "meth_item": 1,
+    "title": "Run Nessus Against All CIDR Nets",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 11,
+    "parent_guid": "f3d1afc2a9339d501cd87eb61928de0d",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "nessus <ALL_CIDR_NETS>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.942",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 2,
+  "fields": {
+    "guid": "ed49fa1de5c95776450f3cf7dad9f7ee",
+    "lineage_guid": "50ea90a99503b3fef87074a79df32e43",
+    "project": 1,
+    "meth_item": 2,
+    "title": "Screenshot All Web Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "ad7a48043c0423f6eba47fafd03e2ff3",
+    "sequence": 2,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "EyeWitness.py --no-prompt --web --prepend-https --add-https-ports=<HTTPS_PORTS> --add-http-ports=<HTTP_PORTS> -f <INPUT_FILE>",
+    "est_time": "1:00",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.958",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 3,
+  "fields": {
+    "guid": "69eeb8eff14b32caccdd56adecf0d03b",
+    "lineage_guid": "b4b00d1fd69b94e825079ba78fc9b9a5",
+    "project": 1,
+    "meth_item": 3,
+    "title": "Screenshot all potential VHosts",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "6c650c574318690729a4ab7876df5e14",
+    "sequence": 3,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "./EyeWitness.py --no-prompt --web --prepend-https -f <INPUT_FILE>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.965",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 4,
+  "fields": {
+    "guid": "a64cc56459fdea2ae865bd8134905d2c",
+    "lineage_guid": "520062d4ffd163cd5f0fc301dfb15f18",
+    "project": 1,
+    "meth_item": 4,
+    "title": "Screenshot All Interesting Files and DIrectories",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "39f22a1101dd15a77a58cad01d48227a",
+    "sequence": 4,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "./EyeWitness.py --no-prompt --web --prepend-https -f <INPUT_FILE>",
+    "est_time": "1:00",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.973",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 5,
+  "fields": {
+    "guid": "927ba0dc191689217ebcda795c1bdd29",
+    "lineage_guid": "c74acdf48ebb8b9dc23acb56f78edc11",
+    "project": 1,
+    "meth_item": 5,
+    "title": "Harvest Link from Robots.txt Files",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "0585383704f28d534497e9cab7bdea71",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "-i <ALL_WWW_URLS>\r\n     Takes file as input. Be sure all URLs are prefixed with appropriate http/https\r\n-o <OUTFILE>",
+    "base_command": "robotix.pl -i <ALL_WWW_URLS> -o <OUTFILE>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.980",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 6,
+  "fields": {
+    "guid": "ae2cc3c94f380bc1221f09035340d1c9",
+    "lineage_guid": "e7edce6cbba3facfa9ce96c3ec83e242",
+    "project": 1,
+    "meth_item": 6,
+    "title": "Wapiti",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "9cfa665a37d0af71598cb3a0d1ada1ca",
+    "sequence": 5,
+    "tier": 1,
+    "description": "Wapiti is a Web Application Vulnerability Scanner",
+    "help_base": "",
+    "base_command": "./wapiti https://url.goes.here.com/ --format html -o /directory/where/to/save/output.html -v 2",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.988",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 7,
+  "fields": {
+    "guid": "cfa3f89c67451462de9042477906f307",
+    "lineage_guid": "e7edce6cbba3facfa9ce96c3ec83e242",
+    "project": 1,
+    "meth_item": 50,
+    "title": "Wapiti",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 12,
+    "parent_guid": "cb7f658724b86504ab2f1a63a2ade8fc",
+    "sequence": 5,
+    "tier": 1,
+    "description": "Wapiti is a Web Application Vulnerability Scanner",
+    "help_base": "",
+    "base_command": "./wapiti https://url.goes.here.com/ --format html -o /directory/where/to/save/output.html -v 2",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:27.995",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 8,
+  "fields": {
+    "guid": "84eb1bb163ef6917eaff13e75232924f",
+    "lineage_guid": "1ebc4423727af6b0391254ca73d38603",
+    "project": 1,
+    "meth_item": 7,
+    "title": "Perform Nikto Scans",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "5d376e9dbc5b8598e1635d84ad0f1cf8",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "-host <host or hosts  file>\r\n     Can be an IP address, hostname or text file of hosts. Can also parse hosts from nmap greppable (-oG) file.\r\n-output <filename>\r\n-Format <format>\r\n     Options are csv, htm, txt or xml\r\n-Display V\r\n     Verbose output",
+    "base_command": "nikto -host <host or hosts  file> -output <filename> -Format <format>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.006",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 9,
+  "fields": {
+    "guid": "b75265c0b0b70686553aea42ddba8bc0",
+    "lineage_guid": "268f9df0c9effe37e335d5c4cbd6d384",
+    "project": 1,
+    "meth_item": 8,
+    "title": "Perform Dirb Scan Against Web Servers",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "fdec43c638e31e94f42dcb5d519c1c48",
+    "sequence": 1,
+    "tier": 1,
+    "description": "DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects. It basically works by launching a dictionary based attack against a web server and analyzing the response.",
+    "help_base": "<ALL_WEBSERVERS>\r\n\r\n<wordlist_file(s)>\r\n     Wordlists can be found under /usr/share/dirb/wordlists. Run small.txt, big.txt, common.txt, indexes.txt, mutations_common.txt\r\n\r\n -o <output_file>\r\n\r\n-t\r\n     Don't force an ending '/'' on URLs.\r\n\r\n-w\r\n     Don't stop on WARNING messages.\r\n\r\n-r\r\n     Don't search recursively.",
+    "base_command": "dirb <ALL_WEBSERVERS> <wordlist_file(s)> -o <output_file> -t -w -r",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.012",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 10,
+  "fields": {
+    "guid": "3fcf66d78d5b5a7390b7be333dbe03cf",
+    "lineage_guid": "f8968f0237cfdfe3682cb0cf398957da",
+    "project": 1,
+    "meth_item": 9,
+    "title": "Spiderfoot Active",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "0afe80cf73d67d3b57fcc5608b4e03ba",
+    "sequence": 1,
+    "tier": 1,
+    "description": "You want to use All Scan Type or specifically choose modules you want to use. Active modules should be on",
+    "help_base": "",
+    "base_command": "./sf.py",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.020",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 11,
+  "fields": {
+    "guid": "93509d5261bed71cd5068c240ac5795a",
+    "lineage_guid": "396ff9dfb3614fcfac3cc7396c97f4f6",
+    "project": 1,
+    "meth_item": 10,
+    "title": "Backup File Artifact Checker",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "8cdf97d884bfac426c3459a32f56aba0",
+    "sequence": 1,
+    "tier": 1,
+    "description": "bfac checks for files that would exist if backups were made and not cleaned off the web server.",
+    "help_base": "",
+    "base_command": "./bfac.py -v --verbose-output /directory/to/save/output.txt -u https://url.goes.here.com",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.027",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 12,
+  "fields": {
+    "guid": "ab39aa441c5305c07bf89275d8375139",
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "project": 1,
+    "meth_item": 11,
+    "title": "Skipfish",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "ae06affc0574bd872dc64d31615cecd5",
+    "sequence": 4,
+    "tier": 1,
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "help_base": "",
+    "base_command": "skipfish -v -u -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.034",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 13,
+  "fields": {
+    "guid": "90320048af24cc97d9dc874527ad285e",
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "project": 1,
+    "meth_item": 12,
+    "title": "Skipfish",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "a81f9a216b27d1117efdfa13df648ec6",
+    "sequence": 4,
+    "tier": 1,
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "help_base": "",
+    "base_command": "skipfish -U -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.042",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 14,
+  "fields": {
+    "guid": "9b566727653f43a8850167b4609d2a94",
+    "lineage_guid": "45023ef4aeea6b8b622f218be3b3bad8",
+    "project": 1,
+    "meth_item": 13,
+    "title": "Investigate Forgotten Password Systems",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "231b3b46c12ca10e5780df69010054ab",
+    "sequence": 10,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.048",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 15,
+  "fields": {
+    "guid": "c47575c9c4c4e88fdca2c5a4819bf796",
+    "lineage_guid": "f8968f0237cfdfe3682cb0cf398957da",
+    "project": 1,
+    "meth_item": 51,
+    "title": "Spiderfoot Active",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "e99c098c23716046a327c9a3c84a056c",
+    "sequence": 1,
+    "tier": 1,
+    "description": "You want to use All Scan Type or specifically choose modules you want to use. Active modules should be on",
+    "help_base": "",
+    "base_command": "./sf.py",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.057",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 16,
+  "fields": {
+    "guid": "326bb1ad4b192411e0adc3b7f37a05c5",
+    "lineage_guid": "396ff9dfb3614fcfac3cc7396c97f4f6",
+    "project": 1,
+    "meth_item": 52,
+    "title": "Backup File Artifact Checker",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "ff29a014eec1ac844d7f1dfe85a19f9f",
+    "sequence": 1,
+    "tier": 1,
+    "description": "bfac checks for files that would exist if backups were made and not cleaned off the web server.",
+    "help_base": "",
+    "base_command": "./bfac.py -v --verbose-output /directory/to/save/output.txt -u https://url.goes.here.com",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.063",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 17,
+  "fields": {
+    "guid": "d989f773b653e5af70c5537567a1eaec",
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "project": 1,
+    "meth_item": 53,
+    "title": "Skipfish",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "314fdb8d9e93ad4a4c97e014800a1e60",
+    "sequence": 4,
+    "tier": 1,
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "help_base": "",
+    "base_command": "skipfish -v -u -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.071",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 18,
+  "fields": {
+    "guid": "e8e75db44d30515c468ed53fe1dc6b61",
+    "lineage_guid": "94aaa87ba2ec9a01378511f195e85d8d",
+    "project": 1,
+    "meth_item": 54,
+    "title": "Skipfish",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 13,
+    "parent_guid": "55f6582c1a1b6c32a113fe9dd6c72ded",
+    "sequence": 4,
+    "tier": 1,
+    "description": "Skipifish is a Web Application Vulnerability Scanner that uses multiple techniques to find vulnerabilties. It also will dynamically create and update a wordlist (format =.wl) used against the target",
+    "help_base": "",
+    "base_command": "skipfish -U -O -o <OUTPUT DIR> -W <WORDLIST> <DOMAIN OR IP>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.077",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 19,
+  "fields": {
+    "guid": "1e9cf32c501ae7d876b663a5f8e7f5dc",
+    "lineage_guid": "2960382d815ed5ed2f080f7e50555a4a",
+    "project": 1,
+    "meth_item": 14,
+    "title": "Perform Whois Lookups",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "b5eb875b4814054ec3a7b20ded304342",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "-H\n     Prevents display of verbose legal disclaimers\n<ALL_DOMAINS>\n     Unique domain for each command. Does not accept file input.",
+    "base_command": "whois -H <ALL_DOMAINS>",
+    "est_time": "10",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.087",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 20,
+  "fields": {
+    "guid": "43f0546fa303d39728a2046035de34f9",
+    "lineage_guid": "875cda5e52a49e1b59644f8dfac5a47d",
+    "project": 1,
+    "meth_item": 15,
+    "title": "Obtain information from Internet Registry",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "58610e27d513dbcf69a0c4aef5ea399b",
+    "sequence": 2,
+    "tier": 1,
+    "description": "You can use the arininfo tool or the arin.net website, be sure to explore to identify all relevant information",
+    "help_base": "",
+    "base_command": "arininfo -t orgname <ORG_NAME>",
+    "est_time": "15",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.093",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 21,
+  "fields": {
+    "guid": "a241d472ba6fa5c8e435a78ff767733e",
+    "lineage_guid": "580a4f2bee62856ba034e8a441f579ad",
+    "project": 1,
+    "meth_item": 16,
+    "title": "Attempt DNS Zone Transfer",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "00c75026cddba8b2496584e5e664fc70",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Attempt DNS Zone transfer against",
+    "help_base": "-c <OUTFILE>\n-d <ALL_DOMAINS> This needs to be a unique command for each variable\n-n <ALL_NAMSERVERS> This needs to be a unique command for each variable",
+    "base_command": "dnsrecon -t axfr -c <OUTFILE> -d <ALL_DOMAINS> -n",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.100",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 22,
+  "fields": {
+    "guid": "9d5d10bce4eb425b50828872efee50d0",
+    "lineage_guid": "50012c73d4fdcb0d84029bf1f947a468",
+    "project": 1,
+    "meth_item": 17,
+    "title": "Recon via Spiderfoot",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "d5cef75569bcc99bae71cb6fabb6493c",
+    "sequence": 5,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "2:00",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.107",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 23,
+  "fields": {
+    "guid": "aebb87ab9720e6fa2054b67470eb1b00",
+    "lineage_guid": "655e448fe11de92015301cfcef82a54d",
+    "project": 1,
+    "meth_item": 18,
+    "title": "Brute-force Enumerate Subdomains",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "85441e327c069a675ee8e60f51778609",
+    "sequence": 2,
+    "tier": 1,
+    "description": "",
+    "help_base": "-c <OUTFILE> \n-d <ALL_DOMAINS>\n     Unique domain. Will not accept file as input.\n-t brt\n     Specifies brute-force\n-D /usr/share/dnsrecon/subdomains-top1mil.txt\n     This file is found in SecLists under /Discovery/DNS/subdomains-top1mil-110000.txt\n-n <ALL_DNS_NS>\n     Unique name server. Will not accept file as input.\n\n--threads X\n     Use if too slow",
+    "base_command": "dnsrecon -c <OUTFILE> -d <ALL_DOMAINS> -t brt -D subdomains-top1mil-110000.txt -n <ALL_DNS_NS>",
+    "est_time": "20",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.113",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 24,
+  "fields": {
+    "guid": "faf31046c797f304bad660a05ce8800b",
+    "lineage_guid": "55e270eb09828f2c7eeb277d5e5f3e0c",
+    "project": 1,
+    "meth_item": 19,
+    "title": "Create Initial Recon Results Spreadsheet",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "d0cef951d444dce75d59fd2382224b60",
+    "sequence": 7,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.121",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 25,
+  "fields": {
+    "guid": "51b862ae3cf1311f8532565e6d6157c7",
+    "lineage_guid": "772d0062257fa4e64ab6a5d852617a54",
+    "project": 1,
+    "meth_item": 20,
+    "title": "Enumerate Subdomains from Search Engines SubList3r",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "67e61500c17a14b775fc5e372a77195b",
+    "sequence": 3,
+    "tier": 1,
+    "description": "Sublist3r Utilizies multiple 3rd party services to enumerate SubDomains related to a target",
+    "help_base": "-v Verbose\r\n-d <DOMAIN> target domain",
+    "base_command": "./sublist3r.py -v -d <DOMAIN>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.129",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 26,
+  "fields": {
+    "guid": "8bf00280427b9327a6184cfae447e230",
+    "lineage_guid": "91b3098c120bc13bd5ef413863880944",
+    "project": 1,
+    "meth_item": 21,
+    "title": "Resolve Domain from IP via VirusTotal - IPtoDomain",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "c0eb69cac528854a0467b2b6ad3369c2",
+    "sequence": 5,
+    "tier": 1,
+    "description": "IPtoDomain is a tool that utilizes VirusTotal to find a Domain linked to a certain IP Address",
+    "help_base": "-i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> \r\n(have not tested but believe this must be a contiguous range)\r\n-w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> \r\n-o <PATH/FILENAME FOR ALL DOMAINS REPORT>\r\n-r <PATH/FILENAME FOR UNIQ DOMAIN FINAL REPORT>\r\n(creates a number of reports)\r\n -v\r\n(verbose flag)",
+    "base_command": "./iptodomain.py -i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> -w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> -o <PATH/FILENAME FOR ALL DOMAINS REPORT> -v -r <PATH/FILENAME FOR ALL UNIQ DOMAIN FINAL REPORT>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.136",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 27,
+  "fields": {
+    "guid": "d17524bb44ab33f06528d4bc2495651c",
+    "lineage_guid": "9bc29076e680de48b2bcfb03d77aa170",
+    "project": 1,
+    "meth_item": 22,
+    "title": "Perform DNS Reverse Lookups",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "7f0609d117c449a126a79e0222fcd3cc",
+    "sequence": 3,
+    "tier": 1,
+    "description": "",
+    "help_base": "-r <ALL_CIDR_NETS> \r\n     Unique CIDR net for each command. Will not accept file as input.\r\n-n <ALL_DNS_NS>\r\n     Unique name server for each command. Will not accept file as input.\r\n-c <OUTFILE>",
+    "base_command": "dnsrecon -r <ALL_CIDR_NETS> -n <ALL_DNS_NS> -c <OUTFILE>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.142",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 28,
+  "fields": {
+    "guid": "7bff8d38fa8b20a21705921d1543a1d1",
+    "lineage_guid": "3b7292b9d5e1982daf2c1a558b94301e",
+    "project": 1,
+    "meth_item": 23,
+    "title": "Enumerate BGP ASNs from Subnets",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "3582594729a2eb9e7a54b487a3fac4c6",
+    "sequence": 3,
+    "tier": 1,
+    "description": "This command queries a BGP looking glass server for a subnet that we know is associated with the target organization and gives us the BGP ASN that is advertising that subnet. You will need to run this command against all target subnets individually.",
+    "help_base": "This command can take a long time to run. You then parse the file you saved the output to with the following command\r\nbgp-subnet-parse.pl <OUTFILE>",
+    "base_command": "bgp-show-subnet.pl <SUBNET> >> <OUTFILE>",
+    "est_time": "15",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.148",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 29,
+  "fields": {
+    "guid": "1ef18dd40e640a1ac961cdb44acd1450",
+    "lineage_guid": "b20671cc36d9576bdccc47ba29cd9edd",
+    "project": 1,
+    "meth_item": 24,
+    "title": "Enumerate Subnets Advertised via BGP",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "a37e8854b034f5202917be2552a89689",
+    "sequence": 3,
+    "tier": 1,
+    "description": "This command queries a BGP looking glass server for the ASN that we specify and gives us all the subnets being advertised via that BGP ASN. You will need to run this command against all target ASNs individually.",
+    "help_base": "This command can take a long time to run. You then parse the file you saved the output to with the following command bgp-asn-parse.pl <OUTFILE>",
+    "base_command": "bgp-show-asn.pl <ASN> >> <OUTFILE>",
+    "est_time": "15",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.156",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 30,
+  "fields": {
+    "guid": "024b04805b01f63fb926021f30e4d100",
+    "lineage_guid": "d183f9dafb829d1285b4109fb700db89",
+    "project": 1,
+    "meth_item": 25,
+    "title": "Enumerate Hosts via Certificate Search",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "6d34ad98356aebbc15408a8cf25c60fc",
+    "sequence": 2,
+    "tier": 1,
+    "description": "Manually search https://crt.sh - search for all root domains for target organization.",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.162",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 31,
+  "fields": {
+    "guid": "f0525608abb031463f4c2e474cc802a1",
+    "lineage_guid": "a5a6e3a26ac1641d9096caa99cd8fa90",
+    "project": 1,
+    "meth_item": 26,
+    "title": "Create Asset Tracker Spreadsheet",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "98c61c437c8ceca27af923a062cc2b34",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "15",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.168",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 32,
+  "fields": {
+    "guid": "9431b1579343cb5759b360dcbd581cd7",
+    "lineage_guid": "772d0062257fa4e64ab6a5d852617a54",
+    "project": 1,
+    "meth_item": 55,
+    "title": "Enumerate Subdomains from Search Engines SubList3r",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "da375c5043c1cc31ea127a5268d14de0",
+    "sequence": 3,
+    "tier": 1,
+    "description": "Sublist3r Utilizies multiple 3rd party services to enumerate SubDomains related to a target",
+    "help_base": "-v Verbose\r\n-d <DOMAIN> target domain",
+    "base_command": "./sublist3r.py -v -d <DOMAIN>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.176",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 33,
+  "fields": {
+    "guid": "fdf8abef0623002c2e858e20ff1b9872",
+    "lineage_guid": "91b3098c120bc13bd5ef413863880944",
+    "project": 1,
+    "meth_item": 56,
+    "title": "Resolve Domain from IP via VirusTotal - IPtoDomain",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 14,
+    "parent_guid": "660295b5c16447e015fffcd6ce259c2c",
+    "sequence": 5,
+    "tier": 1,
+    "description": "IPtoDomain is a tool that utilizes VirusTotal to find a Domain linked to a certain IP Address",
+    "help_base": "-i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> \r\n(have not tested but believe this must be a contiguous range)\r\n-w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> \r\n-o <PATH/FILENAME FOR ALL DOMAINS REPORT>\r\n-r <PATH/FILENAME FOR UNIQ DOMAIN FINAL REPORT>\r\n(creates a number of reports)\r\n -v\r\n(verbose flag)",
+    "base_command": "./iptodomain.py -i <FIRST IP IN RANGE> -f <LAST IP IN RANGE> -w <PATH/FILENAME FOR ALL DOMAIN/IP REPORT> -o <PATH/FILENAME FOR ALL DOMAINS REPORT> -v -r <PATH/FILENAME FOR ALL UNIQ DOMAIN FINAL REPORT>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.182",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 34,
+  "fields": {
+    "guid": "d8ea8876155f58553e5cfa13f1dd6a6f",
+    "lineage_guid": "4f9c520f3182693b954b7eea996596fd",
+    "project": 1,
+    "meth_item": 27,
+    "title": "Run theHarvester Against All Domains",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "f8d64aa99562eb1aef6317429f2c6322",
+    "sequence": 3,
+    "tier": 1,
+    "description": "",
+    "help_base": "-d <ALL_DOMAINS>\n     Unique domain for each command. Does not accept file as input.\n\n-l 500\n     Limit to 500 results.\n\n-b all \n     Specifies all data sources\n\n-f <OUTFILE>",
+    "base_command": "theharvester -d <ALL_DOMAINS> -l 500 -b all -f <OUTFILE>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.193",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 35,
+  "fields": {
+    "guid": "7d16c746c805f95a9f03d89fce0450e7",
+    "lineage_guid": "cc3ceace1e57061e360ad5cfe80d3a31",
+    "project": 1,
+    "meth_item": 28,
+    "title": "MetaData from FOCA",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "f9450a7d026503b127b8e490832d7b34",
+    "sequence": 2,
+    "tier": 1,
+    "description": "FOCA is a graphical tool",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "2:00",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.199",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 36,
+  "fields": {
+    "guid": "b4bce2b846dd82f17cd78c8ac482f18f",
+    "lineage_guid": "f977ab8448db0082efea95c5d0f9319e",
+    "project": 1,
+    "meth_item": 29,
+    "title": "Search Public Data Repositories",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "4c7a99d5b66643f7e34db1b08498efef",
+    "sequence": 1,
+    "tier": 1,
+    "description": "github, pastebin, etc",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "3:00",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.207",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 37,
+  "fields": {
+    "guid": "2545625341af4316f152383a9506eb81",
+    "lineage_guid": "5f8d8cf80f2bbfb35915682155fe7d47",
+    "project": 1,
+    "meth_item": 30,
+    "title": "Operative Framework",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "b077ffc51738166f83200f9ca5e21fa7",
+    "sequence": 6,
+    "tier": 1,
+    "description": "Opeartive Framework is a newer tool that is meant to provide good OSINT and DNS Reccon, it will collect AS information, Emails, Human Names, SubDomains, and more.\r\n\r\nChange the config.json file adding your target Domain, Name and IP- After starting tool use :campaign to run",
+    "help_base": "",
+    "base_command": "./operative.py",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.213",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 38,
+  "fields": {
+    "guid": "764e53625ad952bfa8ccecdeeb8807ac",
+    "lineage_guid": "25ca4d57fa6a2fe37ae85cb0ab4e15c0",
+    "project": 1,
+    "meth_item": 31,
+    "title": "PwnBin",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "2fd5fc3f5317af99119b80265df2ca0e",
+    "sequence": 2,
+    "tier": 1,
+    "description": "PwnBin is a python script that crawls PasteBin Posts for certain keywords you specify",
+    "help_base": "",
+    "base_command": "python pwnbin.py -k keyword",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.220",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 39,
+  "fields": {
+    "guid": "d99e02e88c78548abd47ea705c7c704c",
+    "lineage_guid": "3b046b6338b8621f4e896825a334f594",
+    "project": 1,
+    "meth_item": 32,
+    "title": "SimplyEmail",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "a38213d9f6a3c83009d26071b1edad0d",
+    "sequence": 2,
+    "tier": 1,
+    "description": "SimplyEmail is a tool to enumerate Emails relating to the target. It is considered semi-active",
+    "help_base": "",
+    "base_command": "./SimplyEmail.py -v --e domain.com -all",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.226",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 40,
+  "fields": {
+    "guid": "bed2d757fd97ed3c76c4dcb25cc90c65",
+    "lineage_guid": "4debf77a009a06466e691dedde441a80",
+    "project": 1,
+    "meth_item": 33,
+    "title": "Infoga",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "609a48e0a53ed382ff7acd322354487c",
+    "sequence": 2,
+    "tier": 1,
+    "description": "Infoga is a SubDomain and Email Recon Tool that queries multiple third party services for Subdomains and Emails relating to the target",
+    "help_base": "",
+    "base_command": "./infoga.py --target domain.com --source all",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.232",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 41,
+  "fields": {
+    "guid": "fe7687df0157fbb77d1e384e3f4a07fe",
+    "lineage_guid": "7ac94dc00dc50c9a48aaa78c689ce66d",
+    "project": 1,
+    "meth_item": 34,
+    "title": "Run wmd.sh (Wayback Machine Downloader script) against all discovered subdomains",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "390988e13ea2f4c67f5e42c707b33d0a",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Download all archived files for all discovered subdomains. A portion of script can be un-commented to allow for narrower file type filtering.",
+    "help_base": "<INPUT FILE>\r\n(newline separated file containing all subdomains, sans URI scheme prefix)\r\n<OUTPUT DIR>\r\n(output directory, script will create a new folder for each subdomain)",
+    "base_command": "./wmd.sh <INPUT FILE> <OUTPUT DIR>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.240",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 42,
+  "fields": {
+    "guid": "4eb0b357b2ef8df1306300b61ea98608",
+    "lineage_guid": "2d8ff60cd62f7c503a77b0d0fc47cca0",
+    "project": 1,
+    "meth_item": 35,
+    "title": "Run bulk_extractor against directory containing wmd.sh files",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "a4d53b1c1fa3cecc7aa361761baf7b94",
+    "sequence": 2,
+    "tier": 1,
+    "description": "bulk_extractor scans a directory for a large number of pre-defined regular expressions and other kinds of content. When run against the wmd.sh output, it often yields a bounty of in-scope URLs, emails, phone numbers and other related content.",
+    "help_base": "-R <WMD.SH OUTPUT PARENT DIR> \r\n(point at the parent directory that contains all of the files downloaded from wmd.sh)\r\n-o <OUTPUT DIR>\r\n(bulk_extractor will create an output dir for it's output files. point it at the location where you would like it to create that dir.)",
+    "base_command": "bulk_extractor -R <WMD.SH OUTPUT PARENT DIR> -o <OUTPUT DIR>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.246",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 43,
+  "fields": {
+    "guid": "57312b1955bdf11b49316b7f0b94b2fd",
+    "lineage_guid": "ae453e848d092fd69728e69cfbe74099",
+    "project": 1,
+    "meth_item": 36,
+    "title": "Search Breach Data",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "dbd4915f94afd23408281fbedcbc4cfe",
+    "sequence": 5,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.253",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 44,
+  "fields": {
+    "guid": "1877b8be400f6709599a20a1d8d7ada5",
+    "lineage_guid": "5f8d8cf80f2bbfb35915682155fe7d47",
+    "project": 1,
+    "meth_item": 57,
+    "title": "Operative Framework",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "6275ad712c38cecfdcd01d166d9b18dd",
+    "sequence": 6,
+    "tier": 1,
+    "description": "Opeartive Framework is a newer tool that is meant to provide good OSINT and DNS Reccon, it will collect AS information, Emails, Human Names, SubDomains, and more.\r\n\r\nChange the config.json file adding your target Domain, Name and IP- After starting tool use :campaign to run",
+    "help_base": "",
+    "base_command": "./operative.py",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.260",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 45,
+  "fields": {
+    "guid": "d81a2fe9950281f96e905df833a468bc",
+    "lineage_guid": "25ca4d57fa6a2fe37ae85cb0ab4e15c0",
+    "project": 1,
+    "meth_item": 58,
+    "title": "PwnBin",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "513bd20efd60eb385f6661a074a21666",
+    "sequence": 2,
+    "tier": 1,
+    "description": "PwnBin is a python script that crawls PasteBin Posts for certain keywords you specify",
+    "help_base": "",
+    "base_command": "python pwnbin.py -k keyword",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.266",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 46,
+  "fields": {
+    "guid": "21bcf6f726c3c99b8c42716a470af951",
+    "lineage_guid": "3b046b6338b8621f4e896825a334f594",
+    "project": 1,
+    "meth_item": 59,
+    "title": "SimplyEmail",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "14a880e0c6de9f121e4dcf50267f3068",
+    "sequence": 2,
+    "tier": 1,
+    "description": "SimplyEmail is a tool to enumerate Emails relating to the target. It is considered semi-active",
+    "help_base": "",
+    "base_command": "./SimplyEmail.py -v --e domain.com -all",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.273",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 47,
+  "fields": {
+    "guid": "1a207d3d93bb6637aa4d83f78c54ccc6",
+    "lineage_guid": "4debf77a009a06466e691dedde441a80",
+    "project": 1,
+    "meth_item": 60,
+    "title": "Infoga",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "13b7233445242ef8d591ef2bea6d9362",
+    "sequence": 2,
+    "tier": 1,
+    "description": "Infoga is a SubDomain and Email Recon Tool that queries multiple third party services for Subdomains and Emails relating to the target",
+    "help_base": "",
+    "base_command": "./infoga.py --target domain.com --source all",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.280",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 48,
+  "fields": {
+    "guid": "f2445c7b903ee85b9a0f74228f75bf09",
+    "lineage_guid": "7ac94dc00dc50c9a48aaa78c689ce66d",
+    "project": 1,
+    "meth_item": 61,
+    "title": "Run wmd.sh (Wayback Machine Downloader script) against all discovered subdomains",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "08529e7338125026a1f7a1b81f711dd7",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Download all archived files for all discovered subdomains. A portion of script can be un-commented to allow for narrower file type filtering.",
+    "help_base": "<INPUT FILE>\r\n(newline separated file containing all subdomains, sans URI scheme prefix)\r\n<OUTPUT DIR>\r\n(output directory, script will create a new folder for each subdomain)",
+    "base_command": "./wmd.sh <INPUT FILE> <OUTPUT DIR>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.288",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 49,
+  "fields": {
+    "guid": "032c83c7fb870ef4bf93b18c2ffc8ab6",
+    "lineage_guid": "2d8ff60cd62f7c503a77b0d0fc47cca0",
+    "project": 1,
+    "meth_item": 62,
+    "title": "Run bulk_extractor against directory containing wmd.sh files",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 16,
+    "parent_guid": "25f1001cb45b2844af7859c85b57b72d",
+    "sequence": 2,
+    "tier": 1,
+    "description": "bulk_extractor scans a directory for a large number of pre-defined regular expressions and other kinds of content. When run against the wmd.sh output, it often yields a bounty of in-scope URLs, emails, phone numbers and other related content.",
+    "help_base": "-R <WMD.SH OUTPUT PARENT DIR> \r\n(point at the parent directory that contains all of the files downloaded from wmd.sh)\r\n-o <OUTPUT DIR>\r\n(bulk_extractor will create an output dir for it's output files. point it at the location where you would like it to create that dir.)",
+    "base_command": "bulk_extractor -R <WMD.SH OUTPUT PARENT DIR> -o <OUTPUT DIR>",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.295",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 50,
+  "fields": {
+    "guid": "fa625aaf90013943b38562129a64650b",
+    "lineage_guid": "4f2cf6dfb5e4068b9293ad516dd677ca",
+    "project": 1,
+    "meth_item": 37,
+    "title": "Perform Masscan of All Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "567da94fdfa7dc78c8e38bfc1c1d338f",
+    "sequence": 2,
+    "tier": 1,
+    "description": "",
+    "help_base": "-oX <OUTFILE> \n     Sets output format to XML.. Other format options include binary [-oB], grepable [-oG], JSON [-oJ] and simple list [-oL].\n-p1-65535\n--rate 1000 \n-iL <ALL_LIVE_IPS_FILE>\n     Takes file as input.",
+    "base_command": "masscan -oX <OUTFILE> -p1-65535 --rate 1000 -iL <ALL_LIVE_IPS_FILE>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.308",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 51,
+  "fields": {
+    "guid": "1f1ca905e0cc0217136098d972a5f2ac",
+    "lineage_guid": "60c2af34103b3c02d7a4b17b18a2ee72",
+    "project": 1,
+    "meth_item": 38,
+    "title": "Perform NMAP Scan of All Live Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "c9a9d9292358fd4d62b3d83d3e92ba09",
+    "sequence": 3,
+    "tier": 1,
+    "description": "",
+    "help_base": "-sS \r\n     TCP SYN scan\r\n-Pn \r\n     No ping\r\n-v \r\n     Verbose output\r\n-A \r\n     Enables OS detection, version detection, script scanning and traceroute\r\n-p <ALL_LIVE_PORTS> \r\n     All live ports discovered by Masscan (separate with commas)\r\n-oA <OUTFILE> \r\n     Sets output to all three major formats.\r\n-iL <ALL_CIDR_NETS_AND_IPS>\r\n     Takes new-line separated file as input.",
+    "base_command": "nmap -sS -Pn -v -A -p <ALL_LIVE_PORTS> -oA <OUTFILE> <ALL_CIDR_NETS_AND_IPS>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.319",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 52,
+  "fields": {
+    "guid": "e2da9f04e3c8436bfa71784166e18f89",
+    "lineage_guid": "97f8a18c0203b7e9ee0696c7fc3569fd",
+    "project": 1,
+    "meth_item": 39,
+    "title": "Perform Masscan of Common Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "6459b159b6480d01c99f2bb9292f1399",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Sample Email you can send to client:\r\nThe first task for the internal testing is to enumerate live network ranges. We do this by scanning all private IP ranges (RFC 1918) for about one dozen common ports. We\u2019ll typically do this after hours (it typically takes a good 8 hours to complete). We have control over the packets per second, we don\u2019t expect any issues, but potential issues include network slowness/latency issues. Thus, if you anyone experiences ANYTHING related to network slowness they can reach out to us immediately. Also remember that if anyone on your team suspects our testing is causing an issue they can disconnect our device from the network \u2013 this will not ruin anything we\u2019re doing and we can restart after the problem has been addressed. Let me know if you have any questions or want to schedule a quick call to discuss. Thanks!",
+    "help_base": "-oG <OUTFILE> \r\n     Sets output format to grepable.. (Other format options include binary (-oB), XML (-oX), JSON (-oJ)and simple list (-oL).)\r\n-p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 \r\n--rate 1000 \r\n-iL <ALL_CIDR_NETS>\r\n     Accepts file input. Can be run on a single CIDR net by removing -iL flag.\r\n--interactive\r\n     shows the results in real time on the console",
+    "base_command": "masscan -oG <OUTFILE> -p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 --rate 1000 -iL <ALL_CIDR_NETS> --interactive",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.330",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 53,
+  "fields": {
+    "guid": "a31bf85210a2b94be38f7d0732edcb00",
+    "lineage_guid": "877856d2ffbee28a6adee9984bc46694",
+    "project": 1,
+    "meth_item": 40,
+    "title": "Enumerate Outbound Firewall Rules",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "d54bf90b3ff929618bac4753bed2f70a",
+    "sequence": 2,
+    "tier": 1,
+    "description": "egadz.metasploit.com\r\nThis commond enumerates the TCP ports which are allowed outbound to the Internet. This currently uses the host egadz.metasploit.com which is configured to reply to all SYN packets, making it appear that all ports on the host are open. Be sure to perform an nslookup of the host to make sure the IP address has not changed.",
+    "help_base": "",
+    "base_command": "masscan -oG <OUTFILE> -p 1-65535 --rate 1000 198.58.109.32 --interactive",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.342",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 54,
+  "fields": {
+    "guid": "fd50b92f0a9c61c8d83e62d2bff98931",
+    "lineage_guid": "2f98fac5f1edf680f37391ea99d45b2d",
+    "project": 1,
+    "meth_item": 41,
+    "title": "Scan for common vulnerable ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "d4ede471c4bb03ba27fd837eb4676f24",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "masscan -oG <OUTFILE> -p 1099,7001,8880,8080,2020,60024,4711,40001,54663,18443,1337,8008,8443 --rate 1000 --interactive -iL <ALL_CIDR_NETS>",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.353",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 55,
+  "fields": {
+    "guid": "01143972625ee91f32da0f09ac741960",
+    "lineage_guid": "60c2af34103b3c02d7a4b17b18a2ee72",
+    "project": 1,
+    "meth_item": 63,
+    "title": "Perform NMAP Scan of All Live Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "9217c06371f19e029051e268803f2809",
+    "sequence": 3,
+    "tier": 1,
+    "description": "",
+    "help_base": "-sS \r\n     TCP SYN scan\r\n-Pn \r\n     No ping\r\n-v \r\n     Verbose output\r\n-A \r\n     Enables OS detection, version detection, script scanning and traceroute\r\n-p <ALL_LIVE_PORTS> \r\n     All live ports discovered by Masscan (separate with commas)\r\n-oA <OUTFILE> \r\n     Sets output to all three major formats.\r\n-iL <ALL_CIDR_NETS_AND_IPS>\r\n     Takes new-line separated file as input.",
+    "base_command": "nmap -sS -Pn -v -A -p <ALL_LIVE_PORTS> -oA <OUTFILE> <ALL_CIDR_NETS_AND_IPS>",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.365",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 56,
+  "fields": {
+    "guid": "698cf87a24db5c8cec965bc0a017266f",
+    "lineage_guid": "97f8a18c0203b7e9ee0696c7fc3569fd",
+    "project": 1,
+    "meth_item": 64,
+    "title": "Perform Masscan of Common Ports",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 17,
+    "parent_guid": "f796f7e385d0c93fd890506f15b98484",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Sample Email you can send to client:\r\nThe first task for the internal testing is to enumerate live network ranges. We do this by scanning all private IP ranges (RFC 1918) for about one dozen common ports. We\u2019ll typically do this after hours (it typically takes a good 8 hours to complete). We have control over the packets per second, we don\u2019t expect any issues, but potential issues include network slowness/latency issues. Thus, if you anyone experiences ANYTHING related to network slowness they can reach out to us immediately. Also remember that if anyone on your team suspects our testing is causing an issue they can disconnect our device from the network \u2013 this will not ruin anything we\u2019re doing and we can restart after the problem has been addressed. Let me know if you have any questions or want to schedule a quick call to discuss. Thanks!",
+    "help_base": "-oG <OUTFILE> \r\n     Sets output format to grepable.. (Other format options include binary (-oB), XML (-oX), JSON (-oJ)and simple list (-oL).)\r\n-p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 \r\n--rate 1000 \r\n-iL <ALL_CIDR_NETS>\r\n     Accepts file input. Can be run on a single CIDR net by removing -iL flag.\r\n--interactive\r\n     shows the results in real time on the console",
+    "base_command": "masscan -oG <OUTFILE> -p21,22,23,53,139,389,445,80,443,1433,1443,3389,8080,8443 --rate 1000 -iL <ALL_CIDR_NETS> --interactive",
+    "est_time": "5",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.376",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 57,
+  "fields": {
+    "guid": "2b3dd2ed0bd52ee6b4d46cdf689003ac",
+    "lineage_guid": "3d34fe5dd5d6931f5f55d02934c666a3",
+    "project": 1,
+    "meth_item": 42,
+    "title": "Project Review & Knowledge Transfer",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 18,
+    "parent_guid": "176263d77ba29d1fb6b031f8d0cafb04",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.392",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 58,
+  "fields": {
+    "guid": "f61c2fcd43014010212e6973bf97561f",
+    "lineage_guid": "8e3e8f15a68a078416260f5c4b8fd828",
+    "project": 1,
+    "meth_item": 43,
+    "title": "Gather Initial Scope",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 19,
+    "parent_guid": "44529a76c4350e89f986f45e30a69be1",
+    "sequence": 4,
+    "tier": 1,
+    "description": "Gather initial scope from client",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.409",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 59,
+  "fields": {
+    "guid": "28da495b1cbb53caea21455cf962cde0",
+    "lineage_guid": "90ad1795d0f9343abb64c112ff473117",
+    "project": 1,
+    "meth_item": 44,
+    "title": "Attach Signed Statement of Work",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 19,
+    "parent_guid": "bb3e990362b9dbd0058e500eca0fcc16",
+    "sequence": 1,
+    "tier": 1,
+    "description": "Attach the statement of work to this task as a reference and create a note with the major points, as well as anything unique.",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.422",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 60,
+  "fields": {
+    "guid": "103737b29a3a5b40ac1c1b3e4e2989a4",
+    "lineage_guid": "91556a6aa2a64e5da1540a22f6b53cf0",
+    "project": 1,
+    "meth_item": 45,
+    "title": "Kick Off Call",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 19,
+    "parent_guid": "d2039ca3d5c30e8317129701d4fa928d",
+    "sequence": 3,
+    "tier": 1,
+    "description": "Introduce Team on both sides\r\n\r\nContact Information\r\n LeetSys Project Lead & Emergency Contact Info\r\n Client Project Lead & Emergency Contact Info\r\n\r\nConfirm Scope \r\n Target IPs, Target Websites\r\n Anything specifically avoided/blacklisted\r\n \r\nTesting Windows\r\n Dates and Times\r\n \r\nCheck before Exploitation & How much Oversight",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "30",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.433",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 61,
+  "fields": {
+    "guid": "f6022bad53c9fba8b24eeaff7c440254",
+    "lineage_guid": "c6f06a94ea1ad8095c2899dd14f9981c",
+    "project": 1,
+    "meth_item": 46,
+    "title": "Internal Team Discussion",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 19,
+    "parent_guid": "dad2d96074c617cc3509656037975f05",
+    "sequence": 2,
+    "tier": 1,
+    "description": "Cover at least the following\r\n\r\nThe Client - Name, Address, Overview, Industry and Sector, Size\r\nHow we obtained the work\r\nThe type of project and any unique elements\r\nTargeted Assets (primary and secondary)\r\n\r\nTentative dates, timelines and deadlines\r\n\r\nDefine project roles\r\n project manager  \r\n technical lead  \r\n testers\r\n\r\nReview project methodology and discuss any recent additions to methodology\r\n\r\nOpen floor to question, thoughts, comments",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.448",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 62,
+  "fields": {
+    "guid": "e4003418186d4497187a57a50fc078a9",
+    "lineage_guid": "5a53dc446088457dd58abec26b0509c0",
+    "project": 1,
+    "meth_item": 47,
+    "title": "Write Draft Report",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 20,
+    "parent_guid": "b1ede2ef1d939b82da7a8974429bc8b7",
+    "sequence": 1,
+    "tier": 1,
+    "description": "",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.463",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 63,
+  "fields": {
+    "guid": "efa26565a88263773b05f259dbaa4753",
+    "lineage_guid": "a48957f2ee95adb5702e11fa238ae9b4",
+    "project": 1,
+    "meth_item": 48,
+    "title": "Peer Review Report",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 20,
+    "parent_guid": "4174ddc6bf6e9da18d3513ebec32ef4d",
+    "sequence": 2,
+    "tier": 1,
+    "description": "Spelling & Grammar Check\r\nVerify no other client names\r\nVerify no data should be sanitized (eg; passwords, sensitive emails, etc)",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.476",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 64,
+  "fields": {
+    "guid": "d5918b7b0868793db1f462bcb6b8cdc6",
+    "lineage_guid": "6228eb369b4552873836752f45221972",
+    "project": 1,
+    "meth_item": 49,
+    "title": "Deliver Report",
+    "session_time": null,
+    "session": false,
+    "newest": true,
+    "phase": 20,
+    "parent_guid": "c8e31370a4f9e141d9887e7f12406ebf",
+    "sequence": 3,
+    "tier": 1,
+    "description": "Deliver the report to client.",
+    "help_base": "",
+    "base_command": "",
+    "est_time": "",
+    "status": "open",
+    "created": "2018-05-09T00:58:28.485",
+    "tsk_duration": "0.00",
+    "exec_duration": "0:00:01",
+    "exec_cmd": "sample exec cmd",
+    "mangle": null,
+    "variables": []
+  }
+},
+{
+  "model": "users.tester",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "tier": 1,
+    "phone_number": "1010101010",
+    "avatar": "user_1/vagrant/static/images/avatar_default.png",
+    "scratchpad": 1,
+    "last_project": null,
+    "project": null,
+    "context": 1,
+    "role": "Tester - Tier I",
+    "review": false
+  }
+},
+{
+  "model": "users.tester",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "tier": 1,
+    "phone_number": "9000000099",
+    "avatar": "/static/images/avatar_default.png",
+    "scratchpad": 1,
+    "last_project": "1",
+    "project": 1,
+    "context": 1,
+    "role": null,
+    "review": false
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2018-05-03T04:24:45.869",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "TestUser",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2018-05-03T04:25:38.747",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "TestUser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2018-05-09T00:40:45.747",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "TestUser",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2018-05-09T00:42:19.928",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TestUser",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"object\": \"Tester object\", \"name\": \"tester\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2018-05-09T00:42:56.421",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "TestUser",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\", \"email\", \"is_staff\", \"is_superuser\"]}}]"
+  }
+}
+]

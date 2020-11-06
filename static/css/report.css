@@ -1,0 +1,57 @@
+.report-summary {
+	width:90%;
+	margin-right:auto;
+	margin-left:auto;
+	border:solid 1px #999;
+	margin-bottom: 5px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	padding: 0 5px 0 5px;
+	cursor: pointer;
+}
+
+.report-item {
+	letter-spacing: 2px;
+	font-size:20px;
+}
+
+#title-div {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+}
+
+#add-report-form {
+	display:flex;
+	flex-direction:row;
+	justify-content: space-around;
+}
+
+#form-div {
+	margin-bottom:15px;
+}
+
+#title {
+	order:0;
+	max-width: 50%;
+}
+
+#type {
+	order:1;
+	max-width: 50%;
+}
+
+#submit {
+	order:2;
+}
+
+#rep-tab {
+	color:black;
+	z-index:10;
+	background: rgb(233, 229, 226); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(233, 229, 226), #D7D5D5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(233, 229, 226), #D7D5D5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(233, 229, 226), #D7D5D5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(233, 229, 226), #D7D5D5); /* Standard syntax */
+}

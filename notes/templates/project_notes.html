@@ -1,0 +1,13 @@
+{% extends 'base_list_view.html' %}
+{% load static %}
+
+{% block page_headers %}
+	<div class="col-xs-3"></div>
+	<div class="col-xs-3"></div>
+	<div class="col-xs-3"></div>
+	<div class="col-xs-3"></div>
+{% endblock %}
+
+{% block items %}
+		{% include 'display_project_notes.html' with items=notes item_header=True item_body=True %}
+{% endblock %}

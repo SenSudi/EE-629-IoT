@@ -1,0 +1,27 @@
+<div id="modalWindow" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirm-modal" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header{{header_class}}" style="border:none;padding-bottom:0;padding-top:0px;">
+				<div class="row" style="position:relative;top:10px;">
+					<div class="col-xs-10">
+						<h4 id="modal-title{{title_id}}" class="header-scheme" style="margin:0;font-size:20px;">
+							<b>{{title}}</b>
+						</h4>
+					</div>
+					<div class="col-xs-2">
+						<a class="close pull-right header-scheme" data-dismiss="modal" style="display:inline;">×</a>
+						<span class="btn pull-right btn-scratch-text-up header-scheme" style="position:relative;top:-10px;right:5px;padding-left:3px;padding-right:3px;margin-left:10px;margin-right:10px;"><i class="fa fa-long-arrow-up" style="position:relative;top:-1px;"></i><i class="fa fa-font"></i></span>
+						<span class="btn pull-right btn-scratch-text-down header-scheme" style="position:relative;top:-10px;padding-left:3px;padding-right:3px;margin-left:10px;margin-right:10px;"><i class="fa fa-long-arrow-down" style="position:relative;top:1px;"></i><i class="fa fa-font"></i></span>
+					</div>
+				</div>
+				<hr class="modal-divider" style="margin-bottom:5px;">
+			</div>
+			<div class="modal-body{{body_class}}" id="scratch-pad-body" style="padding-top:0;min-height:60vh;overflow-x:hidden;word-wrap:break-word;" contenteditable="true">
+				{{body|linebreaksbr}}
+			</div>
+			<div class="modal-footer" style="padding:0;margin:0;border:none;font-size:15px;text-shadow:1px 1px #333;min-height:30px;">
+				<span id="scratch-pad-messages"></span>
+			</div>
+		</div>
+	</div>
+</div>

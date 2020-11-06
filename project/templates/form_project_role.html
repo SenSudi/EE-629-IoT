@@ -1,0 +1,18 @@
+<div class="form-group" style="display:inline;">
+	<label for="{{ form.role.id_for_label }}">
+		<b>Role</b>
+	</label>
+	<span class="field-errors" id="{{form.role.name}}_errors">
+		{{ form.role.errors }}
+	</span>
+	<div class="input-group">
+  		<div class="input-group-addon"></div>
+  		<select onchange="projectRoleChange(event)" id="id_role" name="role" class="form-control">
+  			<option value="" selected="selected">---------</option>
+  			<option value="add">+ Add Role</option>
+  			{% for role in form.role.field.queryset %}
+  			<option value="{{role.id}}">{{role.label}}</option>
+  			{% endfor %}
+  		</select>
+	</div>
+</div>

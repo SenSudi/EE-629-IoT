@@ -1,0 +1,79 @@
+{% load static %}
+
+{% block top_pallet %}
+  {% include 'auditor.html' %}
+{% endblock %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12 white-box">
+    <div class="row">
+      <div class="col-md-3">
+        <button onclick="pfFileAdd(event);" id="btn-associate-file" type="button" class="btn btn-success" style="display:inline;">Associate New File To Project</button>
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-5">
+        {% include 'search_bar.html' %}
+      </div>  
+    </div>
+    <div class="row">
+
+      <div class="col-sm-3">
+        <span><b>Showing Associated Files for <span id="showing">{{user.tester.project.title}}</span></b></span>
+      </div>
+
+      <div class="col-sm-6">
+      </div>
+    </div>
+    
+    <hr>
+
+  <div class="row item">
+    <div class="row">
+
+      <div class="row">
+        <div class="row" style="background-color:#999;width:100%;margin-left:0px;">
+          <div class="col-sm-1"><i class="btn btn-clear fa fa-minus btn-min-max" style="margin-right:5px;"></i></div>
+          <div class="col-sm-11" style="margin-top:5px"><b style="color:black">Project Files</b></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 text-left btn hsb"><b id="filename">File Name</b></div>
+        <div class="col-sm-1 text-center btn hsb"><b id="extension">Extension</b></div>
+        <div class="col-sm-2 text-center btn hsb"><b id="size">Size</b></div>
+        <div class="col-sm-2 btn hsb" style="text-align:left"><b id="updated">Uploaded</b></div>
+        <div class="col-sm-2 btn hsb"><b id="uploader">Uploader</b></div>
+        <div class="col-sm-2 btn hsb"><b id="project">Associated Item</b></div>
+      </div>
+
+    </div>  
+    <div class="row item-body" id="files">
+      {% include 'display_project_files.html' %}
+    </div>
+  </div>
+</div>
+
+<div id="dynamicModal"></div>
+<div id="notesModal"></div>
+<div id="form-sample" style="display:none;">
+<form id="modal-body-form" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  {% for field in form %}
+    <div class="form-group">
+      <label for="{{ field.id_for_label }}"></label><span>{{ field.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{field}}
+      </div>
+    </div>
+  {% endfor %}
+</form>
+</div>
+
+<div id="page-data" style="display:none;" data-section="{{section}}"></div>
+{% endblock %}

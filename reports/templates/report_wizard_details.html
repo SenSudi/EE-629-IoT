@@ -1,0 +1,10 @@
+{% extends 'report_wizard_modal.html' %}
+{% load static %}
+
+{% block header_title %}
+	<b><span class="editable-modal-title">{{report.title}}</span> Report Wizard</b>
+{% endblock %}
+
+{% block body_content %}
+	{% include 'report_wizard_content.html' %}
+{% endblock %}

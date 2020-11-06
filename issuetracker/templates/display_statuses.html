@@ -1,0 +1,4 @@
+{% for status in statuses %}
+		{% cycle 'even' 'odd' as rowcolor silent%}
+		{% include 'status_new_obj.html' %}
+{% endfor %}

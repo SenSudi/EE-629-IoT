@@ -1,0 +1,43 @@
+<div class="white-box col-lg-12 col-sm-12 col-xs-12">
+    <h3 class="box-title">Milestones</h3>
+    <div class="row">
+        <hr style="margin:0 0 10px 0;background-color:#999;">
+        <div class="row" style="background-color:white;">
+            <div class="col-xs-2" onclick="msSort(this, 'milestone')" id="title"><b> Title </b><i class="fa fa-sort"></i></div>
+            <div class="col-sm-2" onclick="msSort(this, 'project')" id="project"><b> Project </b><i class="fa fa-sort"></i></div>
+            <div class="col-sm-2" onclick="msSort(this, 'status')" id="status"><b> Status </b><i class="fa fa-sort"></i></div>
+            <div class="col-sm-1" id="total"><b> Total </b></div>
+            <div class="col-xs-1" id="billed"><b> Billed </b></div>
+            <div class="col-xs-1" id="remain"><b> Remain </b></div>
+            <div class="col-xs-1" onclick="msSort(this, 'startDate')" id="start"><b > Start </b><i class="fa fa-sort"></i></div>
+            <div class="col-xs-1" onclick="msSort(this, 'endDate')" id="end"><b> End </b><i class="fa fa-sort"></i></div>
+        </div>
+        <hr style="margin:0 0 10px 0;background-color:#999;">
+        {% for ms in milestones %}
+            <div id={{ ms.id }} class="row milestone">
+            <div class="col-xs-2"><i onclick="ovvwMilestoneBody(this)" class="btn fa fa-plus" style="font-size:10px;padding:4px;"></i><b>{{ ms.title }}</b></div>
+            <div class="col-sm-2" ><b>{{ ms.project.title }}</b></div>
+            <div class="col-sm-2 milestone-state">{% include 'milestone_state.html' %}</div>
+            <div class="col-sm-1" ><b>{{ ms.hours }}</b></div>
+            <div class="col-xs-1" ><b>{{ ms.completed }}</b></div>
+            <div class="col-xs-1" ><b>{{ ms.remaining }}</b></div>
+            <div class="col-sm-1" ><b>{{ ms.start }}</b></div>
+            <div class="col-sm-1 text-center"><b>{{ ms.end }}</b></div>
+            <div class="col-sm-1">
+                <i class="fa fa-trash-o btn btn-obj-delete"
+                   style="position:relative;top:-3px;font-weight:bold;margin:1px;padding:3px;color:rgba(144, 0, 0, 0.65098);"
+                   onclick="ovvwMilestoneDelete(this)">
+                </i>
+            </div>
+            <div class="col-xs-12 body" style="display:none;white-space:pre;"><b style="margin-left:10px;">
+                {{ ms.display_phases|linebreaksbr }}{{ ms.comment|linebreaksbr }}</b>
+            </div>
+            <hr style="margin:0;background-color:#999;">
+            </div>
+
+            {% if not forloop.last %}
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

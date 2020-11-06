@@ -1,0 +1,423 @@
+{% load static %}
+
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/Mark.png' %}">
+<title>Katana</title>
+<!-- Bootstrap Core CSS -->
+<link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Menu CSS -->
+<link href="{% static 'plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css' %}" rel="stylesheet">
+<!-- vector map CSS -->
+<link href="{% static 'plugins/bower_components/vectormap/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet" />
+<link href="{% static 'plugins/bower_components/css-chart/css-chart.css' %}" rel="stylesheet">
+<!-- JQUERY UI -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- DRAGGABLE -->
+<link href="{% static 'plugins/bower_components/gridstack/gridstack.css' %}" rel="stylesheet">
+<!-- Wizard CSS -->
+<link href="{% static 'plugins/bower_components/jquery-wizard-master/css/wizard.css' %}" rel="stylesheet">
+
+<!-- animation CSS -->
+<link href="{% static 'elite/animate.css' %}" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="{% static 'elite/style.css' %}" rel="stylesheet">
+<!-- color CSS -->
+<link href="{% static 'elite/colors/gray.css' %}" id="theme"  rel="stylesheet">
+<!-- My Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/hvstyle.css' %}">
+<style type="text/css">
+  html, body {
+  background-color:rgb(237, 241, 245);/*#4F5467 !important;*/
+  color:rgba(0,0,0,0.75);
+  text-shadow:1px 1px 1px #dad8d8;
+}
+
+b {
+  color:rgba(0,0,0,0.65);
+  text-shadow:1px 1px 1px #dad8d8;
+}
+
+.user-bg {
+  height:400px !important;
+}
+
+.cancel-btn :hover {
+  opacity:.8 !important;
+}
+
+.login-box {
+  margin-top:15% !important;
+  border-radius:15px !important;
+}
+
+.logo > b > img {
+  width:45px;
+  height:45px;
+  margin-top:2px;
+  margin-left:9px;
+}
+
+
+.top-spacer {
+  height:40px;
+}
+
+.search-div {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+.show-all-div {
+}
+
+#chriss-awesome-img {
+ /* transform: scale(1.2,1.2);
+  margin-left:5px;
+  padding-left:15px;
+  padding-top:2px;*/
+  transform:scale(.45,.45);
+  position:absolute;
+  top:-15px;
+  left:-60px;
+}
+
+.nav-label {
+  /*position:relative;
+  top:7px;
+  left:480px;*/
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:55%;
+  display:inline-flex;
+  color:white;
+  font-weight:bold;
+  font-size:2em;
+  margin-top:6px;
+  margin-left:auto;
+  margin-right:auto;
+  letter-spacing:1px;
+  text-shadow:1px 1px 3px #333;
+}
+
+#nav-label-divider {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#side-menu ul > li > a:hover {
+  font-weight: bolder;
+  color:black;
+}
+
+
+.nofloat {
+  float:none !important;
+}
+
+.form-box {
+  max-width: 90%;
+}
+
+.oa {
+  background-color:#b3e6b3;
+}
+
+.ea {
+  background-color:#b3b3ff;
+}
+
+.ne {
+    background-color:rgba(23,140,48,0.5);
+}
+.even {
+background-color:rgba(190, 203, 224,0.6);
+}
+.odd {
+background-color:#eee;
+}
+.vc {
+vertical-align:middle;
+}
+.col-spacer {
+padding-top:5px;
+}
+.sc {
+padding:2px;
+text-shadow:1px 1px 1px #dad8d8;
+}
+.tdi {
+background-color:#eee;
+font-size:13px;
+padding-top:6px;
+min-height:25px;
+border:solid 1px #dad8d8;
+margin-bottom:5px;
+}
+
+.note {
+  color:rgba(0,0,0,0.75);
+  text-shadow:1px 1px 1px #dad8d8;
+}
+
+.item-title {
+cursor:pointer;
+}
+.header-text {
+letter-spacing:2px;
+font-weight:bolder;
+margin:0px;
+}
+
+#section {
+  padding-top:3px;
+}
+
+/*.navbar-header {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}*/
+.adjust {
+    height:145px;
+    box-shadow:1px 1px 2px grey;
+  }
+
+ h5 { font-weight: bolder;font-size: 20px; margin-top:0px;}
+ 
+ .top-left-part {
+  height:50px;
+ }
+
+.navbar-top-links, .dropdown {
+  min-height:50px !important; 
+  line-height:50px !important;
+}
+
+.navbar-top-links > li > a {
+  min-height:50px !important; 
+  line-height:50px !important;
+}
+
+.profile-pic {
+  min-height:50px !important;
+}
+
+.sidebar {
+  padding-top:35px;
+}
+
+#page-wrapper{
+  padding-bottom:0px;
+}
+
+.task-modal-form-active {
+  border:solid 1px rgb(104, 104, 104);
+  box-shadow:1px 1px 1px #dad8d8;
+  border-radius:5px;
+  padding:10px;
+  margin-bottom:15px;
+}
+
+.recommend {
+  color:#d88820;/*rgb(251, 150, 120);*/
+  font-size:22px;
+  margin-left:10px;
+  position:relative;
+  top:2px;
+  text-shadow:0px 0px 1px black;/*rgb(104, 104, 104);*/
+}
+
+.notify {
+  display:inline;position:relative;top:19px;
+}
+
+.header-scheme {
+  color:rgb(104, 104, 104);
+  text-shadow:1px 1px 1px #dad8d8;
+  opacity:1;
+}
+
+.modal-divider {
+  margin:4px 0px 5px 0px;
+  border-color:rgb(104, 104, 104);
+  box-shadow:1px 1px 1px #dad8d8;
+}
+
+.modal-phase-recommend-alert {
+  position:relative;
+  top:5px;
+  color:#d88820;
+  text-shadow:1px 1px 1px black;
+}
+
+.modal-content, .bakgrad {
+
+  background: #f2f4f7; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(white, #f2f4f7); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(white, #f2f4f7); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(white, #f2f4f7); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(white, #f2f4f7); /* Standard syntax */
+
+}
+
+.details-modal-data-header {
+  background-color:rgba(197, 210, 221,0.6);
+  box-shadow:1px 1px 1px rgb(104,104,104);
+  margin-bottom:7px;
+  font-weight:bold;
+  padding-top:3px;
+  font-size:14px;
+  color:rgba(0,0,0,0.65098);
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+/*MODAL CONTROLS*/
+
+.modal-header-edit-btn {
+  display:inline;position:relative;font-size:17px;font-weight:bold;right:10px;top:-2px;
+}
+
+.modal-header-ancestor-btn {
+  display:inline;position:relative;right:10px;top:-2px;
+}
+
+.modal-header-descendant-btn {
+  display:inline;position:relative;right:10px;top:-2px;
+}
+
+.modal-header-update-cancel-btn {
+  display:inline;position:relative;right:15px;
+}
+
+.modal-header-refresh-btn {
+  display:inline;position:relative;font-size:16px;font-weight:bold;right:25px;top:-2px;
+}
+
+.modal-header-control-divider {
+  position:relative;right:10px;font-size:20px;cursor:default;margin:0px 5px 0px 5px;top:-4px;
+}
+
+.modal-header-go-back-btn {
+  display:inline;position:relative;font-size:17px;font-weight:bolder;right:-5px;top:-2px;cursor:pointer;
+}
+/*----------END MODAL CONTROLS--------------*/
+
+.modal-header-title {
+  display:inline;text-shadow:1px 1px 1px #dad8d8;
+}
+
+
+.expand-icon {
+  font-size:20px;font-weight:bolder;margin-right:10px !important;position:relative;top:3px;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+.popped {
+  box-shadow:1px 1px 1px rgb(104,104,104),-1px -1px 1px #dad8d8;
+}
+
+.btn-form-field-add:hover {
+  opacity:0.8;
+}
+
+.it-issue-title:hover {
+  opacity:0.8;
+  cursor:pointer;
+}
+
+.mcb {
+  position:relative;text-shadow:1px 1px 1px #dad8d8;color:rgba(0,0,0,0.7);
+}
+
+.mcb:hover {
+  opacity:0.6;
+}
+
+.modal-error-field {
+  color:rgb(144,0,0);background-color:rgba(144,0,0,0.18);
+}
+
+.object {
+  padding:10px 2px 2px 2px;
+  margin-bottom:1px;
+}
+
+.cf {
+  max-height:20px;
+}
+
+.click {
+  cursor:pointer;
+}
+
+.modalTransparent {
+  background-color:rgba(0,0,0,0.7);!important;
+}
+
+.collapsed {
+  display:none;
+}
+
+.searchResult {
+  color:red !important;
+}
+
+.selected {
+  background-color:rgba(17, 87, 198,0.6)!important;
+}
+
+.label-katana {
+  background-color:rgba(80, 80, 150,0.6);
+  color:rgba(30,30,30,0.9);
+  text-shadow:1px 1px 1px rgb(91, 91, 91);
+  letter-spacing:4px;
+  font-weight:100;
+  font-size:13px !important;
+  min-width:40px !important;
+  position:relative;
+  padding-left:12px !important;
+}
+
+.customtab li a {
+  color:rgba(0,0,0,0.5);
+}
+
+.errored {
+  border:1px solid red;
+}
+
+.modal-open {
+  padding:0!important;
+}
+
+.wizard-back {
+  background-color:rgba(186, 5, 5,0.2);
+}
+
+.wizard-next {
+  background-color:rgba(5, 41, 186,0.2);
+}
+
+.wizard-finish {
+  background-color:rgba(23, 165, 4,0.2);
+}
+
+.wizard-back, .wizard-next, .wizard-finish {
+  box-shadow:1px 1px 1px rgb(104,104,104),-1px -1px 1px #dad8d8;
+  font-weight:600;
+  color:rgba(0,0,0,0.65);
+}
+
+.disabled {
+  color:rgba(0,0,0,0.5);
+}
+</style>
+

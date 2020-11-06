@@ -1,0 +1,28 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+    <h4 id="modal-manage-attrs-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+        <b>Manage Item Type Attributes</b>
+    </h4>
+    <a class="close pull-right header-scheme" data-dismiss="modal" style="display:inline;">×</a>
+    <hr class="modal-divider">
+</div>
+<div class="modal-body container-fluid" style="padding-top:0;">
+    <div id="modal-manage-attrs-description">
+        <b>Select the item type to display the current associated attributes.</b>
+    </div>
+    <br>
+    <div class="row" id="item-type-div">
+        <div class="col-xs-6" id="item-type-col">
+            {% include 'form_select_field.html' with label=form.item_type.title select_id="item_type" name="item_type" selection=item_type %}
+        </div>
+        <div class="col-xs-6" id="addon-col" style="">
+            <i onclick="ridbItemTypeAdd(this)" class="btn fa fa-plus" style="font-size:25px;margin-top:27px;" id="btn-add-item-type"></i>
+        </div>
+    </div>
+    <div>
+        <button id="btn-manage-static-attr" style="position: fixed;z-index:5010" class="btn btn-success static-attr-manage waves-effect waves-light m-r-10" style="float:left">Manage Static Attributes</button>
+    </div>
+    <div class="col-xs-12" id="type_attributes">
+    </div>
+    <!-- TODO - finish this to include more descriptions -->
+</div>

@@ -1,0 +1,7 @@
+{% load static %}
+
+{% for object in objects %}
+	{% cycle 'even' 'odd' as rowcolor silent %}
+	{% block object_pallet %}
+	{% endblock %}
+{% endfor %}

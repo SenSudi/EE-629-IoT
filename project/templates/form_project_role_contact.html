@@ -1,0 +1,17 @@
+<div class="form-group" style="display:inline;">
+	<label for="{{ form.person.id_for_label }}">
+		<b>Person</b>
+	</label>
+	<span class="field-errors" id="{{form.person.name}}_errors">
+		{{ form.person.errors }}
+	</span>
+	<div class="input-group">
+  		<div class="input-group-addon"></div>
+  		<select onchange="projectPersonChange(event)" id="id_person" name="person" class="form-control">
+  			<option value="" selected="selected">---------</option>
+  			{% for person in form.person.field.choices %}
+  			<option value="{{person.0}}">{{person.1}}</option>
+  			{% endfor %}
+  		</select>
+	</div>
+</div>

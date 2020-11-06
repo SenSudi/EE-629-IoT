@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="modal-header" style="border:none;padding-bottom:0;">
+    <h4 id="modal-manager-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+        <b>Data Types and Attributes Manager</b>
+    </h4>
+    <a class="close pull-right header-scheme" data-dismiss="modal" style="display:inline;">×</a>
+    <hr class="modal-divider">
+</div>
+<div class="modal-body container-fluid" style="padding-top:0;">
+    <div id="modal-manage-attrs-description">
+        <b>Select the data type to display the current associated attributes.</b>
+    </div>
+    <br>
+    <div class="row" id="data-type-div">
+        <div class="col-xs-6" id="data-type-col">
+            {% include 'form_select_field.html' with field=form.data_type %}
+        </div>
+        <div class="col-xs-6" id="addon-col" style="">
+            <i id="btn-add-data-type" class="btn fa fa-plus" style="font-size:25px;margin-top:27px;"></i>
+        </div>
+    </div>
+    <div class="col-xs-12" id="type-attributes">
+    </div>
+</div>

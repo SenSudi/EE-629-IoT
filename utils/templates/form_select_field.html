@@ -1,0 +1,42 @@
+<div class="form-group">
+	{% if field %}
+		<label for="{{ field.id_for_label }}">{{field.label}}</label>
+		<span class="field-errors" id="{{field.name}}_errors">
+			{{ field.errors }}
+		</span>
+		<div class="input-group">
+	  		<div class="input-group-addon"></div>
+	  		{{field}}
+		</div>
+	{% else %}
+		<label for="{{ for_label }}">{%autoescape off%}{{label}}{%endautoescape%}</label>
+		<span class="field-errors" id="{{name}}_errors">
+			{{ errors }}
+		</span>
+		<div class="input-group">
+	  		<div class="input-group-addon"></div>
+	  		<select class="form-control {{select_class}}" id="id_{{select_id}}" name="{{name}}" {%if multiple%} multiple="multiple" size="6" {%endif%} {%if require %} required="required" {%endif%}>
+	  			{% if not multiple %}
+	  				<option {%if not blankval%} value="none" {% endif %}></option>
+	  			{% endif %}
+	  			{% for item in items %}
+	  				{% if selection %}
+	  					{% if item.id in selection %}
+				  			<option value="{{item.id}}"  selected="selected">
+				  				{{item.select_label}}
+				  			</option>
+				  		{% else %}
+				  			<option value="{{item.id}}">
+			  					{{item.select_label}}
+			  				</option>
+				  		{% endif %}
+	  				{% else %}
+		  				<option value="{{item.id}}">
+		  					{{item.select_label}}
+		  				</option>
+	  				{% endif %}
+	  			{% endfor %}
+	  		</select>
+		</div>
+	{% endif %}
+</div>

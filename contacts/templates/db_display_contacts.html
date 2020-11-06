@@ -1,0 +1,8 @@
+{% load static %}
+
+{% for client in clients %}
+	{% for contact in client.contacts.all %}
+		{% cycle 'odd' 'even' as rowcolor silent %}
+		{% include 'db_contact_object.html' with object=contact client=client %}
+	{% endfor %}
+{% endfor %}

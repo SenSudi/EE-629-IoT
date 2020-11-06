@@ -1,0 +1,10 @@
+{% load static %}
+<div role="tabpanel" class="tab-pane fade active in" id="udb-info-tab-content-{{udb_user.id}}" style="display:flex;flex-direction:row;justify-content:space-around;">
+	{% include 'udb_info_card.html' with card_count=udb_user.tester.project_count card_label="PROJECTS" %}
+
+	{% include 'udb_info_card.html' with card_count=udb_user.tester.note_count card_label="NOTES" %}
+
+	{% include 'udb_info_card.html' with card_count=udb_user.tester.issue_count card_label="ISSUES" %}
+
+	{% include 'udb_info_card.html' with card_count=udb_user.tester.time_logged card_label="HOURS" %}
+</div>

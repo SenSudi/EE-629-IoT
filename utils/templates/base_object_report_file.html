@@ -1,0 +1,7 @@
+{% load static %}
+{% block object_pallet %}
+<div class="col-xs-12 {{rowcolor}} {{object.filename}} object popped"                                            data-obj-title="{{object.filename}}"               data-obj-id="{{object.id}}"              					data-obj-app="{{object.app_label}}" 			data-obj-model="{{object.updated}}"         			data-obj-type="{{object.loaded}}"           data-note-form="{{object.note_form}}"           			data-file-form="{{object.file}}"   >
+    {% block object_content %}
+    {% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<ul class="nav nav-tabs tabs customtab">
+	<li class="active tab">
+    	<a href="#details" data-toggle="tab" aria-expanded="false"> 
+    		<span class="visible-xs">
+    			<i class="fa fa-info-circle"></i>
+    		</span> 
+    		<span class="hidden-xs">Details</span> 
+    	</a> 
+    </li>
+    <li class="tab it-modal-issue-notes">
+    	<a href="#notes" data-toggle="tab" aria-expanded="false"> 
+    		<span class="visible-xs">
+    			<i class="fa fa-comment-o"></i>
+    		</span> 
+    		<span class="hidden-xs">Notes</span> 
+    	</a> 
+    </li>
+    <li class="tab it-modal-issue-files">
+        <a href="#files" data-toggle="tab" aria-expanded="false"> 
+            <span class="visible-xs">
+                <i class="fa fa-file-o"></i>
+            </span> 
+            <span class="hidden-xs">Files</span> 
+        </a> 
+    </li>
+</ul>
+<div class="tab-content" style="margin-top:5px;">
+    <hr class="modal-divider" style="position:relative;top:-5px;margin-top:0px;margin-top:0px;opacity:0.5;">
+	<div class="tab-pane active" id="details">
+        {% include 'it_issue_details_tab_content.html' %}          
+	</div>
+    <div class="tab-pane" id="notes">
+        {% include 'it_issue_notes_tab_content.html' %}
+    </div>
+    <div class="tab-pane" id="files">
+        {% include 'it_issue_files_tab_content.html' %}
+    </div>
+</div>

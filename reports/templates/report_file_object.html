@@ -1,0 +1,13 @@
+{% extends 'base_object_report_file.html' %}
+{% load static %}
+
+{% block object_content %}
+	<div class="col-xs-4 " style="cursor:pointer;">
+		<b><a href="{{file.file.url}}">{{file.filename}}</a></b>
+	</div>
+	<div class="col-xs-3">{{file.uploader}}</div>
+	<div class="col-xs-4">{{file.updated}}</div>
+	<div class="col-xs-1">
+		{% include 'object_delete_btn_file.html' %}
+	</div>
+{% endblock %}

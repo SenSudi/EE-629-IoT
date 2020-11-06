@@ -1,0 +1,14 @@
+{% load static %}
+<div class="col-xs-12 reports-header">
+	<div class="col-xs-3 btn" style="text-align:left;"><b>Title</b></div>
+	<div class="col-xs-3 btn" style="text-align:left;"><b>Last Author</b></div>
+	<div class="col-xs-3 btn" style="text-align:left;"><b>Updated</b></div>
+	<div class="col-xs-3 btn" style="text-align:left;"><b>Steps</b></div>
+	<div class="col-xs-1 btn"></div>
+</div>
+<div class="col-xs-12 reports popped" style="padding:0;">
+	{% for report in reports %}
+		{% cycle 'odd' 'even' as rowcolor silent %}
+		{% include 'report_object.html' with object=report %}
+	{% endfor %}
+</div>

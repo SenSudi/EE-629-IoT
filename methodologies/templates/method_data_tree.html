@@ -1,0 +1,84 @@
+<script type="text/javascript">
+	defaultData = [
+		{% for ptype in project_types|dictsort:"title" %}
+			{
+				text: '<span class="db-ptype node-text object" data-obj-id="{{ptype.id}}" data-obj-title="{{ptype.title}}" data-url="/db_ptype_details/"><b>{{ptype.title}} {%if ptype.has_recommendation%}<i class="fa fa-arrow-circle-o-down recommend"></i>{%endif%}</b></span>',
+        		uid: '{{ptype.id}}',
+        		node_type: 'ptype',
+        		state: {
+                  checked: false,
+                  disabled: false,
+                  expanded: false,
+                  selected: false
+                },
+        		icon: 'glyphicon glyphicon-folder-close',
+				nodes: [
+					{% for phase in ptype.phase.all|dictsort:"sequence" %}
+						{% if phase.newest %}
+							{
+								text: '<span class="db-phase node-text object" data-obj-id="{{phase.id}}" data-parent-id="{{ptype.id}}" data-obj-title="{{phase.title}}" data-url="/db_phase_details/">Phase: {{phase.title}} {%if phase.has_recommendation%}<i class="fa fa-arrow-circle-o-down recommend></i>{%elif phase.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+		            			uid: '{{phase.id}}',
+		            			node_type: 'phase',
+								nodes: [
+								{% for method in phase.method_set.all|dictsort:"sequence" %}
+									{% if ptype in method.project_type.all %}
+										{% if method.newest %}
+								 		{
+								 			text: '<span class="db-method node-text object" data-obj-id="{{method.id}}" data-obj-title="{{method.title}}" data-url="/db_method_details/">{{method.title}} {%if method.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+			                				uid: '{{method.id}}',
+			                				node_type: 'method',
+			                				icon: 'glyphicon glyphicon-cog'
+								 		},
+								 		{% endif %}
+							 		{% endif %}
+								{% endfor %}//END methods
+								]//END phase nodes
+							},
+						{% endif %}
+					{% endfor %} //END phases
+					{% for method in no_phase_methods %}
+						{% if ptype in method.project_type.all %}
+							{
+								text: '<span class="db-method unassociated node-text object" data-obj-id="{{method.id}}" data-obj-title="{{method.title}}" data-url="/db_method_details/">Unassociated Method: {{method.title}} {%if method.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+	            				uid: '{{method.id}}',
+	            				node_type: 'method',
+	            				icon: 'glyphicon glyphicon-cog'
+							},
+						{% endif %}
+					{% endfor %}
+				] //END ptype nodes
+			},
+		{% endfor %}
+		{% for phase in unassociated_phases %}
+			{% if phase.newest %}
+			{
+				text: '<span class="phase node-text object" data-obj-id="{{phase.id}}" data-obj-title="{{phase.title}}" data-url="/db_phase_details/">Unassociated Phase: {{phase.title}} {%if phase.has_recommendation%}<i class="fa fa-arrow-circle-o-down recommend></i>{%elif phase.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+				uid: '{{phase.id}}',
+				node_type: 'phase',
+				nodes: [
+				{% for method in phase.method_set.all|dictsort:"sequence" %}
+					{% if method.newest %}
+			 		{
+			 			text: '<span class="method node-text object" data-obj-id="{{method.id}}" data-obj-title="{{method.title}}" data-parent-id="{{phase.id}}" data-url="/db_method_details/">{{method.title}} {%if method.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+        				uid: '{{method.id}}',
+        				node_type: 'method',
+        				icon: 'glyphicon glyphicon-cog'
+			 		},
+			 		{% endif %}
+				{% endfor %}
+				]
+			},
+			{% endif %}
+		{% endfor %}
+		{% for method in no_ptype_methods %}
+			{% if method.newest %}
+			{
+				text: '<span class="db-method unassociated node-text object" data-obj-id="{{method.id}}" data-obj-title="{{method.title}}" data-details="{{method.details_url}}" data-edit="{{method.edit_url}}" data-url="{{method.details_url}}"><b>Unassociated Method:</b> {{method.title}} {%if method.recommend%}<i class="fa fa-arrow-circle-o-left recommend"></i>{%endif%}</span>',
+				uid: '{{method.id}}',
+				node_type: 'method',
+				icon: 'glyphicon glyphicon-cog'
+			},
+			{% endif %}
+		{% endfor %}
+	];
+</script>

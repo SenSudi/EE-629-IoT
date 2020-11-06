@@ -1,0 +1,36 @@
+{% for issue in tracked_issues %}
+    <div class="col-sm-12 {% cycle 'even' 'odd' %} issue object" data-obj-title="{{issue.title}}" data-obj-id="{{issue.id}}" data-obj-app="issuetracker" data-obj-model="Issue" data-obj-type="issue" data-note-form="{{issue.note_form}}" data-file-form="{{issue.file_form}}" data-details="{{issue.details_url}}" data-edit="{{issue.edit_url}}">
+        <div class="col-md-3 vc" style="text-align:left;">
+            <b class="it-issue-title">{{issue.title}}</b>
+        </div>
+        <div class="col-md-1 text-center">
+            <b>{{issue.status.title}}</b>
+        </div>
+        <div class="col-md-1 item-contrib-name">
+            <b>{{issue.technical_poc.first_name}} {{issue.technical_poc.last_name}}</b>
+        </div>
+        <div class="col-md-1 item-contrib-name">
+            {% if issue.issue_owner.first_name %}
+            <b>{{issue.issue_owner.first_name}} {{issue.issue_owner.last_name}}</b>
+            {% else %}
+            <b>{{issue.issue_owner.user.first_name}} {{issue.issue_owner.user.last_name}}</b>   
+            {% endif %}
+        </div>
+        <div class="col-md-2 text-left item-updated">
+            <b>{{issue.updated}}</b>
+        </div>
+        <div class="col-xs-3">
+            {%with ifile=issue.latest_issue_file%}
+                {%if ifile%}
+                    <a href="{{ifile.url}}" target="_blank">{{ifile}}</a>
+                {% else %}
+                    <span>No Issue File</span>
+                {%endif%}
+            {%endwith%}
+        </div>
+        <div class="col-md-1 text-right">
+            <i class="fa fa-comment btn btn-note-add" style="padding-top:0px;"></i>
+            <span class="label label-rouded label-info pull-right note-count">{{issue.notes.all.count}}</span>
+        </div>
+    </div>
+{% endfor %}

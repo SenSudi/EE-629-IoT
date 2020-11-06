@@ -1,0 +1,24 @@
+{% load static %}
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-8">
+            {% include 'search_bar.html' %}
+        </div>
+    </div>
+    <hr class="modal-divider" style="margin-bottom:10px;">
+    <div class="row">
+        <div class="col-xs-12 text-left" style="padding-left: 10px"><b>Title</b></div>
+    </div>
+    <hr class="modal-divider" style="margin-top:10px;">
+    <div class="row" style="max-height:500px;overflow:scroll;padding-bottom:10px">
+        {% for phase in phases %}
+            <div class="row item object {% cycle 'even' 'odd' %}" id="{{phase.id}}" data-obj-title="{{phase.title}}"  data-obj-id="{{phase.id}}" data-obj-app="{{phase.app_label}}" data-obj-model="{{phase.model_class}}" data-obj-type="{{phase.type_label}}" data-file-form="{{phase.file_form}}" data-details="{{phase.details_url}}" data-edit="{{phase.edit_url}}">
+                <div class="col-xs-11 phase-title click text-left" style="padding-left: 10px">{{phase.title}}</div>
+                 <div class="col-xs-1" style="color:rgba(144, 0, 0, 0.65098);">
+                    <i class="btn fa fa-trash phase-delete" style="color:red;font-size:16px;position:relative;"></i>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

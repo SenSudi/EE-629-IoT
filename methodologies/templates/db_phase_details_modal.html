@@ -1,0 +1,81 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+	<div class="row">
+		<div class="col-xs-8">
+			<h4 id="modal-phase-details-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+				Details for phase <b>{{phase.title}}</b>
+			</h4>
+		</div>
+		<div class="col-xs-4">
+			{% include "modal_header_controls.html" with item_type="phase" item=phase %}
+		</div>
+	</div>
+	{% if phase.recommend %}
+	<div class="row" style="padding:0;">
+		<div class="col-xs-6">
+				<span class="modal-phase-recommend-alert" style="letter-spacing:1px;font-size:15px;left:10px;opacity:0.8;">
+					<b>This phase has been recommended as an update</b>
+				</span>
+				<button class="btn btn-success" id="btn-modal-phase-recommend-approve" style="margin-left:20px;padding-top:2px;padding-bottom:2px;position:relative;top:4px;" data-obj-id="{{phase.id}}">
+					approve
+				</button>
+				<button class="btn btn-info" id="btn-modal-phase-recommend-decline" style="margin-left:20px;padding-top:2px;padding-bottom:2px;position:relative;top:4px;" data-obj-id="{{phase.id}}">
+					decline
+				</button>
+		</div>
+	</div>
+	{% endif %}
+	<hr class="modal-divider" style="margin-top:15px;">
+</div>
+<div class="modal-body" style="padding-top:15px;position:relative;min-height:40vh;">
+	
+	<div class="row details-modal-data-header">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 text-center"><b>Sequence		</b></div>
+		<div class="col-xs-2 text-center"><b># of Methods	</b></div>
+		<div class="col-xs-2 text-center"><b>Version		</b></div>
+		<div class="col-xs-2 text-center"><b>Ancestor		</b></div>
+		<div class="col-xs-2 text-center"><b>Descendant		</b></div>
+	</div>
+	
+	<div class="row tdi">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 text-center"><b>{{phase.sequence}}			</b></div>
+		<div class="col-xs-2 text-center"><b>{{phase.method_count}}		</b></div>
+		<div class="col-xs-2 text-center"><b>{{phase.version}}			</b></div>
+		<div class="col-xs-2 text-center"><b>{{phase.has_ancestor}} 	</b></div>
+		<div class="col-xs-2 text-center"><b>{{phase.has_descendant}}	</b></div>
+	</div>
+	<!-- <hr class="modal-divider"> -->
+	
+	<br>
+	<div class="row details-modal-data-header">
+		<div class="col-xs-6">
+			<b>Parent Project Types</b>
+		</div>
+		<div class="col-xs-6">
+			<b>Statistics</b>
+		</div>
+	</div>
+	<div class="row tdi">
+		<div class="col-xs-6">
+			{% for ptype in phase.project_type_set.all %}
+				<div><b class="btn db-modal-content-link" data-obj-id="{{ptype.id}}" data-url="/db_ptype_details/" style="white-space:pre;">   - {{ptype.title}}</b></div>
+			{% endfor %}
+		</div>
+		<div class="col-xs-6">
+			<b style="position:relative;top:8px;">This phase has {{all_time}} hours logged accross all projects</b>
+		</div>
+	</div>
+	<hr class="modal-divider" style="opacity:0.65;margin-top:10px;">
+	<div class="row details-modal-data-header">
+		<div class="col-xs-12">
+			<b>Methods Associated With This Phase</b>
+		</div>
+	</div>
+	<div class="row tdi">
+		{% for method in phase.method_set.all %}
+			<div><b class="btn db-modal-content-link" data-obj-id="{{method.id}}" data-url="/db_method_details/" style="white-space:pre;">   - {{method.title}}</b></div>
+		{% endfor %}
+	</div>
+</div>

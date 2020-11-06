@@ -1,0 +1,18 @@
+{% for entry in entries %}	
+	<div class="row item entry {% cycle 'even' 'odd' %} each" id="{{entry.id}}">
+		<div class="row item-header" style="background-color:{% cycle '#bfbfbf' '#b3b3b3' %};">
+			<div class="col-sm-3"><i class="btn btn-clear fa fa-plus btn-min-max" style="margin-right:5px;"></i><b>{{entry.project.codename}} - {{entry.project.title}}</b></div>
+			<div class="col-sm-3 text-center entry-time col-spacer"><b>{{entry.time}}</b></div>
+			<div class="col-sm-3 col-spacer"><b>{{entry.date|date:"m-d-y"}}</b></div>
+			<div class="col-sm-3 col-spacer"><b>{{entry.tester}}</b><i onclick="ttEntryEdit(this)" class="btn btn-clear fa fa-edit pull-right btn-edit-entry" ></i> <i class="fa fa-trash-o btn btn-obj-delete "  id="del" name="del" value="del" style = "margin-left:60px;color:rgba(144, 0, 0, 0.65098);" onclick="ttDelete(this)" ></i>
+          </div>
+
+		</div>
+		<div class="row item-body" style="display:none;">
+			<div class="col-sm-9"><b style="margin-left:10px;">{{entry.title}} - </b>{{entry.body|linebreaks}}</div>
+			<div class="col-sm-3">{% if entry.associated_item %}<b>Associated Item</b><hr style="margin:2px;"><b>{{entry.associated_item}}</b>{% endif %}</div>
+		</div>
+		<hr style="margin-top:2px;margin-bottom:1px;background-color:#999;height:1px;width:102%;margin-left:-1%;opacity:0.5">
+	</div>
+	
+{% endfor %}

@@ -1,0 +1,35 @@
+{% load static %}
+
+{% if form_val %}
+<div class="col-xs-12 text-center" style="border-bottom:1px solid rgba(0,0,0,0.65);margin-bottom:10px;"><h4>Data Type Attributes<h4></div>
+<div class="col-xs-12" id="attrs">
+    {% for attr in attributes %}
+        <div class="form-group">
+            <label for="id_{{attr.0.split|join:'_'}}"><b>{{attr.0}}</b></label>
+            <div class="input-group">
+                <div class="input-group-addon"></div>
+                <textarea id="id_{{attr.0.split|join:'_'}}" name="attr_{{attr.0.split|join:'_'}}" class="form-control">{{attr.1}}</textarea>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="col-xs-12 text-center"><h4>Data Type Attributes<h4></div>
+<div class="col-xs-12" style="margin-bottom:5px;">
+    <b>Values for these attributes must be entered for individual Data Items. </b>
+    <b style="white-space:pre;"> </b>
+    <b> The attributes will update automatically after pressing [Enter] or [Tab].</b>
+</div>
+<br>
+<div class="col-xs-12" style="border-bottom:1px solid rgba(0,0,0,0.65);margin-bottom:10px;">
+    <div class="col-xs-12"></div>
+</div>
+<div class="col-xs-12 text-center btn" id="data-type-new-attr" style="opacity:0.6;cursor:pointer;font-size:15px;">
+    <div class="col-xs-12" style="border:dashed 1px rgba(0,0,0,0.6);padding:8px">Add Attribute</div>
+</div>
+<div class="col-xs-12" id="attrs">
+    {% for attr in attrs %}
+        {% include 'attr.html' with name=attr.0 %}
+    {% endfor %}
+</div>
+{% endif %}

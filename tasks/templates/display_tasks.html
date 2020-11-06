@@ -1,0 +1,32 @@
+{% load static %}
+{% for task in tasks|dictsort:"sequence" %}
+	<div class="col-xs-12 task object {% cycle 'even' 'odd' %}" id="{{task.id}}" data-app="tasks" data-model="Task" data-obj-title="{{task.title}}" data-obj-type="task" data-obj-app="tasks" data-obj-model="Task" data-obj-id="{{task.id}}" data-url="/task_details/" data-delete="{{task.delete_url}}">
+		<div class="col-sm-2 task-state" style="display:flex;flex-direction:row;justify-content:space-around;padding-right:0;padding-left:0;">
+			{% include 'task_state.html' %}
+		</div>
+		<div class="col-sm-1 text-center">
+			<b>{{task.tier}}</b>
+		</div>
+		<div class="col-sm-5 item-title wf-task-title">
+			<b>{{task.title}}</b>
+		</div>
+		<div class="col-sm-1 text-right cf" style="position:relative;left:25px;">
+        	{% include 'note_add_btn_and_counter.html' with color="info" note_count=task.note_count class="task-note-count" style="position:relative;margin-top:-1px;"%}
+		</div>
+		<div class="col-sm-1 text-right cf">
+			<i class="fa fa-file btn btn-task-files" style="padding-top:0px;position:relative;"></i>
+			<span class="label label-rouded label-info pull-right file-count" style="position:relative;top:-1px;">{{task.files.all.count}}</span>
+		</div>
+		<div class="col-sm-1 text-center cf">
+			<b style="position:relative;top:0px;"><span class="task-time">{{task.total_time}}</span> h</b>
+			<i class="pull-right btn-time-entry-add" style="margin-top:-16px;">
+				{% include 'btn_time_entry.html' %}
+			</i>
+		</div>
+		<div class="col-xs-1">
+			<i class="btn btn-clear fa fa-trash-o pull-right btn-delete-task" style="position:relative;top:-.5px;font-weight:bold;margin:1px;padding:3px;color:rgba(144, 0, 0, 0.65098);"></i>
+		</div>
+	</div>
+{% endfor %}
+
+<!-- <i class="btn fa fa-clock-o pull-right btn-time-entry-add" style="padding-top:0px;padding-bottom:0px;font-size:18px;"></i> -->

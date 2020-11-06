@@ -1,0 +1,22 @@
+<div class="col-xs-12 {{rowcolor}} status object" data-obj-id="{{status.id}}" data-edit="{{status.edit_url}}" data-delete="{{status.delete_url}}" style="padding:10px;padding-top:18px;">
+	<div class="col-xs-2 text-center">
+		<div class="col-xs-4">
+			<b class="it-status-object-sequence obj-editable-field" contenteditable data-init="{{status.sequence}}" data-content="sequence">
+				{{status.sequence}}
+			</b>
+		</div>
+		<div class="col-xs-8" style="color:rgba(0, 0, 0, 0.65098);">
+			
+			<i class="fa fa-caret-square-o-up btn it-modal-status-seq-up" style="padding:0px 6px 0px 12px;font-size:20px;position:absolute;font-weight:lighter;left:0px;top:-4px;"></i>
+		
+			<i class="fa fa-caret-square-o-down btn it-modal-status-seq-down" style="padding:0px 12px 0px 6px;font-size:20px;position:absolute;font-weight:lighter;right:0px;top:-4px;"></i>
+		
+		</div>
+	</div>
+	<div class="col-xs-9">
+		<b class="it-status-object-title obj-editable-field" id="oef-modal-s-{{status.id}}" placeholder="Add a title..." contenteditable  data-content="title" style="position:relative;min-height:13px;">{{status.title}}</b>
+	</div>
+	<div class="col-xs-1" style="color:rgba(144, 0, 0, 0.65098);">
+		<i class="fa fa-trash-o btn it-modal-status-delete btn-obj-delete" style="padding:0px 6px 0px 12px;font-size:20px;position:absolute;font-weight:lighter;left:0px;top:-5px;"></i>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+{% extends 'base_object.html' %}
+{% load static %}
+{% block object_content %}
+	<div class="col-xs-3 rw-report-title" style="cursor:pointer;">
+		<b>{{report.title}}</b>
+	</div>
+	<div class="col-xs-3">{{report.author}}</div>
+	<div class="col-xs-3">{{report.updated}}</div>
+	<div class="col-xs-2">{{report.step_modified}} of {{report.step_count}}</div>
+	<div class="col-xs-1">
+		{% include 'object_delete_btn.html' %}
+	</div>
+{% endblock %}

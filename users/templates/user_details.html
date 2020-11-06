@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-xs-2"><img src="{{user.tester.avatar.url}}"></div>
+	<div class="col-xs-10">
+		<div class="row">
+			<div class="col-xs-2"><b>{{user.username}}</b></div>
+			<div class="col-xs-2"><b>{{user.first_name}}</b></div>
+			<div class="col-xs-2"><b>{{user.last_name}}</b></div>
+			<div class="col-xs-2"><b>{{user.email}}</b></div>
+			<div class="col-xs-2"><b>{{user.tester.role}}</b></div>
+		</div>
+		<hr style="margin-top:4px;margin-bottom:4px;border-color:#dad8d8;">
+		<label><b>{{user.username}}'s Groups:</b></label>
+		{% for group in user.groups.all %}		
+		<div class="row">
+			<div class="col-xs-3" style="{%if not forloop.last%}border-bottom:1px solid #dad8d8;{%endif%}"><b>{{group.name}}</b></div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<hr style="margin-top:4px;margin-bottom:4px;">
+<label><b>{{user.username}}'s Projects</b></label>
+<div class="row" style="background-color:#dad8d8;margin-bottom:2px;">
+	<div class="col-xs-3"><b>Title</b></div>
+	<div class="col-xs-2"><b>Client</b></div>
+	<div class="col-xs-1"><b>Active</b></div>
+	<div class="col-xs-3"><b>Start</b></div>
+	<div class="col-xs-3"><b>End</b></div>
+</div>
+{% for project in user.project_set.all %}
+<div class="row" style="{%if not forloop.last%}border-bottom:1px solid #dad8d8;{%endif%}">
+	<div class="col-xs-3"><b>{{project.title}}</b></div>
+	<div class="col-xs-2"><b>{{project.client}}</b></div>
+	<div class="col-xs-1"><b>{{project.active}}</b></div>
+	<div class="col-xs-3"><b>{{project.start_date}}</b></div>
+	<div class="col-xs-3"><b>{{project.end_date}}</b></div>
+</div>
+{% endfor %}

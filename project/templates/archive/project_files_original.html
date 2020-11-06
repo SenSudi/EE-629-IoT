@@ -1,0 +1,347 @@
+{% extends 'baseline.html' %}
+{% load static %}
+
+{% block head %}
+<style type="text/css">
+  .even {
+    background-color:#dad8d8;
+  }
+  .odd {
+    background-color:#89d699;
+  }
+  .vc {
+    vertical-align:middle;
+  }
+</style>
+{% endblock %}
+
+{% block top_pallet %}
+  {% include 'auditor.html' %}
+{% endblock %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12 white-box">
+    <div class="row">
+      <div class="col-md-3">
+        <button id="btn-associate-file" type="button" class="btn btn-success" style="display:inline;">Associate New File To Project</button>
+        <!-- <button class="btn btn-info" id=btn-expand-collapse style="display:inline;">Expand All</button> -->
+      </div>
+      <div class="col-md-2">
+        <!-- <div class="form-group">
+          <select class="form-control" id="project-filter">
+            <option value="all"> ----- All Projects ----- </option>
+            {% for project in all_projects %}
+            <option value="{{project.id}}">{{project.title}}</option>
+            {% endfor %}
+          </select>
+        </div> -->
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+          <input class="form-control" id="input-search" placeholder="Type to search..." value="" type="input">
+        </div>
+      </div>
+      <div class="col-md-2" style="background-color:#eee;">
+        <!-- <div class="checkbox checkbox-info" style="margin-top:0;">
+          <input id="chk-ignore-case" type="checkbox" checked>
+          <label for="chk-ignore-case">Ignore Case</label>
+        </div> -->
+        <div class="checkbox checkbox-info">
+          <input id="chk-exact-match" type="checkbox">
+          <label for="chk-exact-match">Exact Match</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm-3">
+        <span><b>Showing Associated Files for <span id="showing">{{user.tester.project.title}}</span></b></span>
+      </div>
+
+      <div class="col-sm-6">
+        <!-- <form class="form-inline" style="display:inline;">
+          <span><b>Filter by Date</b></span>
+          <div class="form-group" style="display:inline;width:10%">
+            <input class="form-control" id="from-date" placeholder="YYYY-MM-DD" value="" type="date">
+          </div>
+          <span><b style="white-space:pre;"> to </b></span>
+          <div class="form-group" style="display:inline;width:10%">
+            <input class="form-control" id="to-date" placeholder="YYYY-MM-DD" value="" type="date">
+          </div>
+        </form>
+        <button class="btn btn-success" style="display:inline;" id="btn-filter-date">Filter</button> -->
+      </div>
+    </div>
+    
+    <hr>
+
+  <div class="row item">
+    <div class="row">
+
+      <div class="row">
+        <div class="row" style="background-color:#999;width:100%;margin-left:0px;">
+          <div class="col-sm-1"><i class="btn btn-clear fa fa-minus btn-min-max" style="margin-right:5px;"></i></div>
+          <div class="col-sm-11" style="margin-top:5px"><b style="color:black">Project Files</b></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 text-left btn hsb"><b id="filename">File Name</b></div>
+        <div class="col-sm-1 text-center btn hsb"><b id="extension">Extension</b></div>
+        <div class="col-sm-2 text-center btn hsb"><b id="size">Size</b></div>
+        <div class="col-sm-2 btn hsb" style="text-align:left"><b id="updated">Uploaded</b></div>
+        <div class="col-sm-2 btn hsb"><b id="uploader">Uploader</b></div>
+        <div class="col-sm-2 btn hsb"><b id="project">Associated Item</b></div>
+      </div>
+
+    </div>  
+    <div class="row item-body" id="files">
+      {% include 'display_project_files.html' %}
+    </div>
+  </div>
+</div>
+
+<div id="dynamicModal"></div>
+<div id="notesModal"></div>
+<div id="form-sample" style="display:none;">
+<form id="modal-body-form" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  {% for field in form %}
+    <div class="form-group">
+      <label for="{{ field.id_for_label }}"></label><span>{{ field.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{field}}
+      </div>
+    </div>
+  {% endfor %}
+</form>
+</div>
+
+<div id="page-data" style="display:none;" data-section="{{section}}"></div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+	
+	$(document).on('click','#btn-associate-file',function(){
+		var header = "Associate New File(s) With {{user.tester.project.title}}";
+    var content = $('#form-sample').html();
+    var strSubmitFunc = "submitForm()";
+    var btnText = "Add Entry";
+    doModal('dynamicModal', header, content, strSubmitFunc, btnText);
+    $('#modalWindow').find('#btn-modal-form-submit').attr('id','btn-submit-file');
+    $('#modalWindow').find('form').attr('action','/project_files/')
+	});
+
+	$(document).on('click','#btn-submit-file',function(){
+		var form = $(this).closest('.modal').find('form');
+		form.ajaxSubmit(function(returned){
+	      $('#files').empty().html(returned);
+	      $('#modalWindow').modal('hide');
+	    });
+	    return false;
+	});
+
+  
+  function formatForm(){
+    $.each($('[id*="id_"]'), function(index, value){
+      //console.log($(this));
+      var input = $(this);
+      //console.log(input.closest('.form-group').find('label'));
+      var label = input.closest('.form-group').find('label');
+      var name = pDN(input.attr('name'));
+      //Set label inner html
+      if (label.children().length == 0) {
+        label.html(name);
+      }
+      //Add form-control class to input
+      input.addClass('form-control');
+      if(/date/i.test(name)){input.attr('type','date');}
+      //re-write this as $.each type = 'date' (keep form.width)
+      if(/date/i.test(name)){
+        input.parent().css('width','20%');
+      }
+      if (input.is('textarea')) {
+        input.attr('rows','4')
+      }
+      if(input.attr('required')){
+        label.append(' *')
+      }
+      if (input.is('select') && input.attr('multiple') && !input.attr('disabled')) {
+        label.append(' (select at least one)')
+      }
+      if (label.text()== 'Time') {
+        label.append(' (in hours)')
+        input.parent().css('width','20%');
+      }
+      if (label.text() == 'Task *') {
+        label.closest('.form-group').css('display','none');
+      }
+    });
+    
+  }
+
+  formatForm();
+
+
+  $(document).on('keyup','#input-search',function(){
+    // Set search value
+    var search = $(this).val();
+    // If the search Value is not empty !('').
+    if (search.length > 0) {
+        // Make all Items invisible
+        $('.item').css('display','none');
+        // If the form 'ignore case checkbox is checked'
+        if ($('#chk-exact-match').is(':checked')) {
+            // Create the regex from the search value with ignore case flag
+            var re = new RegExp(search);
+            // Check each .item to see if the regex matches and display the item if it does
+            $.each($('.item'),function(){
+                //console.log($(this).text().trim());
+                var item = $(this).text()
+                if (re.test(item)) {
+                    $(this).css('display','block');
+                }
+            });
+        } else {
+          // Create the regex from the search value with ignore case flag
+          var re = new RegExp(search,"i");
+          // Check each .item to see if the regex matches and display the item if it does
+          $.each($('.item'),function(){
+              //console.log($(this).text().trim());
+              var item = $(this).text()
+              if (re.test(item)) {
+                  $(this).css('display','block');
+              }
+          });
+        }
+    } else {
+        $('.item').css('display','block');
+    }
+  });
+
+  $(document).on('click','.btn-edit-note',function(){
+    var btn = $(this);
+    var item= btn.closest('.item');
+    var note_id=item.attr('id');
+    var url='/time_entry_edit_form/';
+    $.get(url,{'id':note_id},function(returned){
+      var header = "Update Time Entry";
+      var content = returned;
+      var strSubmitFunc = "submitForm()";
+      var btnText = "Update Entry";
+      doModal('dynamicModal', header, content, strSubmitFunc, btnText);
+      $('#modalWindow').find('#btn-modal-form-submit').attr('id','btn-update-entry');
+      $('#modalWindow').find('#update_id').val(note_id);
+      formatForm();
+    });
+  });
+
+  $(document).on('click','#btn-update-entry',function(){
+    var form = $(this).closest('.modal').find('form');
+    form.ajaxSubmit(function(returned){
+      $('#files').empty().html(returned);
+      $('#modalWindow').modal('hide');
+    });
+    return false;
+  });
+
+  $(document).on('change','#project-filter',function(){
+    var option = $(this).find(':selected');
+    var text = option.text()
+    //console.log(text)
+    var proj_id = option.val();
+    var url = '/display_project_files/';
+    $.get(url,{'p_id':proj_id},function(returned){
+      $('#files').empty().html(returned);
+      if (proj_id != 'all'){
+        $('#showing').empty().text(text);
+      } else {
+        $('#showing').empty().text('All Projects');
+      }
+    });
+  });
+
+  $(document).on('change','#id_project',function(){
+    var select = $(this);
+    var choice = select.find(':selected');
+    console.log()
+    var p_id = choice.val();
+    var url = '/get_tasks_for_project/';
+    console.log(p_id)
+    $.get(url,{'p_id':p_id},function(returned){
+      if (returned == 'invalid project') {
+        alert(returned);
+      } else {
+        select.closest('form').append('<div class="form-group"><label for="id_task"></label><span></span><div class="input-group"><div class="input-group-addon"></div><select id="id_task" name="task"></select></div></div>');
+        $('#id_task').empty().html(returned);
+        formatForm();
+        $('#id_task').closest('.form-group').css('display','block');
+      }
+    });
+  });
+  //([0-9]{1,2}[-/][0-9]{1,2}[-/][0-9]{2})
+  $(document).on('click','#btn-filter-date',function(){
+      var btn = $(this);
+      //btn.closest('form').preventDefault();
+      data = {};
+      var from = $('#from-date').val();
+      var url ='/display_project_files/';
+      if ($('#from-date').val().length == 10) {
+        data['from'] = $('#from-date').val();
+      }
+      if ($('#to-date').val().length == 10) {
+        data['to'] = $('#to-date').val();
+      }
+      data['p_id'] = $('#project-filter').find(':selected').val();
+      $.get(url,data,function(returned){
+        if (returned != 'Invalid Date or Range!') {
+          $('#files').empty().html(returned);
+          btn.text('Clear Filter');
+          btn.attr('id','btn-clear-filter');
+          btn.removeClass('btn-success');
+          btn.addClass('btn-info');
+        }
+      });
+  });
+
+  $(document).on('click','#btn-clear-filter',function(){
+    var btn = $(this);
+    var url = /display_project_files/;
+    data = {'p_id':$('#project-filter').find(':selected').val()};
+    $.get(url,data,function(){
+      $('#files').empty().html(returned);
+      btn.text('Filter');
+      btn.attr('id','btn-filter-date');
+      btn.removeClass('btn-info');
+      btn.addClass('btn-success');
+    });
+  });
+
+
+  $(document).on('keypress','[id*="date"]',function(key){
+    if ($(this).val().length == 10) {
+      if (/Tab|ArrowLeft|ArrowRight|Backspace|Enter|Delete/.test(key.key) == false){
+        console.log(key.key)
+        return false;
+      }
+    }
+
+    // if($(this)[0].selection)
+    // console.log($(this))
+  });
+
+  $(document).on('click','.hsb',function(){
+    var val = $(this).find('b').attr('id');
+    var url = '/display_project_files';
+    $.get(url,{'val':val},function(returned){
+      $('#files').empty().html(returned);
+      //console.log(val)
+    });
+  });
+</script>
+{% endblock %}

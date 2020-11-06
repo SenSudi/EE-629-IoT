@@ -1,0 +1,14 @@
+{% extends 'form_modal_base.html' %}
+{% load static %}
+
+{% block header_title %}
+	Update contact <b>{{contact.whole_name}}</b>
+{%endblock%}
+
+{% block header_additional %}
+	
+{%endblock%}
+
+{% block body_content %}
+	{% include 'contact_update_form.html' %}
+{%endblock%}
