@@ -1,6 +1,0 @@
-Django==1.11.4
-django-admin-bootstrapped==2.5.7
-psycopg2==2.7.3
-jsonfield==2.0.2
-python-docx==0.8.6
-docxtpl==0.3.5

@@ -1,8 +1,0 @@
-{% extends 'base_list_view.html' %}
-{% load static %}
-
-{% block items %}
-		{% include 'display_feedback.html' with items=feedback item_header=True item_body=True %}
-{% endblock %}
-
-<div id="page-data" style="display:none;" data-section="{{section}}"></div>

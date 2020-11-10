@@ -1,8 +1,0 @@
-<div class="col-xs-12 select-container" data-obj-type="report_item">
-{% for item in items %}
-<div class="col-xs-12 object selectable {% cycle 'odd' 'even' %} popped" data-obj-type="report_item" data-obj-id="{{item.id}}" style="font-size:15px;margin-left:1px;margin-right:1px;">
-	<div class="col-xs-12 text-left-align" style="overflow-wrap:break-word">
-		<div value="">{{item.title}}</div>
-	</div>
-</div>
-{% endfor %}
