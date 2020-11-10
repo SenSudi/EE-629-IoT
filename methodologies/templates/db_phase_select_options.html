@@ -1,8 +1,0 @@
-<option value="none">-------------------</option>
-{% for phase in phases %}
-	{% if selected and selected == phase.id %}
-		<option value="{{phase.id}}" selected="selected">{{phase.title}}</option>
-	{% else %}
-		<option value="{{phase.id}}">{{phase.title}}</option>
-	{% endif %}
-{% endfor %}

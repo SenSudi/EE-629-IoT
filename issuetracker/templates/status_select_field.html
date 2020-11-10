@@ -1,4 +1,0 @@
-<option value>---------</option>
-{% for status in statuses %}
-	<option value="{{status.id}}" {% if selection == status.id %} selected {%endif%}>{{status.title}}</option>
-{% endfor %}
