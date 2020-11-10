@@ -1,0 +1,82 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+	<div class="row">
+		<div class="col-xs-7">
+			<h4 id="modal-{{item_type}}-details-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+				Details for project type <b>{{ptype.title}}</b>
+			</h4>
+		</div>
+		<div class="col-xs-5">
+			{% include "modal_control_btns.html" with refresh=True edit=True export=True %}
+		</div>
+	</div>
+	<hr class="modal-divider" style="margin-top:15px;">
+</div>
+<div class="modal-body" style="padding-top:15px;position:relative;min-height:40vh;">
+	
+	<div class="row details-modal-data-header">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 text-center"><b>Shorthand		</b></div>
+		<div class="col-xs-2 text-center"><b>Title 			</b></div>
+		<div class="col-xs-2 text-center"><b># Phases		</b></div>
+		<div class="col-xs-2 text-center"><b># Methods		</b></div>
+		<div class="col-xs-2 text-center"><b>Version		</b></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 text-center"><b>{{ptype.shorthand}}		</b></div>
+		<div class="col-xs-2 text-center"><b>{{ptype.title}}			</b></div>
+		<div class="col-xs-2 text-center"><b>{{ptype.phase.count}}		</b></div>
+		<div class="col-xs-2 text-center"><b>{{ptype.method_set.count}} </b></div>
+		<div class="col-xs-2 text-center"><b>{{ptype.version}}			</b></div>
+	</div>
+	<!-- <hr class="modal-divider"> -->
+	
+	<br>
+	<div class="row details-modal-data-header">
+		<div class="col-xs-4">
+			<b>Child Phases</b>
+		</div>
+		<div class="col-xs-4">
+			<b>Child Methods</b>
+		</div>
+		<div class="col-xs-4">
+			<b>Statistics</b>
+		</div>
+	</div>
+	<div class="row tdi">
+		<div class="col-xs-4">
+			<b>This project type has {{all_time}} hours logged accross all projects</b>
+		</div>
+	</div>
+	<hr class="modal-divider" style="opacity:0.65;margin-top:10px;">
+	<div class="row details-modal-data-header">
+		<div class="col-xs-12">
+			<b>Phases Associated With This Project Type</b>
+		</div>
+	</div>
+	<div class="row tdi">
+		{% for phase in ptype.phase.all %}
+			{% if phase.newest and not phase.recommend %}
+				<div class="col-xs-4">
+					<div><b class="btn db-modal-content-link" data-obj-id="{{phase.id}}" data-url="/db_phase_details/" style="white-space:pre;">   - {{phase.title}}</b></div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="row details-modal-data-header">
+		<div class="col-xs-12">
+			<b>Methods Associated With This Project Type</b>
+		</div>
+	</div>
+	<div class="row tdi">
+		{% for method in ptype.method_set.all %}
+			{% if method.newest and not method.recommend %}
+				<div class="col-xs-4">
+					<div><b class="btn db-modal-content-link" data-obj-id="{{method.id}}" data-url="/db_method_details/" style="white-space:pre;">   - {{method.title}}</b></div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

@@ -1,0 +1,84 @@
+<li class="nav-small-cap m-t-10">
+  <b style="color:black;">--- Main Menu</b>
+</li>
+
+<li> 
+  <a href="/?home=True" class="waves-effect active side-nav-link cpll" id="home">
+    <i class="fa fa-home fa-fw"></i> 
+    <span class="hide-menu"> Home </span>
+  </a>
+</li>
+
+<li>
+  <a href="/report_wizard" class="waves-effect side-nav-link cpll" id="report_wizard">
+    <i class="fa fa-magic fa-fw"> </i> 
+    <span class="hide-menu"> Report Wizard</span>
+  </a>
+</li>
+
+<li>
+  <a href="/timetracker" class="waves-effect side-nav-link cpll" id="timetracker">
+    <i class="fa fa-clock-o fa-fw"> </i> 
+    <span class="hide-menu"> TimeTracker</span>
+  </a>
+</li>
+
+<li id="nav-issue-tracker-li"> 
+  <a href="/issue_tracker" class="waves-effect side-nav-link cpll" id="issue_tracker">
+    <i class="fa fa-fire-extinguisher fa-fw"> </i> 
+    <span class="hide-menu"> IssueTracker</span>
+  </a>
+</li>
+        
+        <!-- <li><a href="inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Apps {% if user.is_authenticated %}<span class="fa arrow"></span><span class="label label-rouded label-danger pull-right">New</span>{% endif %}</span></a>
+        
+          <ul class="nav nav-second-level">
+            {% if user.is_authenticated %}
+            <li> <a href="/calendar" class="waves-effect"><i data-icon="A" class="linea-icon linea-elaborate fa-fw"></i> <span class="hide-menu">Calendar</span></a></li>
+            <li><a href="chat.html">Chat-message</a></li>
+            <li><a href="javascript:void(0)" class="waves-effect">Inbox<span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li> <a href="inbox.html">Mail box</a></li>
+                <li> <a href="inbox-detail.html">Inbox detail</a></li>
+                <li> <a href="compose.html">Compose mail</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)" class="waves-effect">Contacts<span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li> <a href="contact.html">Contact1</a></li>
+                <li> <a href="contact2.html">Contact2</a></li>
+                <li> <a href="contact-detail.html">Contact Detail</a></li>
+              </ul>
+            </li>
+            {% endif %}
+          </ul>
+        </li> -->
+
+<li id="projects-dropdown" class=""> 
+  <a href="javascript:void(0);" class="waves-effect active">
+    <i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i> 
+    <span class="hide-menu">Open Projects
+      <span class="fa arrow"></span>
+      <span class="label label-rouded label-purple pull-right">
+        {{open_proj_count}}
+      </span>
+    </span>
+  </a>
+  <ul class="nav nav-second-level collapse" aria-expanded="false" style="height:0px;">
+    <li>
+      <a href="/new_project" class="side-nav-link cpll" id="new_project">
+        <i class="icon-plus"></i> 
+        New Project
+      </a>
+    </li>
+    {% for item in projects %}
+		  {% if item.active %}
+        <li>
+          <a href="/projects/{{item.pk}}" class="side-nav-project-link cppll" id="{{item.id}}" data-title="{{item.title}}">
+            {{item.title}}
+          </a>
+        </li>
+		  {% endif %}
+    {% endfor %}
+  </ul>
+</li>

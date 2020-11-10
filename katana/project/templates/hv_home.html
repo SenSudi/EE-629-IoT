@@ -1,0 +1,58 @@
+{% load static %}
+<div class="top-spacer"></div>
+{% if last_project %}
+<div class="col-lg-10 col-sm-10 col-xs-12">
+    <a href="/projects/{{last_project.id}}" class="cppll" data-title="{{last_project.title}}">
+        <div class="white-box" style="height:105px !important;">
+            <h3 class="box-title" style="margin-bottom:0;">Your Recent Project</h3>
+            <ul class="list-inline two-part" style="margin-top:-15px !important; margin-bottom:0;">
+                <li style="margin-top:10px;"><i class="icon-reload" style="font-size:35px;margin-top:5px;"></i></li>
+                <li class="text-right" style=""><h1 class="">{{last_project.title}}</h1></li>
+            </ul>
+        </div>
+    </a>
+</div>
+{% endif %}
+<div class="white-box col-lg-12 col-sm-12 col-xs-12">
+    <div class="col-xs-2">
+        <div class="form-group" >
+            <select class="form-control" id="project-filter" onchange="msProjectFilter(event)">
+                <option value="all">-- All Projects --</option>
+                {% for project in all_projects %}
+                <option value="{{project.id}}">{{project.title}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="form-group">
+            <select class="form-control" id="status-filter" onchange="msStatusFilter(event)">
+                <option value="all">-- Status --</option>
+                <option value="open">Open</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-5">
+        <div class="form-group" style="display:inline;">
+            <input  class="form-control" type="date" name="fltr-date-start" id="fltr-date-start" style="display:inline;width:45%;" value="{{from}}">
+        </div>
+        <span style="white-space:pre;"><b>-</b></span>
+        <div class="form-gorup" style="display:inline;">
+            <input class="form-control" type="date" name="fltr-date-end" id="fltr-date-end" style="display:inline;width:45%;" value="{{to}}">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <button onclick="msFilterSubmit(this)" class="btn" id="btn-activate-filters" style="margin-top:2px;">
+            <i class="fa fa-filter"></i>
+        </button>
+        <button onclick="msFilterReset(this)" class="btn" id="btn-clear-filters" style="margin-top:2px;">
+            <i class="fa fa-history"></i>
+        </button>
+    </div>
+</div>
+{% if milestones %}
+<div id="home-milestones" class="milestones">
+    {% include 'home_milestones.html' %}
+</div>
+{% endif %}

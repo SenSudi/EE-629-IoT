@@ -1,0 +1,11 @@
+
+<option>------------</option>
+{% if tasks %}
+	{% for task in tasks %}
+<option value="{{task.id}}">{{task.title}}</option>
+	{% endfor %}
+{% else %}
+	{% for task in project.task_set.all %}
+<option value="{{task.id}}">{{task.title}}</option>
+	{% endfor %}
+{% endif %}

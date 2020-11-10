@@ -1,0 +1,4 @@
+{% include 'display_files_list_header.html' %}
+<div class="files-list col-xs-12 popped">
+	{% include 'display_files_list.html' with files=issue.get_files %}
+</div>

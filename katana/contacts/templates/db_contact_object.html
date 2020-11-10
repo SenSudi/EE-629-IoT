@@ -1,0 +1,22 @@
+{% extends 'base_object.html' %}
+{% load static %}
+
+{% block object_content %}
+	<div class="col-xs-2 first_name click details">			<b>{{object.first_name}}	</b></div>
+	<div class="col-xs-2 text-left last_name click details"><b>{{object.last_name}}		</b></div>
+	<div class="col-xs-2 text-left">				<b>{{object.email}}			</b></div>
+	<div class="col-xs-1 text-center">				<b>{{object.phone}}			</b></div>
+	<div class="col-xs-2 text-left">
+		<b>	
+		{% if object.project_roles.count > 0 %}
+			{{object.project_roles.count}} Roles
+		{% else %}
+			Not assigned to any roles
+		{% endif %}
+		</b>
+	</div>
+	<div class="col-xs-2 text-left">				<b>{{client}}	</b></div>
+	<div class="col-xs-1">
+		{% include 'object_delete_btn.html' %}
+	</div>
+{% endblock %}

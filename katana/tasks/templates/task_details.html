@@ -1,0 +1,58 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+	<div class="row">
+		<div class="col-xs-9">
+			<h2 id="modal-task-title header-scheme" style="display:inline;text-shadow:1px 1px 1px #dad8d8;margin-bottom:0px;">
+				<b>{{task.title}}</b>
+			</h2>
+		</div>
+		<div class="col-xs-3">
+			<a class="close pull-right header-scheme" data-dismiss="modal" style="position:relative;font-size:25px;top:5px;">×</a>
+			{% include 'task_details_controls.html' %}
+		</div>
+	</div>
+	<hr class="modal-divider">
+</div>
+<div class="modal-body" style="padding-top:0;margin-top:10px;">
+	<div class="container-fluid" style="padding:5px;">
+		<div class="row task-header tdi popped" >
+			<div class="col-sm-2 col-spacer task-state" style="display:flex;flex-direction:row;justify-content:space-between;padding-right:0;padding-left:0;">
+				{% include 'task_state.html' %}
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2 col-spacer">
+				<b>
+					<span class="task-tier">{{task.tier}}</span>
+					<span style="white-space:pre"> - Yellow Belt</span>
+				</b>
+			</div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-2 col-spacer"><b>Estimated Duration </b><b>{{task.est_time}}</b></div>
+			<div class="col-sm-2 col-spacer text-right"><b>Total Duration </b><b>{{task.total_time}}</b></div>
+		</div>
+		<br>
+		<!-- <label>Description</label> -->
+		{% include 'modal_data_header.html' with header_label="Description" %}
+		<div class="row">
+			<div class="col-sm-12 task-description tdi popped" style="min-height:30px;">{{task.description|linebreaks}}</div>
+		</div>
+		<br>
+		<!-- <label>Command</label> -->
+		{% include 'modal_data_header.html' with header_label="Command" %}
+		<div class="row">
+			<div class="col-sm-12 task-command tdi popped" style="min-height:30px;">{{task.base_command}}</div>
+		</div>
+		<br>
+		<!-- <label>Help</label> -->
+		{% include 'modal_data_header.html' with header_label="Help" %}
+		<div class="row">
+			<div class="col-sm-12 task-help-base tdi popped" style="min-height:30px;">{{task.help_base|linebreaks}}</div>
+		</div>
+		<br>
+		<div id="task-details-form-container"></div>
+		{% include 'task_details_tabs.html' %}
+		<div class="tab-content">
+			{% include 'task_notes_panel.html' %}
+		</div>
+	</div>
+</div>

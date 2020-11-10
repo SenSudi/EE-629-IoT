@@ -1,0 +1,38 @@
+{% load static %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12 white-box popped">
+    <div class="row">
+      <div class="col-md-3">
+        <button id="btn-add-contact" class="btn btn-success btn-object-add popped" data-url="/contact_add_form/" style="display:inline;">Add Contact</button>
+      </div>
+      <div class="col-md-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+      </div>
+      <div class="col-md-7">
+        {% include 'search_bar.html' %}
+      </div>
+    </div>
+    <hr>
+    <span><b>Showing contacts for client [ {{project.client.name}} ]</b></span>
+    <i class="btn fa fa-refresh objects-refresh pull-right"></i>
+    <hr class="modal-divider">
+    <div class="row">
+    	<div class="col-sm-2 btn"><b class="pull-left">First    </b></div>
+		  <div class="col-sm-2 btn"><b class="pull-left">Last     </b></div>
+		  <div class="col-sm-2 btn"><b class="pull-left">e-mail   </b></div>
+      <div class="col-sm-1 btn"><b                  >phone    </b></div>
+		  <div class="col-sm-2 btn"><b class="pull-left">role     </b></div>
+      <div class="col-sm-2 btn"><b class="pull-left">client   </b></div>
+      <div class="col-sm-1"></div>
+    </div>
+
+	<div class="row popped objects-container" id="contacts" data-url="/display_contacts/">
+		{% include 'display_project_contacts.html' %}
+	</div>
+</div>
+
+{% include 'page_data.html' %}
+{% endblock %}

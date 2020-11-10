@@ -1,0 +1,74 @@
+{% extends 'project.html' %}
+{% load static %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/report.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
+{% endblock %}
+
+{% block section %}
+	<span class="project-title project-section">{{section | title}}</span>
+{% endblock %}
+
+
+{% block spacecontent %}
+	{% if report %}
+			<div class="report-summary">
+				<span class="report-item">{{report.title}}</span>
+				<span class="report-item">UPDATED: {{report.updated}}</span>
+				<span class="report-item">CREATED BY: {{report.created_by}}</span>
+				<span class="report-item">TYPE: {{report.report_type}}</span>
+				<div class="display-item">
+					<br>
+					<span class="report-item">VULNERABILITIES: </span>
+					{% for vuln in vulnerabilities %}
+						<div class="item-info">
+							<div class="vuln-header">
+								<span class="v-title"><b>Title:</b> {{vuln.title}}</span><span class="v-cat"><b>Category:</b> {{vuln.category}}</span><a class="remove-link" href="/remove_vuln/{{report.pk}}/{{vuln.pk}}">REMOVE <span  class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+							</div>
+							<span class="v-desc"><b>Description:</b> {{vuln.description}}</span>
+						</div>
+					{% endfor %}
+					<div id="file-div">
+						<span class="report-item">REPORT FILE: 
+						{% if available %}
+						<a href="{{report.file_url}}" id="download-icon"><span  class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><span> {{report.file_name}}</span></a>
+						{% else %}
+						<span> - Please Export A Report - </span>
+						{% endif %}
+						</span>	
+					</div>
+					<div id="export-div">
+						<form method="POST">{% csrf_token %}
+							<input type="submit" name="export" value="EXPORT">
+						</form>	
+					</div>	
+				</div>
+				{% if success %}
+					<b style="color:rgb(14, 74, 14); font-variant:small-caps;">{{num_success}}{{success}}{{num_success|pluralize:"y was added to the report,ies were added to the report"}}</b>
+				{% endif %}<br>
+				{% if error %}
+					<b style="color:rgb(150, 27, 27); font-variant:small-caps;">{{num_error}}{{error}}{{num_error|pluralize:"y was already associated with the report,ies were already associated with the report"}}</b>
+				{% endif %}<br>
+				<p>Search For Vulnerabilities To Add To This Report -</p>
+				<div id="search-div">
+					<form method="POST" id="search-form">{%csrf_token%}
+						<input id="search-bar" type="text" name="search-val" placeholder="name or keyword or category">
+						<button type="submit" class="save btn btn-default">SEARCH <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+					</form>
+
+					{% if search %}
+						<form method="POST" id="add-to-report-form">{% csrf_token %}
+							<input type="submit" id="add-to-report-submit" name="add-to-report" value="Add Selected To Report"><br>
+						
+						{% for search_item in search %}
+							<input type="checkbox" name="item-pk" value="{{search_item.pk}}"><span class="v-title"><b>Title:</b> {{search_item.title}}</span><span class="v-cat"><b>Category:</b> {{search_item.category}}</span><br>
+							<b>Description:</b><br>
+							<textarea class="v-description" name="item-desc">{{search_item.description}}</textarea>
+						{% endfor %}
+						</form>
+					{% endif %}
+				</div>
+			</div>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,67 @@
+{% load static %}
+
+{% block top_pallet %}
+  {% include 'auditor.html' %}
+{% endblock %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="col-md-12 white-box popped">
+    <div class="row">
+      <div class="col-md-4">
+        <button  class="btn btn-success popped" id="btn-wf-phase-add" onclick="wfAddPhase(this)" style="display:inline;">Add Phase</button>
+        <!-- <button class="btn btn-success popped" id="btn-wf-task-add">Add Task</button> -->
+        <button class="btn btn-info popped" id="btn-expand-collapse" style="display:inline;">Expand</button>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <select id="phase-select" onchange="wfPhaseFilter(this)" class="form-control col-md-6 col-spacer" name="phase-select">
+            <option value="all">------All Phases------</option>
+            {% for phase in project.get_phases %}
+              <option value="{{phase.id}}">{{phase.title}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-5">
+      	{% include 'search_bar.html' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <b><span>Showing <span id="showing">All Phases</span></span></b>
+      </div>
+      <div class="col-sm-6">
+      </div>
+    </div>
+    <hr>
+  <div class="container-fluid item-section" style="padding-left:0;padding-right:0;">
+    <div class="row">
+      <ul class="" id="phases" style="list-style:none;">
+        {% include 'display_phases.html' %}
+      </ul>
+    </div> 
+  </div> <!-- End item-section -->
+</div>
+
+<div id="form-sample" style="display:none;">
+<form id="modal-body-form" method="POST" enctype="multipart/form-data" onload="formatForm()">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  {% for field in form %}
+    <div class="form-group">
+      <label for="{{ field.id_for_label }}"></label><span>{{ field.errors }}</span>
+      <div class="input-group">
+        <div class="input-group-addon"></div>
+        {{field}}
+      </div>
+    </div>
+  {% endfor %}
+</form>
+</div>
+
+
+
+{% include 'page_data.html' %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% load static %}
+
+<div role="tabpanel" class="tab-pane fade active in task-time" id="task-time-tab-content-{{task.id}}">
+{% if task.entries_count > 0 %}
+	{% include 'entries_list_display.html' with entries=task.get_time_entries %}
+{% endif %}
+</div>

@@ -1,0 +1,56 @@
+ {% load static %}
+
+ {% if form_val %}
+ <div class="col-xs-12 text-center" style="border-bottom:1px solid rgba(0,0,0,0.65);margin-bottom:10px;"><h4>Item Type Attributes<h4></div>
+ <div class="col-xs-12" id="attrs">
+     {% for attr in attributes|dictsort:"sequence" %}
+         <div class="form-group" data-value="{{attr.id}}">
+            <label for="id_{{attr.title.split|join:'_'}}" ><b>{{attr.title}}</b></label>
+             <div class="input-group">
+                 <div class="input-group-addon"></div>
+                {% if  attr.input_type == 'list' %}
+                    <select id="id_{{attr.title.split|join:'_'}}" name="{{attr.title.split|join:'_'}}" class="form-control" data-obj-type = "list" data-obj-seq = "{{attr.sequence}}">
+                        {% for item in attr.value %}
+                            {% if attr.selected == forloop.counter0 %}
+                                 <option value="{{item}}" selected>{{item}}</option>
+                            {% else %}
+                                 <option value="{{item}}">{{item}}</option>
+                            {% endif %}
+                         {% endfor %}
+                     </select>
+                {% elif attr.input_type == 'text' %}
+                    <input type="text" id="id_{{attr.title.split|join:'_'}}" name="{{attr.title.split|join:'_'}}" class="form-control" value="{{attr.value.0|default_if_none:''}}" data-obj-type = "text" data-obj-seq = "{{attr.sequence}}"/>
+                {% else %}
+                    <textarea id="id_{{attr.title.split|join:'_'}}" name="{{attr.title.split|join:'_'}}" class="form-control" data-obj-type = "textarea" data-obj-seq = "{{attr.sequence}}">{{attr.value.0|default_if_none:''}}</textarea>
+                {% endif %}
+             </div>
+         </div>
+     {% endfor %}
+ </div>
+ {% else %}
+ <div class="col-xs-7">
+     <button class="btn btn-danger btn-item-type-delete m-r-10" style="float:right">Delete Item Type</button>
+ </div>
+ <div class="top-spacer"  style="height:50px"></div>
+ <div class="col-xs-12 text-center"><h4>Item Type Attributes<h4></div>
+ <div class="col-xs-12" style="margin-bottom:5px;">
+     <b>Values for these attributes must be entered for individual Report Items. </b>
+     <b style="white-space:pre;"> </b>
+     <b> The attributes will update automatically after pressing [Enter] or [Tab].</b>
+ </div>
+ <br>
+ <div class="col-xs-12" style="border-bottom:1px solid rgba(0,0,0,0.65);margin-bottom:10px;">
+     <div class="col-xs-12"></div>
+ </div>
+ <div class="col-xs-6 text-center btn" id="item_type_new_attr" style="opacity:0.6;cursor:pointer;font-size:15px;">
+     <div class="col-xs-12" style="border:dashed 1px rgba(0,0,0,0.6);padding:8px">Add Attribute</div>
+ </div>
+ <div class="col-xs-6 text-center btn" id="assign_static_attr" style="opacity:0.6;cursor:pointer;font-size:15px;">
+     <div class="col-xs-12" style="border:dashed 1px rgba(0,0,0,0.6);padding:8px;">Assign Static Attribute</div>
+ </div>
+ <div class="col-xs-12" id="attrs">
+     {% for attr in attributes|dictsort:"sequence" %}
+     {% include 'type_attr.html' %}
+     {% endfor %}
+ </div>
+ {% endif %}

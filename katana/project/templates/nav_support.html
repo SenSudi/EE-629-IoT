@@ -1,0 +1,16 @@
+<li class="nav-small-cap"><b style="color:black;">--- Support</b></li>
+{% if user.username == 'admin' and user.is_authenticated%}
+<li>
+  <a href="/feedback" class="waves-effect side-nav-link cpll" id="feedback">
+    <i class="fa fa-bullhorn text-red"></i>
+    <span class="hide-menu">Feedback</span>
+  </a>
+</li>
+{% endif %}
+<li><a href="http://wiki.leetsys.com" target="content_paine" class="waves-effect side-nav-link cpll" id="wiki"><i class="fa fa-circle-o text-danger"></i> <span class="hide-menu">Wiki</span></a></li>
+<li><a href="faq.html" class="waves-effect side-nav-link cpll" id="faq"><i class="fa fa-circle-o text-success"></i> <span class="hide-menu">FAQs</span></a></li>
+{% if user.is_authenticated %}
+<li><a href="/logout" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
+{% else %}
+<li><a href="/login" class="waves-effect"><i class="icon-login fa-fw"></i> <span class="hide-menu">Login</span></a></li>
+{% endif %}

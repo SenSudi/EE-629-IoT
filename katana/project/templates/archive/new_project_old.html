@@ -1,0 +1,71 @@
+{% extends 'baseline.html' %}
+{% load static %}
+
+{% block table_pallet %}
+<div class="top-spacer"></div>
+
+<div class="container form-box">
+  <div class="white-box">
+    <h3 class="box-title m-b-0">Add New Project</h3>
+    <p class="text-muted m-b-30 font-13"> potential sub heading </p>
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <form method="POST" action="/add_project/" class="post-form" id="proj-form">{% csrf_token %}
+        	{{ form.non_field_errors }}
+        	<!-- TITLE -->
+          <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">Title</label><span>{{ form.title.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input type="{{form.title.field.widget.input_type}}" class="form-control" id="{{ form.title.id_for_label }}" name="{{form.title.html_name}}" maxlength="{{form.title.field.max_length}}" placeholder="{{form.title.html_name|title}}" {% if form.title.field.required %}required{% endif %}>
+           	</div>
+          </div>
+          <!-- CLIENT -->
+          <div class="form-group">
+            <label for="{{ form.client.id_for_label }}">Client</label><span>{{ form.client.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input type="{{form.client.field.widget.input_type}}" class="form-control" id="{{ form.client.id_for_label }}" name="{{form.client.html_name}}" maxlength="{{form.client.field.max_length}}" placeholder="{{form.client.html_name|title}}" {% if form.client.field.required %}required{% endif %}>
+           	</div>
+          </div>
+          <!-- DESCRIPTION -->
+          <div class="form-group">
+            <label for="{{ form.description.id_for_label }}">Description</label><span>{{ form.description.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input type="{{form.description.field.widget.input_type}}" class="form-control" id="{{ form.description.id_for_label }}" name="{{form.description.html_name}}" maxlength="{{form.description.field.max_length}}" placeholder="{{form.description.html_name|title}}" {% if form.description.field.required %}required{% endif %}>
+           	</div>
+          </div>
+          <!-- START DATE -->
+          <div class="form-group">
+            <label for="{{ form.start_date.id_for_label }}">Start Date</label><span>{{ form.start_date.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"></div>
+              <input type="date" class="form-control" id="{{ form.start_date.id_for_label }}" name="{{form.start_date.html_name}}" maxlength="{{form.start_date.field.max_length}}" placeholder="{{form.start_date.html_name|title}}" {% if form.start_date.field.required %}required{% endif %}><!-- {{form.start_date.field.widget.input_type}} -->
+           	</div>
+          </div>
+          <!-- END DATE -->
+          <div class="form-group">
+            <label for="{{ form.end_date.id_for_label }}">End Date</label><span>{{ form.end_date.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input type="date" class="form-control" id="{{ form.end_date.id_for_label }}" name="{{form.end_date.html_name}}" maxlength="{{form.end_date.field.max_length}}" placeholder="{{form.end_date.html_name|title}}" {% if form.end_date.field.required %}required{% endif %}><!-- {{form.end_date.field.widget.input_type}} -->
+           	</div>
+          </div>
+          <!-- PROJECT TYPE -->
+          <div class="form-group">
+            <label for="{{ form.project_type.id_for_label }}">Project Type</label><span>{{ form.project_type.errors }}</span>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="ti-user"></i></div>
+              <input class="form-control" id="{{ form.project_type.id_for_label }}" name="{{form.project_type.html_name}}" maxlength="{{form.project_type.field.max_length}}" placeholder="{{form.project_type.html_name|title}}" {% if form.project_type.field.required %}required{% endif %}><!-- {{form.project_type.field.widget.input_type}} -->
+           	</div>
+          </div>
+          <!-- BUTTONS -->
+          <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+          <a href="/" class="cancel-btn"><span class="btn btn-inverse waves-effect waves-light">Cancel</span></a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

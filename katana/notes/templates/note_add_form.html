@@ -1,0 +1,10 @@
+{% load static %}
+<form method="POST" action="{{action|default:'/note_add/'}}" id="{{form_id|default:'form-note-add'}}">
+{%csrf_token%}
+{% include 'form_input_field.html' with field=form.title %}
+{% include 'form_input_field.html' with field=form.body %}
+	<div class="container-fluid">
+		<button class="btn btn-info pull-right {{cancel_class}}" style="margin-left:20px;">cancel</button>
+		<button class="btn btn-success pull-right" id="{{submit_id|default:'btn-note-submit'}}">submit</button>
+	</div>
+</form>

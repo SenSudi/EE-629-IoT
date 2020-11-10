@@ -1,0 +1,7 @@
+{% load static %}
+
+<div role="tabpanel" class="tab-pane fade active in task-notes" id="task-files-tab-content-{{task.id}}">
+{% if task.note_count > 0 %}
+	{% include 'note_list_display.html' with notes=task.get_notes %}
+{% endif %}
+</div>

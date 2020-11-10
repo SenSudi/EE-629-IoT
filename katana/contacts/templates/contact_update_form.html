@@ -1,0 +1,32 @@
+{% load static %}
+<form method="POST" action="{{action}}" id="{{form_id}}">
+{%csrf_token%}
+{{ form.non_field_errors }}
+<div class="row">
+	<div class="col-xs-6">
+		{% include 'form_input_field.html' with field=form.first_name %}
+	</div>
+	<div class="col-xs-6">
+		{% include 'form_input_field.html' with field=form.last_name %}
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-6">
+		{% include 'form_input_field.html' with field=form.email %}
+	</div>
+	<div class="col-xs-6">
+		{% include 'form_input_field.html' with field=form.phone %}
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-6">
+		{% include 'form_select_field.html' with field=form.roles %}
+	</div>
+</div>
+	<div class="container-fluid">
+		<button class="btn btn-info pull-right popped" id="btn-modal-{{object_type}}-update-cancel" style="margin-left:20px;">cancel</button>
+		<button class="btn btn-success pull-right popped bmus" id="btn-modal-{{object_type}}-update-submit">{{submit_text}}</button>
+	</div>
+</form>

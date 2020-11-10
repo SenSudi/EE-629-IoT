@@ -1,0 +1,10 @@
+{% load static %}
+<form method="POST" action="/note_edit/" id="form-note-edit">
+{%csrf_token%}
+{% include 'form_input_field.html' with field=form.title %}
+{% include 'form_input_field.html' with field=form.body %}
+	<div class="container-fluid">
+		<button class="btn btn-info pull-right" id="btn-note-update-cancel">cancel</button>
+		<button class="btn btn-success pull-right" id="btn-note-update">update</button>
+	</div>
+</form>

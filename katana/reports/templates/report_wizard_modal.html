@@ -1,0 +1,35 @@
+{% load static %}
+<div id="modalWindow" class="modal fade object report" tabindex="-1" role="dialog" aria-labelledby="confirm-modal" aria-hidden="true" data-backdrop="static" data-obj-id="{{report.id}}" data-details="{{report.details_url}}" data-obj-model="{{report.model_class}}" data-obj-app="{{report.app_label}}" data-edit="{{report.edit_url}}" data-obj-type="{{report.type_label}}" data-export="{{report.export_url}}">
+	<div class="modal-dialog">
+		<div class="modal-content popped rw-mc">
+			<div class="modal-header" style="border:none;padding-bottom:0;padding-top:5px;">
+				<div class="row">
+					<div class="col-xs-8">
+						<h2 id="{%block header_title_id%}{%endblock%}" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+							{% block header_title %}{%endblock%}
+						</h2>
+					</div>
+					<div class="col-xs-4">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="padding-right:0px;">
+								<a class="wizard-close close pull-right header-scheme" data-dismiss="modal" style="position:relative;top:7px;margin-left:10px;">×</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% block header_additional %}{%endblock%}
+				<hr class="modal-divider" style="margin-top:0px;">
+			</div>
+			<div class="modal-body container-fluid rw-mb" style="padding-top:15px;position:relative;min-height:30vh;">
+				<div class="col-xs-12" style="padding:0 12px 0 12px;">
+                    {% if report.wizard.description %}
+					    <div class="col-xs-12 popped" style="font-weight:400;padding:10px;">
+						    {{report.wizard.description}}
+					    </div>
+					{% endif %}
+				</div>
+				{% block body_content %}{%endblock%}
+			</div>
+		</div>
+	</div>
+</div>

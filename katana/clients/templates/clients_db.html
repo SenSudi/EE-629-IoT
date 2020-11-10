@@ -1,0 +1,15 @@
+{% extends 'base_list_view.html' %}
+{% load static %}
+
+{% block page_headers %}
+    <div class="top-spacer"  style="height:70px"></div>
+    <div class="col-xs-2"><b>Name</b></div>
+    <div class="col-xs-2 text-center"><b># Contacts</b></div>
+    <div class="col-xs-2 text-center"><b>Total Projects</b></div>
+    <div class="col-xs-2 text-center"><b>Active Project</b></div>
+    <div class="col-xs-2 text-center"><b># Active Projects</b></div>
+{% endblock %}
+
+{% block items %}
+    {% include 'display_clients.html' with items=clients item_header=True item_body=True %}
+{% endblock %}

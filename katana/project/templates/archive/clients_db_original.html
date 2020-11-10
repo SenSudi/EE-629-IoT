@@ -1,0 +1,192 @@
+{% extends 'baseline.html' %}
+{% load static %}
+
+{% block head %}
+<style type="text/css">
+	.even {
+		background-color:#dad8d8;
+	}
+	.odd {
+
+	}
+	.vc {
+		vertical-align:middle;
+	}
+</style>
+{% endblock %}
+
+
+{% block top_pallet %}
+<div class="top-spacer"></div>
+
+
+<div class="container form-box">
+  <div class="white-box">
+    <h3 class="box-title m-b-0">Add Client</h3>
+    <!-- <p class="text-muted m-b-30 font-13"> potential sub heading </p> -->
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+				<form method="POST" action="/client_handler/" class="post-form" id="proj-form" enctype="multipart/form-data">{% csrf_token %}
+				{{ form.non_field_errors }}
+					{% for field in form %}
+						<div class="form-group">
+							<label for="{{ field.id_for_label }}"></label><span>{{ field.errors }}</span>
+							<div class="input-group">
+						  	<div class="input-group-addon"></div>
+						  	{{field}}
+							</div>
+						</div>
+					{% endfor %}
+					<!-- BUTTONS -->
+				  <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+				  <a href="/" class="cancel-btn"><span class="btn btn-inverse waves-effect waves-light">Cancel</span></a>
+				</form>
+			</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-md-12">
+  	<div class="white-box">
+  		{% for client in clients %}
+    	<div class="row">
+      		<div class="col-sm-12 {% cycle 'even' 'odd' %}">
+            	<div class="row" id="{{project.id}}" style="padding:10px;padding-top:20px;">
+            		<div class="col-md-6 proj-title vc">
+            			<b>{{client.name | title}}</b>
+            		</div>
+            		<div class="col-md-4">
+            			
+            		</div>
+            		<div class="col-md-2 text-right">
+            			<button class="btn btn-warning waves-effect waves-light proj-close" type="button" disabled style="margin-top:-8px;">
+            				<span>Delete</span>
+            				<i class="fa fa-folder m-l-5"></i>
+            			</button>
+            		</div>
+            	</div>
+            </div>
+      	</div>
+    	{% endfor %}	
+   	</div>
+</div>
+<div id="dynamicModal"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		//To Title Case
+		function tTC(str) {
+	    return str.replace(/(?:^|\s)\w/g, function(match) {
+	        return match.toUpperCase();
+	    });
+		}
+
+		//Prep Display Name
+		function pDN(str){
+			if (/_/i.test(str)){
+				return tTC(str.split('_').join(' '));
+			}else{
+				return tTC(str);
+			}
+		}
+
+		$.each($('[id*="id_"]'), function(index, value){
+			//console.log($(this));
+			var input = $(this);
+			//console.log(input.closest('.form-group').find('label'));
+			var label = input.closest('.form-group').find('label');
+			var name = pDN(input.attr('name'));
+			//Set label inner html
+			label.html(name);
+			//Add form-control class to input
+			input.addClass('form-control');
+			if(/date/i.test(name)){input.attr('type','date');}
+			//re-write this as $.each type = 'date' (keep form.width)
+			if(/date/i.test(name)&&($('form').width()>600)){
+				input.parent().css('width','20%');
+			}
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#id_client').keydown(function(){
+			// console.log('here');
+			if ($(this).val() != ''){
+				$(this).parent().addClass('ui-widget');
+				data = {'val' : $(this).val(), 'csrfmiddlewaretoken': '{{csrf_token}}'}
+				url = /find_model/
+				$.post(url,data,function(returned){
+					//console.log(returned['clients']);
+					var clientsList = returned['clients']
+					//console.log (clientsList);
+					//console.log ($(this))
+					$('#id_client').autocomplete({source: clientsList});
+				});
+
+			}
+		});
+	});
+</script>
+<!-- jQuery file upload -->
+<script src="{% static 'plugins/bower_components/dropify/dist/js/dropify.min.js' %}"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$('#id_associated_files').removeClass('form-control');
+		//$('#id_associated_files').addClass('dropify');
+		//$('#id_associated_files').addClass('form-control');
+		$('#id_associated_files').attr('multiple','true');
+	});
+</script>
+<script>
+    $(document).ready(function(){
+        // Basic
+        $('.dropify').dropify({
+        	messages: {
+        		default: 'Drag and drop Associated Files or click'
+        	}
+        });
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove:  'Supprimer',
+                error:   'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element){
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element){
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element){
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e){
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+</script>
+{% endblock %}

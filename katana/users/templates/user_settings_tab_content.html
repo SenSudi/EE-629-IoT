@@ -1,0 +1,45 @@
+<form method="POST" action="/user_profile_update/" class="form-horizontal form-material" id="profile-form">
+	{% csrf_token %}
+	<div class="form-group">
+		<label class="col-md-12">First Name</label>
+        <span class="field-errors" id="f_name_errors"></span>
+		<div class="col-md-12">
+			<input type="text" name="f_name" placeholder="{{user.first_name}}" class="form-control form-control-line">
+		</div>
+	</div>
+    <div class="form-group">
+        <label class="col-md-12">Last Name</label>
+        <span class="field-errors" id="l_name_errors"></span>
+        <div class="col-md-12">
+        	<input type="text" name="l_name" placeholder="{{user.last_name}}" class="form-control form-control-line">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone" class="col-md-12">Phone</label>
+        <span class="field-errors" id="phone_errors"></span>
+        <div class="col-md-12">
+            <input type="phone" placeholder="{{user.tester.phone}}" class="form-control form-control-line" name="phone">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-md-12">Email</label>
+        <span class="field-errors" id="email_errors"></span>
+        <div class="col-md-12">
+        	<input type="email" placeholder="{{user.email}}" class="form-control form-control-line" name="email" id="example-email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-12">Password</label>
+        <div class="col-md-12">
+            <button class="btn btn-info" id="btn-modal-user-password-change">
+                Change Password
+            </button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+        	<button id="btn-update-profile" class="btn btn-success pull-right">Update Profile</button>
+        </div>
+    </div>
+</form>
+<span id="form-messages"></span>

@@ -1,0 +1,18 @@
+{% load static %}
+
+<form method="POST" action="/client_update/" class="post-form" id="client-edit-form" enctype="multipart/form-data">
+	<div class="container-fluid">
+	{% csrf_token %}
+	{{ form.non_field_errors }}
+    {% for field in form %}
+		<div class="form-group"  id="{{id}}">
+			<label for="{{ field.id_for_label }}" style="margin-left:40px;margin-right:40px;"></label>
+			<span class="field-errors" id="{{field.name}}_errors">{{ field.errors }}</span>
+			<div class="input-group" style="margin-left:40px;margin-right:40px;">
+				<div class="input-group-addon"></div>
+				{{field}}
+			</div>
+		</div>
+    {% endfor %}
+	</div>
+</form>

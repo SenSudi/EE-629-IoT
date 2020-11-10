@@ -1,0 +1,28 @@
+<li id="projects-dropdown">
+  <a href="#" class="waves-effect">
+    <i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i> 
+    <span class="hide-menu">Open Projects
+      <span class="fa arrow"></span>
+      <span class="label label-rouded label-purple pull-right">
+        {{open_proj_count}}
+      </span>
+    </span>
+  </a>
+  <ul class="nav nav-second-level collapse in" aria-expanded="true">
+    <li>
+      <a href="/new_project" class="side-nav-link cpll" id="new_project">
+        <i class="icon-plus"></i> 
+        New Project
+      </a>
+    </li>
+    {% for item in projects %}
+		  {% if item.active %}
+        <li>
+          <a href="/projects/{{item.pk}}" class="side-nav-project-link cppll" id="{{item.id}}" data-title="{{item.title}}">
+            {{item.title}}
+          </a>
+        </li>
+		  {% endif %}
+    {% endfor %}
+  </ul>
+</li>

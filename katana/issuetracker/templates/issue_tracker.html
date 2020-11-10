@@ -1,0 +1,78 @@
+{% load static %}
+
+{% block top_pallet %}
+	{% include 'auditor.html' %}
+{% endblock %}
+
+{% block table_pallet %}
+	<div class="top-spacer"></div>
+
+	<div class="col-xs-12 white-box popped">
+    <div class="row">
+      <div class="col-xs-2">
+        <button id="btn-it-issue-add" class="btn btn-success popped" data-url="/it_issue_add_form/" style="display:inline;">
+          Open New Issue Report
+        </button>
+      </div>
+      <div class="col-xs-2">
+        <button id="btn-it-status-manage" class="btn btn-info popped" data-url="/it_status_manage/" style="display:inline;">
+          Manage Statuses
+        </button>
+      </div>
+      <div class="col-xs-2">
+        {% include 'it_project_filter.html' %}
+      </div>
+      <div class="col-xs-6">
+        {% include 'search_bar.html' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <span>
+          <b>Showing Issues for 
+            <span id="showing">
+              {% if current_project %}
+                {{current_project.title}}
+              {% else %}
+                All Projects
+              {% endif %}
+            </span>
+          </b>
+        </span>
+      </div>
+      <div class="col-xs-7"></div>
+      <div class="col-xs-1">
+        <i class="btn fa fa-refresh objects-refresh pull-right"></i>
+      </div>
+    </div>
+        
+    <hr class="modal-divider">
+    
+    <div class="row" id="issue_headers">
+      <div onclick="itHSB(this)" class="col-md-3 btn hsb">
+        <b id="title">Title</b>
+      </div>
+      <div onclick="itHSB(this)" class="col-md-1 btn hsb" >
+        <b id="status">Status</b>
+      </div>
+      <div onclick="itHSB(this)" class="col-md-1 btn hsb" style="text-align:left;">
+        <b id="technical_poc__first_name">Technical PoC</b>
+      </div>
+      <div onclick="itHSB(this)" class="col-md-1 btn hsb" style="text-align:left;">
+        <b id="issue_owner">Issue Owner</b>
+      </div>
+      <div onclick="itHSB(this)" class="col-md-2 btn hsb" style="text-align:left;">
+        <b id="updated" style="margin-left:40px;">Updated</b>
+      </div>
+      <div class="col-md-3 btn hsb" style="text-align:left;margin-left:40px;">
+        <b>Latest Issue File</b>
+      </div>
+      <div class="col-xs-1"></div>
+    </div>
+		<div class="row objects-container popped" id="it-issues" data-url="/display_tracked_issues/">
+			{% include 'display_tracked_issues.html' %}
+		</div>
+	</div>
+
+<div id="page-data" style="display:none;" data-section="{{section}}"></div>
+{% endblock %}

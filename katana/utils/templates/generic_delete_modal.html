@@ -1,0 +1,20 @@
+{% load static %}
+<div class="modal-header" style="border:none;padding-bottom:0;">
+    <h4 id="modal-delete-title" style="display:inline;text-shadow:1px 1px 1px #dad8d8;">
+        Are you sure you want to delete this item?
+    </h4>
+    <a class="close pull-right header-scheme" data-dismiss="modal" style="display:inline;">×</a>
+    <hr class="modal-divider">
+</div>
+<div class="modal-body text-center container-fluid" style="padding-top:0;">
+    <h4><b>!This item may be linked to other objects in the system!</b></h4>
+    <h3><b style="color:red;">You are about to delete: <span id="deletion-type">{{model}}</span><span style="white-space:pre;"> - </span><span id="deletion-title">{{title}}</span> !</b></h3>
+    {% if content %}
+        {% autoescape off %} {{ content}} {% endautoescape %}
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <button class="btn btn-danger pull-left popped" id="btn-generic-delete-submit">yes, delete this item</button>
+    <button class="btn btn-success pull-right popped" id=btn-modal-close>oops, keep this item</button>
+</div>

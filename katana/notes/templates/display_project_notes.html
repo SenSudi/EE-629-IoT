@@ -1,0 +1,36 @@
+{% extends 'base_display_items.html' %}
+{% load static %}
+
+{% block item_header_block %}
+<div class="row">
+	<div class="col-xs-1">
+		<i class="btn btn-clear fa fa-plus btn-min-max" style="margin-right:5px;"></i>
+	</div>
+	<div class="col-xs-3 col-spacer"><b>{{item.title}}</b></div>
+	<div class="col-xs-2 col-spacer"><b>{{item.updated}}</b></div>
+	<div class="col-xs-3 col-spacer"><b>{{item.content_type}}</b></div>
+	<div class="col-xs-2 col-spacer"><b>{{item.creator}}</b></div>
+	<div class="col-xs-2 col-spacer">
+		<b>
+			<a href="{{item.current_page}}" target="_blank">
+				{{item.current_page}}
+			</a>
+		</b>
+	</div>
+</div>
+{% endblock %}
+
+{% block item_body_block %}
+<div class="row">
+	<div class="col-xs-9">
+		{{item.body}}
+	</div>
+	<div class="col-xs-3">
+		{% if item.associated_item %}
+			<a href="{{item.associated_item.url}}"  class='cpll' target="_blank">
+				<b>{{item.associated_item.title}}</b>
+			</a>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

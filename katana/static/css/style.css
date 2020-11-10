@@ -1,0 +1,30 @@
+html
+{
+	background-color: rgb(100, 92, 87);
+}
+
+body
+{
+	background-color: rgb(100, 92, 87);
+}
+
+.navbar-default
+{	
+	min-height: 25px;
+	height:25px;
+	border-radius:0;
+	box-shadow:0px 2px 4px black;
+	border:none;
+}
+
+ .grad {
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(black, grey); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, grey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, grey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, grey); /* Standard syntax */
+}
+
+.details-modal-data-header {
+	background-color:#dad8d8;box-shadow:1px 1px 1px rgb(104,104,104);margin-bottom:5px;
+}

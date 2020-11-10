@@ -1,0 +1,29 @@
+{% load static %}
+<form method="POST" action="{{action}}" id="{{form_id}}">
+{%csrf_token%}
+{{ form.non_field_errors }}
+<div class="row">
+	<div class="col-xs-1">
+		{% include 'form_input_field.html' with field=form.sequence %}
+	</div>
+	<div class="col-xs-11">
+		{% include 'form_input_field.html' with field=form.title %}
+	</div>
+</div>
+{% if ptypes %}
+	{% include 'form_select_field.html' with for_label="id_ptypes" name="ptypes" select_id="project_type" items=ptypes  selection=select%}
+{% endif %}
+	<div class="container-fluid">
+		{% if recommend %}
+		<button class="btn btn-warning pull-right" id="btn-phase-recommend" style="margin-left:20px;">recommend</button>
+		{% endif %}
+		{% if edit %}
+		<button class="btn btn-info pull-right" id="btn-phase-update-cancel" style="margin-left:20px;">cancel</button>
+		<button class="btn btn-success pull-right" id="btn-phase-update">update</button>
+		{% endif %}
+		{% if add %}
+		<button class="btn btn-info pull-right" id="btn-modal-phase-add-cancel" style="margin-left:20px;">cancel</button>
+		<button class="btn btn-success pull-right" id="btn-modal-phase-add-submit">submit</button>
+		{% endif %}
+	</div>
+</form>

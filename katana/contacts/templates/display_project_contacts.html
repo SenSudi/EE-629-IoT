@@ -1,0 +1,6 @@
+{% load static %}
+
+{% for contact in contacts %}
+	{% cycle 'odd' 'even' as rowcolor silent %}
+	{% include 'display_contacts.html' with object=contact %}
+{% endfor %}

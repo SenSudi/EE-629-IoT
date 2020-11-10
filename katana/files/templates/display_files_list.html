@@ -1,0 +1,14 @@
+{% for file in files %}
+	<div class="row file tdi" data-obj-id="{{file.id}}" data-obj-app="files" data-obj-type="associated file" data-obj-model="Associated_File" data-url="{{file.url}}" data-obj-title="{{file.name_only}}">
+		<div class="col-sm-4 text-left">
+			<a href="{{file.url}}" target="_blank"><b>{{file.name_only}}</b></a>
+		</div>
+		<div class="col-sm-1 text-center">{{file.extension}}</div>
+		<div class="col-sm-2 text-center">{{file.size}}</div>
+		<div class="col-sm-2 text-center">{{file.updated}}</div>
+		<div class="col-sm-2 text-center">{{file.uploader}}</div>
+	</div>
+	{% if not forloop.last %}
+		<hr class="modal-divider" style="margin:1px 0 1px 0;opacity:.6;">
+	{% endif %}
+{% endfor %}

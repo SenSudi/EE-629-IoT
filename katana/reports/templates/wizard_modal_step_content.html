@@ -1,0 +1,55 @@
+<div role="tabpanel" class="tab-pane fade active in popped container-fluid object {{step.type_label}}" id="step-{{step.sequence}}-tab-content" data-obj-id="{{step.id}}" data-app="{{step.app_label}}" data-obj-model="{{step.model_class}}" data-sequence="{{step.sequence}}">
+	<div class="col-xs-12">
+		{% include 'form_input_field.html' with field=sf.title %}
+	</div>
+	<div class="col-xs-12">
+		{% include 'form_input_field.html' with field=sf.description %}
+	</div>
+
+    <div class="col-xs-12 popped btn btn-wt-modal-step-variable-add" style="margin-bottom:10px;background-color:rgba(0,120,0,0.4);">
+		Add Variable
+	</div>
+	<div class="col-xs-12 details-modal-data-header">
+		<div class="col-xs-3"><b>Display Label</b></div>
+		<div class="col-xs-2 text-center"><b>Input Type</b></div>
+		<div class="col-xs-3 text-center"><b>Content Limit</b></div>
+		<div class="col-xs-3 text-center"><b>Template Tag</b></div>
+		<div class="col-xs-1"></div>
+	</div>
+
+	<div class="col-xs-12 step-variables popped" style="padding:0;">
+		{% for var in step.variables.all %}
+			<div class="col-xs-12 object {{var.type_label}} {% cycle 'odd' 'even' %}" data-obj-id="{{var.id}}" data-model="{{var.model_class}}" data-app="{{var.app_label}}" data-parent-id="{{step.id}}" data-delete="{{var.delete_url}}" data-edit="{{var.edit_url}}">
+				<div class="col-xs-3" style="overflow-wrap:break-word">{{var.title}}</div>
+				<div class="col-xs-2 text-center">
+					<select class="wizard_var_input_type_select" style="position:relative;top:-3px;overflow-wrap:break-word" data-attr-name="input_type">
+					{% if var.selectable %}
+						{% for item in var.selectable_list %}
+							<option value="{{item.0}}" {% if var.input_type == item.1 %} selected {% endif %}>{{item.1}}</option>
+						{% endfor %}
+					{% else %}
+						{% for item in var.input_list %}
+							<option value="{{item.0}}" {% if var.input_type == item.1 %} selected {% endif %}>{{item.1}}</option>
+						{% endfor %}
+					{% endif %}
+					</select>
+				</div>
+				<div class="col-xs-3 text-center">
+					{% if var.limited %}
+						<span class="tm-wizard-var-limit editable" contenteditable data-attr-name="limit">
+							{{var.limit}}
+						</span>
+					{% else %}
+					N/A
+					{% endif %}
+				</div>
+				<div class="col-xs-3 text-center tm-wizard-var-template-tag editable" contenteditable data-attr-name="template_var">
+					{{var.template_var}}
+				</div>
+				<div class="col-xs-1">
+					{% include 'object_delete_btn.html' %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

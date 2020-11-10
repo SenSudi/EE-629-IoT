@@ -1,0 +1,11 @@
+{% for audit in audits %}
+<div class="row audit {% cycle 'oa' 'ea' %}">
+	<div class="col-xs-2"><b>{{audit.when}}</b></div>
+	{% if where == 'overview' %}
+		<div class="col-xs-8"><b>{{audit.who.username}} - {{audit.what}}</b></div>
+		<div class="col-xs-2 text-right"><b><a href="/{{audit.where}}" id="{{audit.where}}" {% if 'project/' in audit.where %} class="cppll"{% else %} class="cpll"{% endif %} style="color:inherit">{{audit.where}}</a></b></div>
+	{% else %}
+		<div class="col-xs-10"><b>{{audit.who.username}} - {{audit.what}}</b></div>
+	{% endif %}
+</div>
+{% endfor %}

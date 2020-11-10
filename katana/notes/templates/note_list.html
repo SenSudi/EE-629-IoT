@@ -1,0 +1,42 @@
+{% load static %}
+<div class="modal-notes-div">
+  {% include 'note_list_header.html' %}
+  <div id="note_table" class="notes">
+	{% for note in notes %}
+    {% if workflow %}
+      {% if note.project == user.tester.project%}
+        <div class="note row {% cycle 'ne' 'odd' %}" data-obj-id="{{note.id}}" data-obj-title="{{note.title}}"  style="cursor:pointer;">
+          <div id="title_col" class="col-md-5 col-spacer note-title"><b>{{note.title}}</b></div>
+          <div id="creator_col" class="col-md-2 text-center col-spacer">{{note.creator}}</div>
+          <div id="date_col" class="col-md-3 text-center col-spacer">
+          {{note.updated}}
+          </div>
+          <div class="col-xs-1">
+            {% if user.is_superuser %}
+            <i class="btn btn-clear fa fa-trash-o pull-right btn-delete-note" style="position:relative;top:-.5px;font-weight:bold;margin:1px;padding:3px;"></i>
+            {% endif %}
+            <i onclick="noteEdit(this)" class="btn btn-clear fa fa-edit pull-right btn-edit-note" style="position:relative;font-weight:bold;top:.5px;margin:1px;padding:3px;"></i>
+          </div>
+        </div>
+      {% endif %}
+    {% else %}
+        <div class="note row {% cycle 'ne' 'odd' %}" data-obj-id="{{note.id}}" data-obj-title="{{note.title}}" style="cursor:pointer;">
+          <div id="title_col" class="col-md-5 col-spacer note-title"><b>{{note.title}}</b></div>
+          <div id="creator_col" class="col-md-2 text-center col-spacer">{{note.creator}}</div>
+          <div id="date_col" class="col-md-3 text-center col-spacer">
+          {{note.updated}}
+          </div>
+          <div id="time_col" class="col-xs-1 text-center col-spacer">
+            <b class="note-time">{{note.time}}</b>
+          </div>
+          <div class="col-xs-1">
+            <i class="btn btn-clear fa fa-edit pull-right btn-edit-note" onclick="noteEdit(this)" style="padding-top:2px;"></i>
+            {% if user.is_superuser %}
+            <i class="btn btn-clear fa fa-trash-o pull-right btn-delete-note" style="padding-top:2px;"></i>
+            {% endif %}
+          </div>
+        </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>

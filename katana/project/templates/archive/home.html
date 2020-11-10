@@ -1,0 +1,67 @@
+{% load static %}
+
+{% block head %}
+<style type="text/css">
+  .adjust {
+    height:145px;
+    box-shadow:1px 1px 2px grey;
+  }
+</style>
+{% endblock %}
+
+{% block main_pallet %}
+	<div class="top-spacer"></div>
+    {% if last_project %}
+      <div class="col-lg-10 col-sm-10 col-xs-12">
+        <a href="/projects/{{last_project.id}}" class="cpll">
+        <div class="white-box" style="height:105px !important;">
+          <h3 class="box-title" style="margin-bottom:0;">Your Recent Project</h3>
+          <ul class="list-inline two-part" style="margin-top:-15px !important; margin-bottom:0;">
+            <li style="margin-top:10px;"><i class="icon-reload" style="font-size:35px;margin-top:5px;"></i></li>
+            <li class="text-right" style=""><h1 class="">{{last_project.title}}</h1></li>
+          </ul>
+        </div>
+        </a>
+      </div>
+    {% endif %}
+	<!-- PROJECTS -->
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <div class="white-box adjust">
+        <h3 class="box-title">Open Projects</h3>
+        <ul class="list-inline two-part">
+          <li><i class="icon-folder text-info"></i></li>
+          <li class="text-right"><span class="counter">{{projects_count}}</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- REPORTS -->
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <div class="white-box adjust">
+        <h3 class="box-title">Total Reports</h3>
+        <ul class="list-inline two-part">
+          <li><i class="icon-doc text-success"></i></li>
+          <li class="text-right"><span class="counter">{{reports_count}}</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- CLIENTS -->
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <div class="white-box adjust">
+        <h3 class="box-title">Clients</h3>
+        <ul class="list-inline two-part">
+          <li><i class="icon-people text-warning"></i></li>
+          <li class="text-right"><span class="counter">{{client_count}}</span></li>
+        </ul>
+      </div>
+    </div>
+     <!-- DATA -->
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <div class="white-box adjust">
+        <h3 class="box-title">Data Items Found</h3>
+        <ul class="list-inline two-part">
+          <li><i class="icon-layers text-danger"></i></li>
+          <li class="text-right"><span class="counter">{{total_data_count}}</span></li>
+        </ul>
+      </div>
+    </div>
+{% endblock %}

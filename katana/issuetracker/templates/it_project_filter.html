@@ -1,0 +1,14 @@
+<div class="form-group">
+  <select class="form-control" id="it-project-filter">
+    <option value="all">---All Projects---</option>
+    {% for project in all_projects %}
+      {% if current_project and current_project.id == project.id %}
+        <option value="{{project.id}}" selected>
+          {{project.title}}
+        </option>
+      {% else %}
+        <option value="{{project.id}}">{{project.title}}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+</div>

@@ -1,0 +1,35 @@
+{% extends 'base_display_items.html' %}
+{% load static %}
+
+{% block item_header_block %}
+<div class="row">
+	<div class="col-xs-1">
+		<i class="btn btn-clear fa fa-plus btn-min-max" style="margin-right:5px;"></i>
+	</div>
+	<div class="col-xs-3 col-spacer"><b>{{item.date}}</b></div>
+	<div class="col-xs-2 col-spacer"><b>{{item.sender}}</b></div>
+	<div class="col-xs-3 col-spacer"><b>{{item.subject}}</b></div>
+	<div class="col-xs-3 col-spacer">
+		<b>
+			<a href="{{item.current_page}}" target="_blank">
+				{{item.current_page}}
+			</a>
+		</b>
+	</div>
+</div>
+{% endblock %}
+
+{% block item_body_block %}
+<div class="row">
+	<div class="col-xs-9">
+		{{item.body}}
+	</div>
+	<div class="col-xs-3">
+		{% if item.supporting_file %}
+			<a href="{{item.supporting_file.url}}" target="_blank">
+				<b>{{item.supporting_file.name}}</b>
+			</a>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
