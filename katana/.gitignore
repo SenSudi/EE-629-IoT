@@ -1,0 +1,23 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+#directories
+/media/*
+**/_private_settings
+
+#files
+*.pyc
+
+# Idea
+.idea/
+
+# VS Code
+.vscode/
+
+# Vagrant
+.vagrant/
+
+# Logs
+*.log
+
+#TestData
+/testData/*
