@@ -12,4 +12,5 @@ A comprehensive log of topics covered in IoT class, as well as their implementat
 ## Predictions From the Titanic Dataset using Neural Networks
 
 * Predictions made using sklearn neural networks
+* Implimented two models with different layer depths, and compared their performance
 * Comparision of misclassifications with Decsion tree
