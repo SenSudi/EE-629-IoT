@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO  ## Import GPIO library
+import RPi.GPIO as GPIO  ## Importing GPIO library
 import socket
 import csv
 
@@ -23,53 +23,3 @@ UDP_PORT = 5050
 sock = socket.socket(socket.AF_INET,  # Internet
                      socket.SOCK_DGRAM)  # UDP
 sock.bind((UDP_IP, UDP_PORT))
-
-while True:
-    data, addr = sock.recvfrom(1024)
-    raw = data
-    # print raw
-    limited = raw.split(",")
-    x = float(limited[3])
-    y = float(limited[4])
-    # print int(x), int(y)
-
-    if int(x) >= 3 and -3 < int(y) < 3:
-        print
-        "FORWARD"
-        GPIO.output(33, True)
-        GPIO.output(11, False)
-        GPIO.output(13, True)
-        GPIO.output(15, False)
-
-    elif int(x) <= -3 and -3 < int(y) < 3:
-        print
-        "BACKWARD"
-        GPIO.output(33, False)
-        GPIO.output(11, True)
-        GPIO.output(13, False)
-        GPIO.output(15, True)
-
-    elif int(y) >= 3 and -3 < int(x) < 3:
-        print
-        "LEFT"
-        GPIO.output(33, False)
-        GPIO.output(11, True)
-        GPIO.output(13, True)
-        GPIO.output(15, False)
-
-    elif int(y) <= -3 and -3 < int(x) < 3:
-        print
-        "RIGHT"
-        GPIO.output(33, True)
-        GPIO.output(11, False)
-        GPIO.output(13, False)
-        GPIO.output(15, True)
-
-
-    else:
-        print
-        "STOP"
-        GPIO.output(33, False)
-        GPIO.output(11, False)
-        GPIO.output(13, False)
-        GPIO.output(15, False)
