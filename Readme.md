@@ -1,4 +1,4 @@
 
-## Internet of Things
+## Android Accelerometer controlled surveillance robot using Raspberry Pi 4
 
-A comprehensive log of topics covered in IoT class, as well as their implementation.
+# Final project for the class CPE 629 IoT.
