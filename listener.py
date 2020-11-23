@@ -1,25 +1,25 @@
 import RPi.GPIO as GPIO  ## Importing GPIO library
-import socket
-import csv
+# import socket
+# import csv
+# Front left tire => GPIO 17 (pin 12)
+# Front right tire => GPIO 18
+# Back left tire => GPIO 26
+# Back right tire => GPIO 20
 
-GPIO.setwarnings(False)
+import Rpi.GPIO as GPIO
+# import socket
+# import csv
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup('port_example_33', GPIO.OUT)
-GPIO.setup('port_example_11', GPIO.OUT)
+#GPIO.setwarnings
+from gpiozero import motor
 
-GPIO.setup('port_example_13', GPIO.OUT)
-GPIO.setup('port_example_15', GPIO.OUT)
+motor = Motor(18,17)
+motor.forward()
 
-GPIO.setup(29, GPIO.OUT)
-GPIO.setup(31, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)  # also tried GPIO.BCM
 
-GPIO.output(29, True)
-GPIO.output(31, True)
+GPIO.setup(18,GPIO.OUT)
 
-UDP_IP = "0.0.0.0"
-UDP_PORT = 5050
-
-sock = socket.socket(socket.AF_INET,  # Internet
-                     socket.SOCK_DGRAM)  # UDP
-sock.bind((UDP_IP, UDP_PORT))
+while True:
+	print ("Forward")
+	GPIO.output(18,True)
