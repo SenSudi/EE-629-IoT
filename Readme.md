@@ -1,4 +1,7 @@
+### Katana is a web application developed on Django Web framework that provides a platform for creating, recording, and planning projects as well as generating reports based on those projects. It also lets the user attach relavant files or photos with each peoject and track time spent on each project. It provides selective access to data based on log-in credentials, in order to maintain privacy. Various features such as Milestones, Report Items, Report Item Type, Report Wizards, Time Tracker, Issue Tracker, Workflow, and Notes, utilize JavaScript, CSS, XML, and HTML for front-end UI and PostgreSQL as the database, controlled by Django migrations.
 
+## Instructions for running the application on web browser, from the files included:
+## 
 ## Installing Vagrant
 
 * Go to https://www.vagrantup.com/. This is Vagrant's official website
