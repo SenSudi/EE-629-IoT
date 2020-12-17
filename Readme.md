@@ -1,7 +1,7 @@
 
-## Internet of Things
+# Internet of Things:
 
-### A comprehensive log of topics covered in IoT class, as well as their implementation.
+# A comprehensive log of topics covered in IoT class, as well as their implementation.
 
 
 ## Branches created for the subtopics:
@@ -10,4 +10,4 @@
 #### => django-app: Django app for managing and tracking employee progress 
 
 
-# Click on "master" or "branches" to navigate through the branches present
+#### Click on "master" or "branches" to navigate through the branches present
