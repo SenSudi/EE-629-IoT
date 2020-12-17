@@ -10,4 +10,4 @@
 #### => django-app: Django app for managing and tracking employee progress 
 
 
-#### Click on "master" or "branches" to navigate through the branches present
+## Click on "master" or "branches" to navigate through the branches present
