@@ -31,5 +31,5 @@
 7. A connection is given from the Ground Terminal of Raspberry Pi to the GND terminal on the controller (to which the negative terminal of the battery is provided).
 8. Once proper connection is established, the motors should respond to changees in the gyroscope readings
 
-<a href="https://youtu.be/gnP4VA49ppM"><img src="https://www.youtube.com/embed/gnP4VA49ppM" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="https://youtu.be/gnP4VA49ppM"><img src="http://img.youtube.com/vi/<https://youtu.be/gnP4VA49ppM>/default.jpg" 
+alt="Video Showing Gyroscope Control of Vehicle" width="240" height="180" border="10" /></a>
