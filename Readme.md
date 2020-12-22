@@ -1,5 +1,5 @@
 
-# Android Accelerometer controlled surveillance robot using Raspberry Pi 4
+# Mobile Gyroscope Controlled Surveillance Robot Using Raspberry Pi 
 
 ### Final project for the class CPE 629 IoT.
 
