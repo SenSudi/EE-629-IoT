@@ -1,3 +1,9 @@
+
+''' 
+    Author: Sudipto Sen
+    Date Created: 12.02.2020
+'''
+
 import RPi.GPIO as GPIO ## Import GPIO library
 import socket
 import csv
@@ -23,7 +29,7 @@ GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.LOW)
 p=GPIO.PWM(en,1000)
 
-p.start(100)
+p.sta
 
 UDP_IP = "0.0.0.0"
 UDP_PORT = 5050
