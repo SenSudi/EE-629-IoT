@@ -1,3 +1,4 @@
+Youtube Demo of [Version 6.3](https://youtu.be/pN2FHeUPFJ0) (includes minor CSS/JS frontend bugs)
 #### Katana is a web application developed on Django Web framework that provides a platform for creating, recording, and planning projects as well as generating reports based on those projects. It also lets the user attach relavant files or photos with each peoject and track time spent on each project. It provides selective access to data based on log-in credentials, in order to maintain privacy. Various features such as Milestones, Report Items, Report Item Type, Report Wizards, Time Tracker, Issue Tracker, Workflow, and Notes, utilize JavaScript, CSS, XML, and HTML for front-end UI and PostgreSQL as the database, controlled by Django migrations.
 
 ## Instructions for running the application on web browser, from the files included:
@@ -50,3 +51,4 @@ Password: GZqN9eboDE7QnFMcVVAdZmsDkBj
 Note that password based SSH login has been disabled. To ssh, you should use the keys in this repo (`id_rsa` + `id_rsa.pub`).
 
 Example:  `ssh -i id_rsa katana@159.89.37.68`.
+
